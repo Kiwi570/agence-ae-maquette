@@ -42,7 +42,7 @@ export default (c) => {
   <div class="conteneur parcours-grille">
     <div>
       <p class="surtitre" data-anime>${c.t('atelier.parcours.surtitre')}</p>
-      <h2 data-anime="lignes">${c.t('atelier.parcours.titre')}</h2>
+      <h2 data-anime="gsap" data-lettres>${c.t('atelier.parcours.titre')}</h2>
       <p data-anime>${c.t('atelier.parcours.texte')}</p>
       <p class="parcours-reseaux" data-anime>${c.t('atelier.parcours.reseaux')}</p>
     </div>
@@ -65,7 +65,7 @@ export default (c) => {
   <div class="conteneur demarche-grille">
     <div class="demarche-texte">
       <p class="surtitre" data-anime>${c.t('atelier.demarche.surtitre')}</p>
-      <h2 data-anime="lignes">${c.t('atelier.demarche.titre')}</h2>
+      <h2 data-anime="gsap" data-lettres>${c.t('atelier.demarche.titre')}</h2>
       <p data-anime>${c.t('atelier.demarche.texte')}</p>
       <div class="meuble">
         ${TIROIRS.map((t) => html`<div class="tiroir${t.n === 1 ? ' est-ouvert' : ''}" data-tiroir="${t.n}">
@@ -90,7 +90,7 @@ export default (c) => {
   <div class="conteneur faq-grille">
     <div>
       <p class="surtitre" data-anime>${c.t('atelier.faq.surtitre')}</p>
-      <h2 data-anime="lignes">${c.t('atelier.faq.titre')}</h2>
+      <h2 data-anime="gsap" data-lettres>${c.t('atelier.faq.titre')}</h2>
       <div class="faq-liste" data-anime="cascade">${[1, 2, 3, 4, 5, 6, 7].map((n) => html`<details class="faq-item"><summary>${c.t(`faq.q${n}.q`)}</summary><div class="faq-reponse"><p>${c.t(`faq.q${n}.r`)}</p></div></details>`)}</div>
     </div>
     ${c.media({ nom: 'faq-interieur', alt: I['faq-interieur'].alt, classe: 'faq-media', ratio: '4 / 5', sizes: '(max-width: 760px) 100vw, 34vw', attrs: 'data-fx="parallaxe"' })}

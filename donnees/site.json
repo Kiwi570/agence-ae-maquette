@@ -3,11 +3,29 @@
   "nomComplet": "L'Agence AE · architecture environnementale",
   "adresse": "https://agence-ae-maquette.vercel.app",
   "siteActuel": "agence-ae.fr",
-  "version": 1,
-  "langues": ["fr"],
-  "navigation": ["accueil", "realisations", "atelier", "convictions", "contact"],
-  "actionEntete": { "page": "contact", "ancre": "rendez-vous" },
-  "couleurs": { "fond": "#f2ede3", "texte": "#1e2427", "voile": "#c26a28", "ouverture": "#1e2427", "menu": "#f2ede3", "theme": "#f2ede3" },
+  "version": 2,
+  "langues": [
+    "fr"
+  ],
+  "navigation": [
+    "accueil",
+    "realisations",
+    "atelier",
+    "convictions",
+    "contact"
+  ],
+  "actionEntete": {
+    "page": "contact",
+    "ancre": "rendez-vous"
+  },
+  "couleurs": {
+    "fond": "#f2ede3",
+    "texte": "#1e2427",
+    "voile": "#c26a28",
+    "ouverture": "#1e2427",
+    "menu": "#f2ede3",
+    "theme": "#f2ede3"
+  },
   "formeVoile": "iris",
   "contact": {
     "telephone": "07 67 42 69 91",
@@ -17,7 +35,10 @@
     "instagram": "https://www.instagram.com/agenceae",
     "facebook": "https://www.facebook.com/agenceaequimper"
   },
-  "polices": ["/assets/fonts/newsreader.woff2", "/assets/fonts/manrope.woff2"],
+  "polices": [
+    "/assets/fonts/newsreader.woff2",
+    "/assets/fonts/manrope.woff2"
+  ],
   "imagePartage": "ouverture-1280.webp",
-  "curseur": true
+  "curseur": false
 }

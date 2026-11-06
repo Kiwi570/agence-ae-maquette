@@ -351,6 +351,43 @@
     784
    ],
    "alt": "Table à dessin avec calques et échantillons de matières"
+  },
+  {
+   "nom": "plein-combrit",
+   "source": "site/agence-ae-3.jpg",
+   "ratio": "16:9",
+   "largeurs": [
+    640,
+    1280,
+    1920
+   ],
+   "cadrage": [
+    60,
+    50
+   ],
+   "mobile": {
+    "source": "site/agence-ae-3.jpg",
+    "ratio": "9:16",
+    "largeurs": [
+     640,
+     960
+    ],
+    "cadrage": [
+     72,
+     50
+    ]
+   },
+   "alt": "Maison T-G à Combrit : pignon vitré et bardage brûlé au soleil couchant"
+  },
+  {
+   "nom": "selection-benodet",
+   "source": "site/chantier-termine-23.png",
+   "ratio": "4:5",
+   "largeurs": [
+    640,
+    1080
+   ],
+   "alt": "Extension V à Bénodet : volume en bois et terrasse au coucher du soleil"
   }
  ],
  "projets": {

@@ -49,3 +49,12 @@ export function carte(c, p, i) {
   </a>
 </li>`;
 }
+
+/* Maquette 3D en CSS : boîte à faces (avant, arrière, droite, gauche, dessus), position en px dans le repère de la maison. */
+export function boite(classe, w, h, d, [x, y, z], faces = {}) {
+  const f = (n, W, H, t) => `<span class="f f-${n} ${faces[n] || ''}" style="width:${W}px;height:${H}px;margin:${-H / 2}px 0 0 ${-W / 2}px;transform:${t}"></span>`;
+  return brut(`<div class="b3 ${classe}" style="transform:translate3d(${x}px,${y}px,${z}px)">`
+    + f('av', w, h, `translateZ(${d / 2}px)`) + f('ar', w, h, `rotateY(180deg) translateZ(${d / 2}px)`)
+    + f('dr', d, h, `rotateY(90deg) translateZ(${w / 2}px)`) + f('ga', d, h, `rotateY(-90deg) translateZ(${w / 2}px)`)
+    + f('ha', w, d, `rotateX(90deg) translateZ(${h / 2}px)`) + '</div>');
+}

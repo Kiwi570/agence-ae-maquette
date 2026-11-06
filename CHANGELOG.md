@@ -1,5 +1,23 @@
 # Journal des versions
 
+## v2 · 6 novembre 2026
+
+Plus de mouvement « wouahou », dans le monde de l'architecte. Comparé fichier par fichier à la v1.
+
+**Accueil**
+- Nouvelle scène épinglée « La maquette » : une maison en ossature bois en 3D se construit au défilement (dalle, murs, baies, toit), tourne sur elle-même, se fait pivoter à la main ou au doigt avec élan ; ses faces s'éclairent selon le soleil.
+- Bandeaux de mots géants (Lumière, Bois, Paille, Chaux…) qui filent au défilement en sens opposés et s'inclinent selon la vitesse.
+- Nouvelle scène « Maison T-G » : la photo part d'une vignette et s'ouvre jusqu'au plein écran, le titre géant s'écarte, puis le lien vers le projet.
+- Sélection de projets : l'Extension V de Bénodet remplace la Maison T-G, qui a sa propre scène ; les photos se déforment légèrement selon la vitesse de défilement.
+
+**Réalisations**
+- Nouveau carrousel 3D courbe de 12 projets : il tourne au défilement, à la main avec élan et aux flèches ; un clic ouvre la visionneuse du projet.
+
+**Toutes les pages**
+- Titres de section qui arrivent lettre par lettre, en rotation.
+- Lumière-soleil qui suit la souris (ordinateur) et s'intensifie sur les photos ; le curseur habituel reste visible.
+- Convictions : bandeau de mots géants (Bioclimatique, Sain, Sobre…) sur fond sombre.
+
 ## v1 · 6 novembre 2026
 
 Base de la maquette, direction « Course du soleil ».

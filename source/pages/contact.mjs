@@ -31,7 +31,7 @@ export default (c) => {
   <div class="conteneur rdv-grille">
     <div class="rdv-tete">
       <p class="surtitre" data-anime>${f('surtitre')}</p>
-      <h2 data-anime="lignes">${f('titre')}</h2>
+      <h2 data-anime="gsap" data-lettres>${f('titre')}</h2>
       <p data-anime>${f('texte')}</p>
       ${c.media({ nom: 'grok/atelier-table', alt: c.donnees.images.images['grok/atelier-table'].alt, classe: 'rdv-media', ratio: '3 / 2', sizes: '(max-width: 760px) 100vw, 30vw', attrs: 'data-fx="zoom"' })}
       <ol class="rdv-etapes" aria-hidden="true">${[1, 2, 3, 4, 5].map((n) => html`<li data-pastille="${n}"${n === 1 ? ' class="est-active"' : ''}><span>${n}</span>${f(`e${n}`)}</li>`)}</ol>
@@ -85,7 +85,7 @@ export default (c) => {
   <div class="conteneur acces-grille">
     <div>
       <p class="surtitre" data-anime>${c.t('contact.acces.surtitre')}</p>
-      <h2 data-anime="lignes">${c.t('contact.acces.titre')}</h2>
+      <h2 data-anime="gsap" data-lettres>${c.t('contact.acces.titre')}</h2>
       <p data-anime>${c.t('contact.acces.texte')}</p>
       <dl class="acces-coord" data-anime="cascade">
         <div><dt>${c.t('contact.telephone')}</dt><dd><a href="tel:${c.site.contact.telephoneLien}">${tel}</a></dd></div>

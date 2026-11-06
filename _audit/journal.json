@@ -125,6 +125,70 @@
    "effetsRetires": [],
    "grilleDispenses": {},
    "notes": "Scripts du dépôt bibliotheque-maquettes non exécutables dans cet environnement (refus de lancer du code téléchargé) : recherche faite en lisant index.json et les fiches, consignes Grok assemblées à partir des gabarits par un script local, images produites par un repli local (outils/produire-images.py). Boosts demandés après l'aperçu : soleil du fil saisissable, photo rééclairée en WebGL, soleil de la coupe manipulable. Regard neuf (second agent) : ombre des titres refaite en ombre debout, étape « vents d'ouest » remplacée, témoignage séparé du portrait, libellé court de la barre fixe, accords singulier et pluriel."
+  },
+  {
+   "version": 2,
+   "skill": "v10.3",
+   "perimetre": [
+    "accueil",
+    "realisations",
+    "atelier",
+    "convictions",
+    "contact",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "construction : animations v2 (maquette 3D, plein écran, mots géants, lettres, lumière au pointeur, carrousel 3D)",
+     "budget": 45,
+     "debut": "2026-11-06T17:50:33+01:00",
+     "fin": "2026-11-06T18:00:00+01:00"
+    },
+    {
+     "etape": "audit standard, corrections",
+     "budget": 20,
+     "debut": "2026-11-06T17:56:00+01:00",
+     "fin": "2026-11-06T18:56:00+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-06T18:56:00+01:00",
+     "fin": "2026-11-06T19:00:00+01:00"
+    }
+   ],
+   "attentes": [
+    {
+     "pour": "choix des animations v2",
+     "debut": "2026-11-06T17:47:00+01:00",
+     "fin": "2026-11-06T17:50:00+01:00"
+    }
+   ],
+   "allersRetours": 1,
+   "modules": [
+    "objet-a-faire-tourner (élan de la maquette et du carrousel)",
+    "galerie-horizontale-epinglee (principe d'épinglage)"
+   ],
+   "audit": {
+    "niveau": "standard",
+    "echecsPremierPassage": 65,
+    "relances": 5,
+    "corrections": [
+     "mots en contour marqués décoratifs (contraste du trait non mesurable)",
+     "cartes du carrousel de profil masquées",
+     "titres lettre par lettre sans masque de lignes",
+     "sélecteur du mur en coupe qui attrapait les murs 3D",
+     "photo plein écran tenue sous l'en-tête",
+     "retour à la section après le bouton du mode calme (restauration du navigateur neutralisée)",
+     "scène plein écran collante plutôt qu'épinglée",
+     "titres lettre par lettre à hauteur figée"
+    ]
+   },
+   "effetsRetires": [
+    "zoom de la photo plein écran (débordait de l'écran)"
+   ],
+   "grilleDispenses": {},
+   "notes": "Demande du client : plus d'animations wouahou et modernes."
   }
  ]
 }

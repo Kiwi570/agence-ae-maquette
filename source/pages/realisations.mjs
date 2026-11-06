@@ -50,6 +50,17 @@ export default (c) => {
   </div>
 </section>
 
+<section class="tour" id="tour" data-grille="manipuler">
+  <div class="conteneur tour-tete">
+    <p class="surtitre" data-anime>${c.t('realisations.tour.surtitre')}</p>
+    <h2 data-anime="gsap" data-lettres>${c.t('realisations.tour.titre')}</h2>
+  </div>
+  <div class="tour-scene" data-effet="carrousel-3d" role="group" aria-label="${c.s('realisations.tour.region')}">
+    <div class="tour-cylindre" data-galerie>${projets.filter((p) => (c.donnees.images.projets[p.id] || []).length).slice(0, 12).map((p, i) => html`<a class="tour-carte" data-superpose href="#projet-${p.id}" data-projet="${p.id}" data-sans-transition style="--i:${i}"><img src="/assets/images/projets/${p.id}-carte-480.webp" alt="" width="480" height="360" loading="lazy" decoding="async"><span><strong>${p.titre}</strong>${p.commune}</span></a>`)}</div>
+  </div>
+  <p class="tour-commandes conteneur"><button type="button" class="vis-bouton tour-prec" aria-label="${c.s('realisations.tour.precedent')}">←</button><span class="tour-indice"><span class="indice-souris">${c.t('realisations.tour.indice')}</span><span class="indice-tactile">${c.t('realisations.tour.indiceTactile')}</span></span><button type="button" class="vis-bouton tour-suiv" aria-label="${c.s('realisations.tour.suivant')}">→</button></p>
+</section>
+
 <section class="real-liste" id="liste">
   <div class="conteneur">
     <div class="real-filtres" role="group" aria-label="${c.s('realisations.filtres')}">

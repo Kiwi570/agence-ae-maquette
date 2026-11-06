@@ -35,11 +35,15 @@ export default (c) => {
   </div>
 </section>
 
+<div class="mots-geants mots-geants--sombre" aria-hidden="true" data-ruban data-audit-ignorer>
+  <p class="mots-rangee" data-effet="mots-geants" data-sens="1">${[1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6].map((n, i) => html`<span class="${i % 2 ? 'mot-creux' : 'mot-plein'}">${c.t(`convictions.mots.m${n}`)}</span><span class="mot-soleil"></span>`)}</p>
+</div>
+
 <section class="principe" id="principes">
   <div class="conteneur principe-grille">
     <div>
       <p class="principe-num" data-anime>${c.t('convictions.p1.numero')}</p>
-      <h2 data-anime="lignes">${c.t('convictions.p1.titre')}</h2>
+      <h2 data-anime="gsap" data-lettres>${c.t('convictions.p1.titre')}</h2>
       <p data-anime>${c.t('convictions.p1.texte')}</p>
       <p>${c.lien('accueil', { ancre: 'lumiere', classe: 'lien-fleche', texte: c.t('convictions.p1.lien') })}</p>
     </div>
@@ -68,7 +72,7 @@ export default (c) => {
     ${c.media({ nom: 'grok/matiere-ossature', alt: I['grok/matiere-ossature'].alt, classe: 'principe-media', ratio: '3 / 2', sizes: '(max-width: 760px) 100vw, 50vw', attrs: 'data-fx="zoom"' })}
     <div>
       <p class="principe-num" data-anime>${c.t('convictions.p3.numero')}</p>
-      <h2 data-anime="lignes">${c.t('convictions.p3.titre')}</h2>
+      <h2 data-anime="gsap" data-lettres>${c.t('convictions.p3.titre')}</h2>
       <p data-anime>${c.t('convictions.p3.texte')}</p>
     </div>
   </div>
@@ -78,7 +82,7 @@ export default (c) => {
   <div class="conteneur sobre-grille">
     <div>
       <p class="surtitre" data-anime>${c.t('convictions.sobre.surtitre')}</p>
-      <h2 data-anime="lignes">${c.t('convictions.sobre.titre')}</h2>
+      <h2 data-anime="gsap" data-lettres>${c.t('convictions.sobre.titre')}</h2>
       <ol class="sobre-liste" data-anime="cascade">${[1, 2, 3, 4].map((n) => html`<li><span class="sobre-num">0${n}</span>${c.t(`convictions.sobre.l${n}`)}</li>`)}</ol>
     </div>
     <div class="sobre-images">

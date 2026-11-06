@@ -1,4 +1,4 @@
-# Agence AE · maquette v1
+# Agence AE · maquette v2
 
 Maquette de présentation du futur site de L'Agence AE (Marine Gourlay, architecte, Quimper), direction artistique **« Course du soleil »** : la conception bioclimatique rendue tangible. Site statique (HTML, CSS, JavaScript), prêt pour Vercel sans étape de construction.
 
@@ -8,8 +8,8 @@ Adresse prévue : https://agence-ae-maquette.vercel.app (à mettre dans le modul
 
 | Page | Ouverture | Points forts |
 |---|---|---|
-| Accueil | photo plein cadre de la Maison T-G, soleil à saisir sur son arc | intro du soleil levant, photo rééclairée en WebGL, coupe bioclimatique épinglée (soleil manipulable), planches, carte de la zone |
-| Réalisations | titre géant, cadran solaire qu'on tourne pour filtrer | 23 projets filtrables (filtre dans l'adresse), visionneuse par projet avec lien propre `#projet-…` |
+| Accueil | photo plein cadre de la Maison T-G, soleil à saisir sur son arc | intro du soleil levant, photo rééclairée en WebGL, maquette 3D qui se construit, mots géants, photo qui s'ouvre en plein écran, coupe bioclimatique épinglée (soleil manipulable), planches, carte de la zone |
+| Réalisations | titre géant, cadran solaire qu'on tourne pour filtrer | carrousel 3D de 12 projets, 23 projets filtrables (filtre dans l'adresse), visionneuse par projet avec lien propre `#projet-…` |
 | L'Atelier | matière chaux-chanvre, cartouche de plan qui se trace et s'écrit | parcours, équipe, démarche en tiroirs du meuble à plans, 7 questions fréquentes |
 | Convictions | « 40 % » géant allumé par un rayon rasant | chiffres en barres, mur en coupe épinglé qui se décompose, chantier propre, vers plus sobre |
 | Contact | le numéro en très grand, bandeau de côte | premier rendez-vous en 5 étapes, tampon « Reçu », plan d'accès schématique |

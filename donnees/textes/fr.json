@@ -175,6 +175,50 @@
       "texte": "Par téléphone ou par e-mail, sans engagement. Apportez si vous le pouvez vos plans et vos photos, vos besoins, votre budget et vos délais.",
       "action": "Demander un rendez-vous",
       "appeler": "Appeler le 07 67 42 69 91"
+    },
+    "maquette": {
+      "surtitre": "La maquette",
+      "titre": "Une maison bois se monte en quatre temps",
+      "region": "Maquette 3D d'une maison en ossature bois qui se construit au défilement ; faites-la pivoter",
+      "indice": "Faites pivoter la maquette",
+      "indiceTactile": "Glissez pour la faire pivoter",
+      "note": "Maquette illustrative",
+      "e1": {
+        "titre": "La dalle.",
+        "texte": "Tout part du terrain : implantation, orientation, niveaux."
+      },
+      "e2": {
+        "titre": "L'ossature bois.",
+        "texte": "Modulaire, rapide à mettre en œuvre, en construction sèche."
+      },
+      "e3": {
+        "titre": "Les baies au sud.",
+        "texte": "Le soleil d'hiver entre, les vues s'ouvrent."
+      },
+      "e4": {
+        "titre": "Le toit et ses débords.",
+        "texte": "Ils protègent du soleil d'été et de la pluie."
+      }
+    },
+    "plein": {
+      "mot1": "Maison",
+      "mot2": "T-G",
+      "legende": "Combrit · Sainte-Marine · ossature bois et bardage brûlé",
+      "lien": "Voir le projet"
+    },
+    "mots": {
+      "lumiere": "Lumière",
+      "bois": "Bois",
+      "paille": "Paille",
+      "chaux": "Chaux",
+      "terre": "Terre",
+      "pierre": "Pierre",
+      "vent": "Vent",
+      "vues": "Vues",
+      "saisons": "Saisons",
+      "sobriete": "Sobriété",
+      "confort": "Confort",
+      "lieu": "Lieu"
     }
   },
   "realisations": {
@@ -206,7 +250,16 @@
     },
     "noteVisuels": "Certains visuels de projets neufs sont des perspectives : statut (projet ou réalisé) à préciser par l'agence.",
     "voirTous": "Voir les projets",
-    "photo": "{n} photo"
+    "photo": "{n} photo",
+    "tour": {
+      "surtitre": "Tour d'horizon",
+      "titre": "Faites tourner les projets",
+      "indice": "Faites tourner le carrousel",
+      "indiceTactile": "Glissez pour tourner",
+      "precedent": "Projet précédent",
+      "suivant": "Projet suivant",
+      "region": "Carrousel 3D des réalisations"
+    }
   },
   "atelier": {
     "cartouche": {
@@ -420,7 +473,15 @@
       "texte": "Premier rendez-vous gratuit et sans engagement.",
       "action": "Demander un rendez-vous"
     },
-    "voirPrincipes": "Nos trois principes"
+    "voirPrincipes": "Nos trois principes",
+    "mots": {
+      "m1": "Bioclimatique",
+      "m2": "Sain",
+      "m3": "Sobre",
+      "m4": "Local",
+      "m5": "Durable",
+      "m6": "Propre"
+    }
   },
   "contact": {
     "surtitre": "Contact",

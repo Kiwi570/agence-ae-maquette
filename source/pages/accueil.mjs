@@ -3,12 +3,12 @@
    Puis : vision (titre à ombre portée), trois savoir-faire en planches empilées, coupe bioclimatique épinglée,
    sélection de projets (ombre qui passe), chiffres, zone d'intervention, témoignage, premier rendez-vous. */
 import { html } from '../../outils/gabarit.mjs';
-import { carte, projetsDe, communesSvg } from '../gabarits/blocs.mjs';
+import { projetsDe, communesSvg, boite } from '../gabarits/blocs.mjs';
 
 export const page = { cle: 'accueil', fichier: 'index', imagePartage: 'ouverture-1280.webp' };
 
 const SELECTION = [
-  { id: 'maison-tg-combrit', image: 'selection-combrit' },
+  { id: 'extension-v-benodet', image: 'selection-benodet' },
   { id: 'remise-pigeonnier-treguennec', image: 'selection-treguennec' },
   { id: 'bureaux-ergue', image: 'selection-bureaux' },
   { id: 'maison-vacances-loctudy', image: 'selection-loctudy' },
@@ -55,10 +55,43 @@ export default (c) => {
   </div>
 </section>
 
+<section class="maquette ecran epingle" id="maquette" data-entete-cache data-plein-ecran data-grille="scene" data-effet="maquette-3d">
+  <div class="conteneur maquette-grille">
+    <div class="maquette-texte">
+      <p class="surtitre">${c.t('accueil.maquette.surtitre')}</p>
+      <h2 class="maquette-titre">${c.t('accueil.maquette.titre')}</h2>
+      <ol class="maquette-etapes">${[1, 2, 3, 4].map((n) => html`<li data-etape-m="${n}"><span class="maquette-num">0${n}</span><span><strong>${c.t(`accueil.maquette.e${n}.titre`)}</strong> ${c.t(`accueil.maquette.e${n}.texte`)}</span></li>`)}</ol>
+      <p class="maquette-note">${c.t('accueil.maquette.note')}</p>
+    </div>
+    <div class="maquette-scene" data-visuel data-tient role="img" aria-label="${c.s('accueil.maquette.region')}">
+      <span class="maquette-soleil" aria-hidden="true"></span>
+      <div class="maquette-monde" aria-hidden="true">
+        <div class="maison3d">
+          <div class="sol3d"><span class="sol3d-ombre"></span></div>
+          <div class="piece" data-piece="dalle">${boite('dalle', 340, 16, 214, [0, -8, 0], { av: 'beton', ar: 'beton', dr: 'beton', ga: 'beton', ha: 'beton-dessus' })}</div>
+          <div class="piece" data-piece="murs">
+            ${boite('mur', 320, 130, 10, [0, -81, 98], { av: 'facade-sud', ar: 'bois-clair', dr: 'bardage', ga: 'bardage', ha: 'tranche' })}
+            ${boite('mur', 320, 130, 10, [0, -81, -98], { av: 'bois-clair', ar: 'bardage', dr: 'bardage', ga: 'bardage', ha: 'tranche' })}
+            ${boite('mur', 10, 130, 186, [-155, -81, 0], { av: 'bardage', ar: 'bardage', dr: 'bois-clair', ga: 'bardage-cote', ha: 'tranche' })}
+            ${boite('mur', 10, 130, 186, [155, -81, 0], { av: 'bardage', ar: 'bardage', dr: 'bardage-cote', ga: 'bois-clair', ha: 'tranche' })}
+          </div>
+          <div class="piece" data-piece="toit">
+            <span class="toit3d toit3d--av" style="transform:translate3d(0,-181px,56px) rotateX(56.3deg)"></span>
+            <span class="toit3d toit3d--ar" style="transform:translate3d(0,-181px,-56px) rotateX(-56.3deg)"></span>
+            <span class="pignon3d" style="transform:translate3d(-160px,-181px,0) rotateY(90deg)"></span>
+            <span class="pignon3d" style="transform:translate3d(160px,-181px,0) rotateY(90deg)"></span>
+          </div>
+        </div>
+      </div>
+      <p class="maquette-indice" aria-hidden="true"><span class="indice-souris">${c.t('accueil.maquette.indice')}</span><span class="indice-tactile">${c.t('accueil.maquette.indiceTactile')}</span></p>
+    </div>
+  </div>
+</section>
+
 <section class="savoir" id="savoir-faire">
   <div class="conteneur savoir-tete">
     <p class="surtitre" data-anime>${c.t('accueil.savoir.surtitre')}</p>
-    <h2 data-anime="lignes">${c.t('accueil.savoir.titre')}</h2>
+    <h2 data-anime="gsap" data-lettres>${c.t('accueil.savoir.titre')}</h2>
   </div>
   <div class="conteneur planches">
     ${['neuf', 'renovation', 'pro'].map((k, i) => html`<article class="planche" style="--i:${i}" data-effet="planches">
@@ -116,6 +149,22 @@ export default (c) => {
   </div>
 </section>
 
+<div class="mots-geants" aria-hidden="true" data-ruban data-audit-ignorer>
+  <p class="mots-rangee" data-effet="mots-geants" data-sens="1">${['lumiere', 'bois', 'paille', 'chaux', 'terre', 'pierre'].map((k, i) => html`<span class="${i % 2 ? 'mot-creux' : 'mot-plein'}">${c.t(`accueil.mots.${k}`)}</span><span class="mot-soleil"></span>`)}${['lumiere', 'bois', 'paille', 'chaux', 'terre', 'pierre'].map((k, i) => html`<span class="${i % 2 ? 'mot-creux' : 'mot-plein'}">${c.t(`accueil.mots.${k}`)}</span><span class="mot-soleil"></span>`)}</p>
+  <p class="mots-rangee mots-rangee--2" data-effet="mots-geants" data-sens="-1">${['vent', 'vues', 'saisons', 'sobriete', 'confort', 'lieu'].map((k, i) => html`<span class="${i % 2 ? 'mot-plein' : 'mot-creux'}">${c.t(`accueil.mots.${k}`)}</span><span class="mot-soleil"></span>`)}${['vent', 'vues', 'saisons', 'sobriete', 'confort', 'lieu'].map((k, i) => html`<span class="${i % 2 ? 'mot-plein' : 'mot-creux'}">${c.t(`accueil.mots.${k}`)}</span><span class="mot-soleil"></span>`)}</p>
+</div>
+
+<section class="plein" id="plein-cadre">
+  <div class="plein-collant" data-plein-ecran>
+  <figure class="plein-cadre" data-effet="plein-ecran" data-tient>
+    ${c.media({ nom: 'plein-combrit', alt: alt('plein-combrit'), classe: 'plein-media', sizes: '100vw' })}
+    <span class="plein-voile" aria-hidden="true"></span>
+  </figure>
+  <h2 class="plein-titre" data-effet="titre-ecarte"><span class="plein-mot plein-mot--g">${c.t('accueil.plein.mot1')}</span><span class="plein-mot plein-mot--d">${c.t('accueil.plein.mot2')}</span></h2>
+  <p class="plein-legende"><span>${c.t('accueil.plein.legende')}</span>${c.lien('realisations', { ancre: 'projet-maison-tg-combrit', classe: 'bouton bouton--soleil', texte: c.t('accueil.plein.lien') })}</p>
+  </div>
+</section>
+
 <section class="projets" id="projets">
   <div class="conteneur projets-tete">
     <p class="surtitre" data-anime>${c.t('accueil.projets.surtitre')}</p>
@@ -139,7 +188,7 @@ export default (c) => {
   <div class="conteneur chiffres-grille">
     <div>
       <p class="surtitre" data-anime>${c.t('accueil.chiffres.surtitre')}</p>
-      <h2 data-anime="lignes">${c.t('accueil.chiffres.titre')}</h2>
+      <h2 data-anime="gsap" data-lettres>${c.t('accueil.chiffres.titre')}</h2>
       <ul class="chiffres-liste" data-anime="cascade" data-grille="typo">
         <li><span class="chiffre-boite"><strong class="chiffre-grand" data-compteur="40" data-effet="chiffres-gras">40</strong><span class="chiffre-unite">%</span></span><span class="chiffre-texte">${c.t('accueil.chiffres.c1')}</span></li>
         <li><span class="chiffre-boite"><strong class="chiffre-grand" data-compteur="70" data-effet="chiffres-gras">70</strong><span class="chiffre-unite">%</span></span><span class="chiffre-texte">${c.t('accueil.chiffres.c2')}</span></li>
@@ -157,7 +206,7 @@ export default (c) => {
   <div class="conteneur zone-carte-boite">
     <div class="zone-texte">
       <p class="surtitre" data-anime>${c.t('accueil.zone.surtitre')}</p>
-      <h2 data-anime="lignes">${c.t('accueil.zone.titre')}</h2>
+      <h2 data-anime="gsap" data-lettres>${c.t('accueil.zone.titre')}</h2>
       <p data-anime>${c.t('accueil.zone.texte')}</p>
       <p class="zone-info" aria-live="polite"><strong data-zone-nom>Quimper</strong><span data-zone-detail>${c.t('accueil.zone.aucun')}</span></p>
       <ul class="zone-communes" data-anime="cascade">${communesSvg(c).liste}</ul>

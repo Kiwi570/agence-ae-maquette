@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-v="1" data-curseur>
+<html lang="fr" data-v="2">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -41,14 +41,14 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 })();</script>
 <link rel="preload" href="/assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/socle.css?v=1">
-<link rel="stylesheet" href="/assets/css/site.css?v=1">
-<link rel="modulepreload" href="/assets/js/site.js?v=1">
-<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<link rel="stylesheet" href="/assets/css/socle.css?v=2">
+<link rel="stylesheet" href="/assets/css/site.css?v=2">
+<link rel="modulepreload" href="/assets/js/site.js?v=2">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
 <script src="/assets/vendor/gsap.min.js" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/SplitText.min.js" defer></script>
-<script type="module" src="/assets/js/site.js?v=1"></script>
+<script type="module" src="/assets/js/site.js?v=2"></script>
 <meta name="theme-color" content="#f2ede3">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -138,10 +138,42 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 </figure>
   </div>
 </section>
+<section class="maquette ecran epingle" id="maquette" data-entete-cache data-plein-ecran data-grille="scene" data-effet="maquette-3d">
+  <div class="conteneur maquette-grille">
+    <div class="maquette-texte">
+      <p class="surtitre">La maquette</p>
+      <h2 class="maquette-titre">Une maison bois se monte en quatre temps</h2>
+      <ol class="maquette-etapes"><li data-etape-m="1"><span class="maquette-num">01</span><span><strong>La dalle.</strong> Tout part du terrain : implantation, orientation, niveaux.</span></li><li data-etape-m="2"><span class="maquette-num">02</span><span><strong>L&#39;ossature bois.</strong> Modulaire, rapide à mettre en œuvre, en construction sèche.</span></li><li data-etape-m="3"><span class="maquette-num">03</span><span><strong>Les baies au sud.</strong> Le soleil d&#39;hiver entre, les vues s&#39;ouvrent.</span></li><li data-etape-m="4"><span class="maquette-num">04</span><span><strong>Le toit et ses débords.</strong> Ils protègent du soleil d&#39;été et de la pluie.</span></li></ol>
+      <p class="maquette-note">Maquette illustrative</p>
+    </div>
+    <div class="maquette-scene" data-visuel data-tient role="img" aria-label="Maquette 3D d&#39;une maison en ossature bois qui se construit au défilement ; faites-la pivoter">
+      <span class="maquette-soleil" aria-hidden="true"></span>
+      <div class="maquette-monde" aria-hidden="true">
+        <div class="maison3d">
+          <div class="sol3d"><span class="sol3d-ombre"></span></div>
+          <div class="piece" data-piece="dalle"><div class="b3 dalle" style="transform:translate3d(0px,-8px,0px)"><span class="f f-av beton" style="width:340px;height:16px;margin:-8px 0 0 -170px;transform:translateZ(107px)"></span><span class="f f-ar beton" style="width:340px;height:16px;margin:-8px 0 0 -170px;transform:rotateY(180deg) translateZ(107px)"></span><span class="f f-dr beton" style="width:214px;height:16px;margin:-8px 0 0 -107px;transform:rotateY(90deg) translateZ(170px)"></span><span class="f f-ga beton" style="width:214px;height:16px;margin:-8px 0 0 -107px;transform:rotateY(-90deg) translateZ(170px)"></span><span class="f f-ha beton-dessus" style="width:340px;height:214px;margin:-107px 0 0 -170px;transform:rotateX(90deg) translateZ(8px)"></span></div></div>
+          <div class="piece" data-piece="murs">
+            <div class="b3 mur" style="transform:translate3d(0px,-81px,98px)"><span class="f f-av facade-sud" style="width:320px;height:130px;margin:-65px 0 0 -160px;transform:translateZ(5px)"></span><span class="f f-ar bois-clair" style="width:320px;height:130px;margin:-65px 0 0 -160px;transform:rotateY(180deg) translateZ(5px)"></span><span class="f f-dr bardage" style="width:10px;height:130px;margin:-65px 0 0 -5px;transform:rotateY(90deg) translateZ(160px)"></span><span class="f f-ga bardage" style="width:10px;height:130px;margin:-65px 0 0 -5px;transform:rotateY(-90deg) translateZ(160px)"></span><span class="f f-ha tranche" style="width:320px;height:10px;margin:-5px 0 0 -160px;transform:rotateX(90deg) translateZ(65px)"></span></div>
+            <div class="b3 mur" style="transform:translate3d(0px,-81px,-98px)"><span class="f f-av bois-clair" style="width:320px;height:130px;margin:-65px 0 0 -160px;transform:translateZ(5px)"></span><span class="f f-ar bardage" style="width:320px;height:130px;margin:-65px 0 0 -160px;transform:rotateY(180deg) translateZ(5px)"></span><span class="f f-dr bardage" style="width:10px;height:130px;margin:-65px 0 0 -5px;transform:rotateY(90deg) translateZ(160px)"></span><span class="f f-ga bardage" style="width:10px;height:130px;margin:-65px 0 0 -5px;transform:rotateY(-90deg) translateZ(160px)"></span><span class="f f-ha tranche" style="width:320px;height:10px;margin:-5px 0 0 -160px;transform:rotateX(90deg) translateZ(65px)"></span></div>
+            <div class="b3 mur" style="transform:translate3d(-155px,-81px,0px)"><span class="f f-av bardage" style="width:10px;height:130px;margin:-65px 0 0 -5px;transform:translateZ(93px)"></span><span class="f f-ar bardage" style="width:10px;height:130px;margin:-65px 0 0 -5px;transform:rotateY(180deg) translateZ(93px)"></span><span class="f f-dr bois-clair" style="width:186px;height:130px;margin:-65px 0 0 -93px;transform:rotateY(90deg) translateZ(5px)"></span><span class="f f-ga bardage-cote" style="width:186px;height:130px;margin:-65px 0 0 -93px;transform:rotateY(-90deg) translateZ(5px)"></span><span class="f f-ha tranche" style="width:10px;height:186px;margin:-93px 0 0 -5px;transform:rotateX(90deg) translateZ(65px)"></span></div>
+            <div class="b3 mur" style="transform:translate3d(155px,-81px,0px)"><span class="f f-av bardage" style="width:10px;height:130px;margin:-65px 0 0 -5px;transform:translateZ(93px)"></span><span class="f f-ar bardage" style="width:10px;height:130px;margin:-65px 0 0 -5px;transform:rotateY(180deg) translateZ(93px)"></span><span class="f f-dr bardage-cote" style="width:186px;height:130px;margin:-65px 0 0 -93px;transform:rotateY(90deg) translateZ(5px)"></span><span class="f f-ga bois-clair" style="width:186px;height:130px;margin:-65px 0 0 -93px;transform:rotateY(-90deg) translateZ(5px)"></span><span class="f f-ha tranche" style="width:10px;height:186px;margin:-93px 0 0 -5px;transform:rotateX(90deg) translateZ(65px)"></span></div>
+          </div>
+          <div class="piece" data-piece="toit">
+            <span class="toit3d toit3d--av" style="transform:translate3d(0,-181px,56px) rotateX(56.3deg)"></span>
+            <span class="toit3d toit3d--ar" style="transform:translate3d(0,-181px,-56px) rotateX(-56.3deg)"></span>
+            <span class="pignon3d" style="transform:translate3d(-160px,-181px,0) rotateY(90deg)"></span>
+            <span class="pignon3d" style="transform:translate3d(160px,-181px,0) rotateY(90deg)"></span>
+          </div>
+        </div>
+      </div>
+      <p class="maquette-indice" aria-hidden="true"><span class="indice-souris">Faites pivoter la maquette</span><span class="indice-tactile">Glissez pour la faire pivoter</span></p>
+    </div>
+  </div>
+</section>
 <section class="savoir" id="savoir-faire">
   <div class="conteneur savoir-tete">
     <p class="surtitre" data-anime>Ce que nous faisons</p>
-    <h2 data-anime="lignes">Trois manières de bâtir</h2>
+    <h2 data-anime="gsap" data-lettres>Trois manières de bâtir</h2>
   </div>
   <div class="conteneur planches">
     <article class="planche" style="--i:0" data-effet="planches">
@@ -227,6 +259,24 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
     </figure>
   </div>
 </section>
+<div class="mots-geants" aria-hidden="true" data-ruban data-audit-ignorer>
+  <p class="mots-rangee" data-effet="mots-geants" data-sens="1"><span class="mot-plein">Lumière</span><span class="mot-soleil"></span><span class="mot-creux">Bois</span><span class="mot-soleil"></span><span class="mot-plein">Paille</span><span class="mot-soleil"></span><span class="mot-creux">Chaux</span><span class="mot-soleil"></span><span class="mot-plein">Terre</span><span class="mot-soleil"></span><span class="mot-creux">Pierre</span><span class="mot-soleil"></span><span class="mot-plein">Lumière</span><span class="mot-soleil"></span><span class="mot-creux">Bois</span><span class="mot-soleil"></span><span class="mot-plein">Paille</span><span class="mot-soleil"></span><span class="mot-creux">Chaux</span><span class="mot-soleil"></span><span class="mot-plein">Terre</span><span class="mot-soleil"></span><span class="mot-creux">Pierre</span><span class="mot-soleil"></span></p>
+  <p class="mots-rangee mots-rangee--2" data-effet="mots-geants" data-sens="-1"><span class="mot-creux">Vent</span><span class="mot-soleil"></span><span class="mot-plein">Vues</span><span class="mot-soleil"></span><span class="mot-creux">Saisons</span><span class="mot-soleil"></span><span class="mot-plein">Sobriété</span><span class="mot-soleil"></span><span class="mot-creux">Confort</span><span class="mot-soleil"></span><span class="mot-plein">Lieu</span><span class="mot-soleil"></span><span class="mot-creux">Vent</span><span class="mot-soleil"></span><span class="mot-plein">Vues</span><span class="mot-soleil"></span><span class="mot-creux">Saisons</span><span class="mot-soleil"></span><span class="mot-plein">Sobriété</span><span class="mot-soleil"></span><span class="mot-creux">Confort</span><span class="mot-soleil"></span><span class="mot-plein">Lieu</span><span class="mot-soleil"></span></p>
+</div>
+<section class="plein" id="plein-cadre">
+  <div class="plein-collant" data-plein-ecran>
+  <figure class="plein-cadre" data-effet="plein-ecran" data-tient>
+    <figure class="media plein-media" style="--cadrage:50% 50%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/plein-combrit-mobile-640.webp 640w" sizes="100vw">
+    <img src="/assets/images/plein-combrit-1280.webp" srcset="/assets/images/plein-combrit-640.webp 640w, /assets/images/plein-combrit-1280.webp 1280w, /assets/images/plein-combrit-1920.webp 1920w" sizes="100vw" alt="Maison T-G à Combrit : pignon vitré et bardage brûlé au soleil couchant" width="1280" height="720" loading="lazy" decoding="async">
+  </picture>
+</figure>
+    <span class="plein-voile" aria-hidden="true"></span>
+  </figure>
+  <h2 class="plein-titre" data-effet="titre-ecarte"><span class="plein-mot plein-mot--g">Maison</span><span class="plein-mot plein-mot--d">T-G</span></h2>
+  <p class="plein-legende"><span>Combrit · Sainte-Marine · ossature bois et bardage brûlé</span><a href="/realisations#projet-maison-tg-combrit" class="bouton bouton--soleil" data-libelle="Réalisations">Voir le projet</a></p>
+  </div>
+</section>
 <section class="projets" id="projets">
   <div class="conteneur projets-tete">
     <p class="surtitre" data-anime>Sélection de projets</p>
@@ -234,16 +284,16 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   </div>
   <ul class="conteneur projets-liste">
     <li class="projet-sel" style="--i:0">
-      <a href="/realisations#projet-maison-tg-combrit" data-libelle="Réalisations">
+      <a href="/realisations#projet-extension-v-benodet" data-libelle="Réalisations">
         <span class="projet-sel-cadre">
           <figure class="media projet-sel-media" data-fx="onde" style="--cadrage:50% 50%">
   <picture>
-    <img src="/assets/images/selection-combrit-1080.webp" srcset="/assets/images/selection-combrit-640.webp 640w, /assets/images/selection-combrit-1080.webp 1080w" sizes="(max-width: 760px) 92vw, 44vw" alt="Maison T-G à Combrit : pergola en bois et bardage brûlé" width="1080" height="1350" loading="lazy" decoding="async">
+    <img src="/assets/images/selection-benodet-1080.webp" srcset="/assets/images/selection-benodet-640.webp 640w, /assets/images/selection-benodet-1080.webp 1080w" sizes="(max-width: 760px) 92vw, 44vw" alt="Extension V à Bénodet : volume en bois et terrasse au coucher du soleil" width="1080" height="1350" loading="lazy" decoding="async">
   </picture>
 </figure>
           <span class="ombre-passe" data-effet="ombre-qui-passe" aria-hidden="true"></span>
         </span>
-        <span class="projet-sel-texte"><span class="projet-sel-type">Neuf et extension</span><strong>Maison T-G</strong><span>Combrit · Sainte-Marine</span></span>
+        <span class="projet-sel-texte"><span class="projet-sel-type">Neuf et extension</span><strong>Extension V</strong><span>Bénodet</span></span>
       </a>
     </li><li class="projet-sel" style="--i:1">
       <a href="/realisations#projet-remise-pigeonnier-treguennec" data-libelle="Réalisations">
@@ -301,7 +351,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <div class="conteneur chiffres-grille">
     <div>
       <p class="surtitre" data-anime>Pourquoi l&#39;écoconstruction</p>
-      <h2 data-anime="lignes">Le bâtiment pèse lourd</h2>
+      <h2 data-anime="gsap" data-lettres>Le bâtiment pèse lourd</h2>
       <ul class="chiffres-liste" data-anime="cascade" data-grille="typo">
         <li><span class="chiffre-boite"><strong class="chiffre-grand" data-compteur="40" data-effet="chiffres-gras">40</strong><span class="chiffre-unite">%</span></span><span class="chiffre-texte">des émissions de gaz à effet de serre viennent du bâtiment, construction et usage compris</span></li>
         <li><span class="chiffre-boite"><strong class="chiffre-grand" data-compteur="70" data-effet="chiffres-gras">70</strong><span class="chiffre-unite">%</span></span><span class="chiffre-texte">des déchets produits en France viennent de la construction et de la démolition</span></li>
@@ -326,7 +376,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <div class="conteneur zone-carte-boite">
     <div class="zone-texte">
       <p class="surtitre" data-anime>Zone d&#39;intervention</p>
-      <h2 data-anime="lignes">Quimper et la côte du Sud Finistère</h2>
+      <h2 data-anime="gsap" data-lettres>Quimper et la côte du Sud Finistère</h2>
       <p data-anime>L&#39;agence intervient principalement autour de Quimper et sur la côte, de Penmarc&#39;h à Moëlan-sur-Mer.</p>
       <p class="zone-info" aria-live="polite"><strong data-zone-nom>Quimper</strong><span data-zone-detail>Commune desservie</span></p>
       <ul class="zone-communes" data-anime="cascade"><li><button type="button" class="puce" data-commune-bouton="Quimper" data-detail="1 réalisation présentée" aria-pressed="false">Quimper</button></li><li><button type="button" class="puce" data-commune-bouton="Pont-l&#39;Abbé" data-detail="Commune desservie" aria-pressed="false">Pont-l&#39;Abbé</button></li><li><button type="button" class="puce" data-commune-bouton="Loctudy" data-detail="2 réalisations présentées" aria-pressed="false">Loctudy</button></li><li><button type="button" class="puce" data-commune-bouton="Île-Tudy" data-detail="Commune desservie" aria-pressed="false">Île-Tudy</button></li><li><button type="button" class="puce" data-commune-bouton="Combrit" data-detail="2 réalisations présentées" aria-pressed="false">Combrit</button></li><li><button type="button" class="puce" data-commune-bouton="Bénodet" data-detail="1 réalisation présentée" aria-pressed="false">Bénodet</button></li><li><button type="button" class="puce" data-commune-bouton="Fouesnant" data-detail="1 réalisation présentée" aria-pressed="false">Fouesnant</button></li><li><button type="button" class="puce" data-commune-bouton="Concarneau" data-detail="1 réalisation présentée" aria-pressed="false">Concarneau</button></li><li><button type="button" class="puce" data-commune-bouton="Névez" data-detail="Commune desservie" aria-pressed="false">Névez</button></li><li><button type="button" class="puce" data-commune-bouton="Moëlan-sur-Mer" data-detail="Commune desservie" aria-pressed="false">Moëlan-sur-Mer</button></li><li><button type="button" class="puce" data-commune-bouton="Penmarc&#39;h" data-detail="2 réalisations présentées" aria-pressed="false">Penmarc&#39;h</button></li></ul>

@@ -4,7 +4,7 @@
    Ici : l'intro (le soleil se lève sur « agence ae » puis rejoint l'objet d'ouverture de la page), le soleil à saisir,
    la course du soleil (fil conducteur), les titres à ombre portée, la coupe bioclimatique, les planches,
    l'ombre qui passe sur les projets, la carte de la zone, puis les effets des pages intérieures. */
-import { demarrer, boucle, etat, versObjet, quand, suivre, lacher, aller } from './socle/index.js?v=1';
+import { demarrer, boucle, etat, versObjet, quand, suivre, lacher, aller } from './socle/index.js?v=2';
 
 const gsap = window.gsap;
 const $ = (s, r = document) => r.querySelector(s);
@@ -14,6 +14,25 @@ const lisse = (a, b, t) => { const x = clamp((t - a) / (b - a)); return x * x * 
 const sourisFine = () => matchMedia('(hover: hover) and (pointer: fine)').matches;
 const ST = () => window.ScrollTrigger;
 const calme = () => etat.calme;
+/* Retour à la section après le bouton du mode calme : la mise en page change beaucoup entre les deux modes
+   (scènes épinglées, sections hautes) ; la restauration du navigateur, en pixels, ne doit pas l'emporter. */
+let sectionDeRetour = null;
+try { sectionDeRetour = sessionStorage.getItem('socle:calme-retour'); } catch (e) { sectionDeRetour = null; }
+if (sectionDeRetour && 'scrollRestoration' in history) history.scrollRestoration = 'manual';
+const reviserRetour = () => {
+  const el = sectionDeRetour && document.getElementById(sectionDeRetour);
+  if (!el) return;
+  const r = el.getBoundingClientRect();
+  if (r.top > innerHeight * 0.5 || r.bottom < innerHeight * 0.3) aller(el, { instant: true });
+};
+if (sectionDeRetour) {
+  addEventListener('load', () => { reviserRetour(); setTimeout(reviserRetour, 250); setTimeout(() => { reviserRetour(); sectionDeRetour = null; }, 900); });
+}
+
+/* Vitesse de défilement lissée, partagée (px/s), sans lecture de mise en page. */
+const vitesse = { v: 0, cible: 0, y: scrollY, t: performance.now(), tt: -1 };
+const amortirVitesse = (dt, t) => { if (t === vitesse.tt) return; vitesse.tt = t; vitesse.cible *= Math.exp(-dt * 7); vitesse.v += (vitesse.cible - vitesse.v) * (1 - Math.exp(-dt * 9)); };
+addEventListener('scroll', () => { const t = performance.now(), dt = Math.max(8, t - vitesse.t); vitesse.cible = clamp((scrollY - vitesse.y) / dt * 1000, -4000, 4000); vitesse.y = scrollY; vitesse.t = t; }, { passive: true });
 
 /* ---------- Heure du soleil (6 h à 21 h) ---------- */
 const heureDe = (t) => { const m = Math.round((6 + t * 15) * 60 / 5) * 5; return { h: Math.floor(m / 60), m: m % 60 }; };
@@ -447,6 +466,7 @@ function preparerPages() {
   planAcces();
   filSaisissable();
   coupeManipulable();
+  preparerV2();
 }
 
 /* Ouverture propre à chaque page : ses lignes de titre montent, ses éléments [data-ouv] arrivent,
@@ -586,7 +606,7 @@ function visionneuse() {
   let x0 = null;
   img.addEventListener('pointerdown', (e) => { x0 = e.clientX; });
   img.addEventListener('pointerup', (e) => { if (x0 == null) return; const d = e.clientX - x0; x0 = null; if (Math.abs(d) > 40) aller_(d < 0 ? 1 : -1); });
-  $$('.real-lien').forEach((a) => a.addEventListener('click', (e) => { e.preventDefault(); ouvrir(a.dataset.projet, a); }));
+  $$('.real-lien, .tour-carte').forEach((a) => a.addEventListener('click', (e) => { e.preventDefault(); ouvrir(a.dataset.projet, a); }));
   const depuisAdresse = () => { const m = location.hash.match(/^#projet-(.+)$/); if (m && D[m[1]]) ouvrir(m[1], $(`[data-projet="${m[1]}"]`)); };
   quand('pret', depuisAdresse);
   addEventListener('hashchange', depuisAdresse);
@@ -635,7 +655,7 @@ function cartouche() {
 
 /* ---------- Convictions : mur en coupe épinglé qui se décompose (point 6) ---------- */
 function murEnCoupe() {
-  const sec = $('.mur');
+  const sec = $('section.mur');
   if (!sec) return;
   const couches = $$('.mur-couche', sec), legende = $$('[data-couche]', sec);
   const appliquer = (p) => {
@@ -786,4 +806,187 @@ function coupeManipulable() {
   astre.addEventListener('pointermove', (e) => { if (e.pointerId === id) sec.__dessiner(angleDe(e)); });
   const fin = (e) => { if (e.pointerId === id) id = null; };
   astre.addEventListener('pointerup', fin); astre.addEventListener('pointercancel', fin);
+}
+
+/* ===================== v2 · animations « wouahou » ===================== */
+function preparerV2() {
+  maquette3d();
+  pleinEcran();
+  motsGeants();
+  lettres();
+  vitesseImages();
+  lumierePointeur();
+  carrousel3d();
+}
+
+/* Vitesse de défilement lissée, partagée (px/s), sans lecture de mise en page. */
+
+/* ---------- Maquette 3D qui se construit au défilement et se fait pivoter à la main ---------- */
+function maquette3d() {
+  const sec = $('.maquette');
+  if (!sec) return;
+  const scene = $('.maquette-scene', sec), maison = $('.maison3d', sec), soleil = $('.maquette-soleil', sec), ombre = $('.sol3d-ombre', sec);
+  const pieces = Object.fromEntries($$('[data-piece]', sec).map((p) => [p.dataset.piece, p]));
+  const murs = $$('.mur', pieces.murs), etapes = $$('[data-etape-m]', sec);
+  const s = { p: 0, ry: -32, main: 0, v: 0, tenu: false };
+  const echelle = () => { const r = scene.getBoundingClientRect(); scene.style.setProperty('--k', Math.min(r.width / 620, r.height / 470, 1.15).toFixed(3)); };
+  echelle(); new ResizeObserver(echelle).observe(scene);
+  const poser = () => {
+    const p = s.p;
+    const ry = -32 + p * 250 + s.main;
+    maison.style.transform = `rotateX(-24deg) rotateY(${ry.toFixed(2)}deg)`;
+    const dalle = lisse(0, 0.16, p), mur = (i) => lisse(0.14 + i * 0.06, 0.34 + i * 0.06, p), toit = lisse(0.62, 0.84, p);
+    pieces.dalle.style.transform = `scale3d(${(0.2 + 0.8 * dalle).toFixed(3)}, ${dalle.toFixed(3)}, ${(0.2 + 0.8 * dalle).toFixed(3)})`;
+    murs.forEach((m, i) => { const k = mur(i); m.style.setProperty('--monte', k.toFixed(3)); m.parentElement === pieces.murs && (m.style.transform = m.dataset.base + ` translateY(${((1 - k) * 65).toFixed(1)}px) scaleY(${Math.max(0.001, k).toFixed(3)})`); });
+    pieces.toit.style.transform = `translate3d(0, ${(-(1 - toit) * 420).toFixed(1)}px, 0) rotateZ(${((1 - toit) * -8).toFixed(2)}deg)`;
+    pieces.toit.style.visibility = toit < 0.01 ? 'hidden' : 'visible';
+    sec.style.setProperty('--vitres', lisse(0.44, 0.6, p).toFixed(3));
+    /* Lumière : le soleil vient du sud-ouest de l'écran ; chaque face est plus ou moins éclairée selon son orientation. */
+    const sol = 205, a = (n) => { const d = ((ry + n - sol) % 360 + 360) % 360 * Math.PI / 180; return (0.62 * (1 - Math.max(0, Math.cos(d)))).toFixed(3); };
+    maison.style.setProperty('--o-av', a(0)); maison.style.setProperty('--o-dr', a(90)); maison.style.setProperty('--o-ar', a(180)); maison.style.setProperty('--o-ga', a(270));
+    maison.style.setProperty('--o-toit', a(0) * 0.7); maison.style.setProperty('--o-toit-ar', a(180) * 0.7);
+    ombre.style.transform = `translate(${(40 + Math.sin(ry * Math.PI / 180) * 30).toFixed(1)}px, ${(-30 + Math.cos(ry * Math.PI / 180) * 20).toFixed(1)}px) skewX(-18deg) scale(${(0.3 + 0.7 * lisse(0.14, 0.5, p)).toFixed(3)})`;
+    soleil.style.transform = `translate3d(${(p * 60).toFixed(1)}px, ${(-Math.sin(p * Math.PI) * 30).toFixed(1)}px, 0)`;
+    const n = p < 0.16 ? 1 : p < 0.44 ? 2 : p < 0.62 ? 3 : 4;
+    etapes.forEach((e, i) => e.classList.toggle('est-active', i + 1 === n));
+  };
+  murs.forEach((m) => { m.dataset.base = m.style.transform; m.style.transformOrigin = '50% 65px'; });
+  if (calme() || !gsap || !ST()) { s.p = 1; s.main = 10; poser(); etapes.forEach((e) => e.classList.add('est-active')); return; }
+  poser();
+  const proxy = { p: 0 };
+  gsap.to(proxy, { p: 1, ease: 'none', onUpdate: () => { s.p = proxy.p; poser(); }, scrollTrigger: { trigger: sec, start: 'top top', end: () => `+=${Math.round(innerHeight * 2.2)}`, pin: true, scrub: 0.8, invalidateOnRefresh: true } });
+  /* Pivoter à la main, avec élan. */
+  let id = null, x0 = 0, t0 = 0;
+  scene.addEventListener('pointerdown', (e) => { if (e.button !== 0) return; id = e.pointerId; s.tenu = true; s.v = 0; x0 = e.clientX; t0 = performance.now(); scene.setPointerCapture(id); scene.classList.add('est-touche'); });
+  scene.addEventListener('pointermove', (e) => { if (!s.tenu || e.pointerId !== id) return; const t = performance.now(), d = (e.clientX - x0) * 0.45; s.v += (d / Math.max(0.008, (t - t0) / 1000) - s.v) * 0.35; s.main += d; x0 = e.clientX; t0 = t; poser(); });
+  const fin = (e) => { if (!s.tenu || (e && e.pointerId !== id)) return; s.tenu = false; if (performance.now() - t0 > 120) s.v = 0; s.v = clamp(s.v, -900, 900); };
+  scene.addEventListener('pointerup', fin); scene.addEventListener('pointercancel', fin);
+  boucle(scene, (dt) => { if (s.tenu || Math.abs(s.v) < 4) return; s.main += s.v * dt; s.v *= Math.exp(-dt * 2.4); poser(); });
+}
+
+/* ---------- Photo de projet qui s'ouvre jusqu'au plein écran, titre géant qui s'écarte ---------- */
+function pleinEcran() {
+  const sec = $('.plein');
+  if (!sec) return;
+  const cadre = $('.plein-cadre', sec), img = $('.plein-media img', sec), g = $('.plein-mot--g', sec), d = $('.plein-mot--d', sec), leg = $('.plein-legende', sec);
+  if (calme() || !gsap || !ST()) return;
+  const tl = gsap.timeline({ scrollTrigger: { trigger: sec, start: 'top top', end: 'bottom bottom', scrub: 0.7, invalidateOnRefresh: true } });
+  tl.fromTo(cadre, { clipPath: 'inset(22% 30% 22% 30% round 22px)' }, { clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'power2.inOut', duration: 1 }, 0)
+    .fromTo(g, { xPercent: 0 }, { xPercent: -38, ease: 'power1.in', duration: 1 }, 0)
+    .fromTo(d, { xPercent: 0 }, { xPercent: 60, ease: 'power1.in', duration: 1 }, 0)
+    .fromTo(leg, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3 }, 0.85);
+}
+
+/* ---------- Mots géants qui filent au défilement, inclinés par la vitesse ---------- */
+function motsGeants() {
+  const rangees = $$('.mots-rangee');
+  if (!rangees.length || calme() || !gsap || !ST()) return;
+  rangees.forEach((r) => {
+    const sens = +r.dataset.sens || 1, boite = r.closest('.mots-geants');
+    const etat_ = { x: 0 };
+    const quick = gsap.quickSetter(r, 'css');
+    gsap.fromTo(etat_, { x: sens > 0 ? 0 : -30 }, { x: sens > 0 ? -30 : 0, ease: 'none', scrollTrigger: { trigger: boite, start: 'top bottom', end: 'bottom top', scrub: 0.4 }, onUpdate: () => quick({ xPercent: etat_.x, skewX: clamp(-vitesse.v / 220, -10, 10) }) });
+  });
+  /* Inclinaison qui retombe quand le défilement s'arrête. */
+  const boucleEl = rangees[0];
+  boucle(boucleEl, (dt, t) => {
+    amortirVitesse(dt, t);
+    if (Math.abs(vitesse.v) > 1) rangees.forEach((r) => gsap.set(r, { skewX: clamp(-vitesse.v / 220, -10, 10) }));
+  });
+}
+
+/* ---------- Titres h2 qui arrivent lettre par lettre, en rotation ---------- */
+function lettres() {
+  const titres = $$('[data-lettres]');
+  if (!titres.length) return;
+  const montrer = (el) => { el.classList.add('vu'); el.style.opacity = 1; };
+  if (calme() || !gsap || !ST() || !window.SplitText || etat.arrivee === 'retour') { titres.forEach(montrer); return; }
+  titres.forEach((el) => {
+    ST().create({
+      trigger: el.parentElement, start: 'top 82%', once: true,
+      onEnter: () => {
+        montrer(el);
+        let d = null;
+        /* Hauteur figée pendant l'animation : la découpe ne décale jamais la page (positions des effets stables). */
+        el.style.height = `${el.offsetHeight}px`;
+        try { d = new window.SplitText(el, { type: 'words,chars', charsClass: 'fx-lettre' }); } catch (e) { el.style.height = ''; return; }
+        gsap.fromTo(d.chars, { yPercent: 60, rotate: 12, opacity: 0, transformOrigin: '0% 100%' }, { yPercent: 0, rotate: 0, opacity: 1, duration: 0.8, ease: 'power3.out', stagger: 0.018, onComplete: () => { d.revert(); el.style.height = ''; } });
+      },
+    });
+  });
+}
+
+/* ---------- Images de projets qui se déforment selon la vitesse de défilement ---------- */
+function vitesseImages() {
+  const cibles = $$('.projet-sel-cadre, .real-media');
+  if (!cibles.length || calme() || !gsap) return;
+  const set = cibles.map((c) => gsap.quickSetter(c, 'skewY', 'deg'));
+  let dernier = 0;
+  boucle(cibles[0].closest('section') || document.body, (dt, t) => {
+    amortirVitesse(dt, t);
+    const k = clamp(vitesse.v / 900, -3.2, 3.2);
+    if (Math.abs(k - dernier) > 0.01) { dernier = k; set.forEach((f) => f(k)); }
+  });
+}
+
+/* ---------- Lumière-soleil au pointeur (souris seulement), plus forte sur les photos ---------- */
+function lumierePointeur() {
+  if (!sourisFine() || calme()) return;
+  const el = document.createElement('div');
+  el.className = 'lumiere-pointeur'; el.setAttribute('aria-hidden', 'true'); el.dataset.auditIgnorer = ''; el.dataset.souris = '';
+  document.body.appendChild(el);
+  const p = { x: -500, y: -500, cx: -500, cy: -500, bouge: false };
+  let raf = 0;
+  const pas = () => {
+    raf = 0;
+    p.cx += (p.x - p.cx) * 0.2; p.cy += (p.y - p.cy) * 0.2;
+    el.style.transform = `translate3d(${p.cx.toFixed(1)}px, ${p.cy.toFixed(1)}px, 0)`;
+    if (Math.abs(p.x - p.cx) + Math.abs(p.y - p.cy) > 0.3) raf = requestAnimationFrame(pas);
+  };
+  addEventListener('pointermove', (e) => {
+    if (e.pointerType !== 'mouse') return;
+    p.x = e.clientX; p.y = e.clientY;
+    if (!p.bouge) { p.bouge = true; p.cx = p.x; p.cy = p.y; el.classList.add('est-actif'); }
+    const cible = e.target;
+    el.classList.toggle('sur-photo', !!(cible && cible.closest && cible.closest('.media, .tour-carte, .maquette-scene')));
+    el.style.visibility = cible && cible.closest && cible.closest('input, textarea, select') ? 'hidden' : 'visible';
+    if (!raf) raf = requestAnimationFrame(pas);
+  }, { passive: true });
+  document.addEventListener('pointerleave', () => el.classList.remove('est-actif'));
+}
+
+/* ---------- Réalisations : carrousel 3D courbe, au défilement et à la main ---------- */
+function carrousel3d() {
+  const scene = $('.tour-scene');
+  if (!scene) return;
+  const cyl = $('.tour-cylindre', scene), cartes = $$('.tour-carte', scene);
+  const pasA = 360 / Math.max(1, cartes.length);
+  const s = { def: 0, main: 0, v: 0, tenu: false, cible: null };
+  const poser = () => {
+    const a = s.def + s.main; cyl.style.transform = `rotateX(-6deg) rotateY(${(-a).toFixed(2)}deg)`;
+    /* Les cartes de profil ou de dos ne sont ni visibles ni cliquables (zones trop étroites). */
+    if (!calme()) cartes.forEach((c, i) => { const d = ((i * pasA - a) % 360 + 540) % 360 - 180, face = Math.abs(d) < 68; if (face !== c.__face) { c.__face = face; c.style.visibility = face ? 'visible' : 'hidden'; c.tabIndex = face ? 0 : -1; } });
+  };
+  const viser = (d) => { const a = s.def + s.main; const i = Math.round(a / pasA) + d; s.cible = i * pasA - s.def; };
+  $('.tour-prec').addEventListener('click', () => { viser(-1); if (calme()) { s.main = s.cible; poser(); } });
+  $('.tour-suiv').addEventListener('click', () => { viser(1); if (calme()) { s.main = s.cible; poser(); } });
+  if (calme() || !gsap || !ST()) return;
+  poser();
+  gsap.fromTo(s, { def: -40 }, { def: 140, ease: 'none', onUpdate: poser, scrollTrigger: { trigger: '.tour', start: 'top bottom', end: 'bottom top', scrub: 0.6 } });
+  let id = null, x0 = 0, t0 = 0, glisse = 0;
+  scene.addEventListener('pointerdown', (e) => { if (e.button !== 0) return; id = e.pointerId; s.tenu = true; s.v = 0; s.cible = null; x0 = e.clientX; t0 = performance.now(); glisse = 0; });
+  scene.addEventListener('pointermove', (e) => {
+    if (!s.tenu || e.pointerId !== id) return;
+    const t = performance.now(), d = -(e.clientX - x0) * 0.22; glisse += Math.abs(e.clientX - x0);
+    if (glisse > 6 && !scene.hasPointerCapture(id)) scene.setPointerCapture(id);
+    s.v += (d / Math.max(0.008, (t - t0) / 1000) - s.v) * 0.35; s.main += d; x0 = e.clientX; t0 = t; poser();
+  });
+  const fin = (e) => { if (!s.tenu || (e && e.pointerId !== id)) return; s.tenu = false; if (performance.now() - t0 > 120) s.v = 0; s.v = clamp(s.v, -500, 500); };
+  scene.addEventListener('pointerup', fin); scene.addEventListener('pointercancel', fin);
+  scene.addEventListener('click', (e) => { if (glisse > 6) { e.preventDefault(); e.stopPropagation(); } }, true);
+  boucle(scene, (dt) => {
+    if (s.tenu) return;
+    if (Math.abs(s.v) > 3) { s.main += s.v * dt; s.v *= Math.exp(-dt * 2.2); poser(); }
+    else if (s.cible != null) { s.main += (s.cible - s.main) * (1 - Math.exp(-dt * 6)); if (Math.abs(s.cible - s.main) < 0.05) s.cible = null; poser(); }
+  });
 }

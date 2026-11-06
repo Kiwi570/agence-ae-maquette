@@ -1,6 +1,29 @@
 {
   "echecs": [],
-  "aRegarder": [],
+  "aRegarder": [
+    {
+      "niveau": "regarder",
+      "controle": "rechargement au milieu de la page",
+      "detail": "écran différent à la même position après rechargement (8.9 %), voir comparaisons/rechargement-atelier-*.png",
+      "etape": "parcours",
+      "page": "/atelier",
+      "taille": "1366×768",
+      "lieux": [
+        "1366×768"
+      ]
+    },
+    {
+      "niveau": "regarder",
+      "controle": "rechargement au milieu de la page",
+      "detail": "écran différent à la même position après rechargement (6.2 %), voir comparaisons/rechargement-realisations-*.png",
+      "etape": "parcours",
+      "page": "/realisations",
+      "taille": "1366×768",
+      "lieux": [
+        "1366×768"
+      ]
+    }
+  ],
   "nonLances": [],
   "oks": {
     "vercel.json": 1,
@@ -8,14 +31,73 @@
     "robots.txt": 1,
     "numéro de version": 1,
     "langues": 1,
-    "mesures": 22,
-    "balayage": 2
+    "grille wouahou": 7,
+    "intro accélérable et passable": 7,
+    "menu": 1,
+    "clavier": 6,
+    "liens et boutons": 6,
+    "liens profonds": 15,
+    "liens vers la page en cours": 5,
+    "changements de hauteur": 5,
+    "mode calme": 10,
+    "bouton du mode calme": 2,
+    "parcours du projet": 1,
+    "tient dans l’écran": 8,
+    "mouvement": 10,
+    "effets du plan": 25,
+    "souris immobile": 6
   },
   "infos": [
-    "Numéro de version des fichiers : ?v=1",
-    "Journal v1 : 7 étape(s) notée(s), 63 min de travail pour 95 min de budget, 19 min d’attente de l’utilisateur.",
-    "Audit standard : étapes lourdes sur /, /convictions.",
-    "Accessibilité : axe-core 4.12.1 en plus des contrôles intégrés."
+    "Numéro de version des fichiers : ?v=2",
+    "Journal v2 : 1 étape(s) notée(s), 5 min de travail pour 45 min de budget, 3 min d’attente de l’utilisateur.",
+    "Audit standard : étapes lourdes sur /, /atelier, /contact, /convictions, /realisations.",
+    "Accessibilité : axe-core 4.12.1 en plus des contrôles intégrés.",
+    "Tient dans l'écran /atelier : aucune section épinglée ou plein écran.",
+    "Tient dans l'écran /contact : aucune section épinglée ou plein écran.",
+    "Tient dans l'écran /realisations : aucune section épinglée ou plein écran."
   ],
-  "grille": []
+  "grille": [
+    {
+      "cle": "manipuler",
+      "nom": "1. L’effet signature se manipule",
+      "statut": "présent",
+      "detail": "accueil et 1 autre(s) page(s)"
+    },
+    {
+      "cle": "intro",
+      "nom": "2. L’intro devient la page",
+      "statut": "présent",
+      "detail": "objet d’ouverture sur 5 page(s), versObjet dans l’intro"
+    },
+    {
+      "cle": "voile",
+      "nom": "3. La transition reprend le motif",
+      "statut": "présent",
+      "detail": "voile en iris"
+    },
+    {
+      "cle": "fil",
+      "nom": "4. Un fil conducteur traverse le site",
+      "statut": "présent",
+      "detail": "sur les 5 page(s)"
+    },
+    {
+      "cle": "typo",
+      "nom": "5. La typographie bouge aussi",
+      "statut": "présent",
+      "detail": "sur les 5 page(s)"
+    },
+    {
+      "cle": "scene",
+      "nom": "6. Les scènes épinglées sont des gestes du métier",
+      "statut": "présent",
+      "detail": "geste du métier sur /atelier, /convictions, /"
+    },
+    {
+      "cle": "retour",
+      "nom": "7. L’action principale a un retour physique",
+      "statut": "présent",
+      "detail": "sur /contact"
+    }
+  ]
 }

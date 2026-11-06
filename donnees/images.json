@@ -261,6 +261,25 @@
     784
    ],
    "ratio": "4:5"
+  },
+  "plein-combrit": {
+   "alt": "Maison T-G à Combrit : pignon vitré et bardage brûlé au soleil couchant",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1280,
+    1920
+   ],
+   "ratio": "16:9"
+  },
+  "selection-benodet": {
+   "alt": "Extension V à Bénodet : volume en bois et terrasse au coucher du soleil",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1080
+   ],
+   "ratio": "4:5"
   }
  },
  "projets": {

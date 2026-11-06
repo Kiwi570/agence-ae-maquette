@@ -653,3 +653,120 @@ html.calme .rdv-recap.est-recu .tampon { opacity: 1; }
 @media (max-width: 760px) and (max-height: 700px) { .contact-coord { display: none; } .contact-soleil { width: 60px; height: 60px; margin-bottom: 4px; } .contact-titre { font-size: 2.1rem; } }
 .planche .lien-fleche { min-height: 50px; }
 .mur-etiquette { background: var(--nuit); padding: 3px 8px; border-radius: 99px; }
+
+/* ===================== v2 · animations « wouahou » ===================== */
+
+/* Maquette 3D qui se construit (CSS 3D) */
+.maquette { background: radial-gradient(120% 90% at 70% 40%, #2c3439, var(--nuit) 70%); color: var(--ecru); overflow: hidden; }
+.maquette .surtitre { color: #f3c48f; }
+.maquette-grille { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(20px, 4vw, 56px); align-items: center; flex: 1 1 auto; min-height: 0; width: min(100% - 2 * var(--gouttiere) - 20px, var(--largeur)); }
+.maquette-titre { font-size: clamp(1.7rem, 1rem + 2.2vw, 3rem); max-width: 14ch; }
+.maquette-etapes { list-style: none; margin: 1.2rem 0; padding: 0; display: grid; gap: 10px; }
+.maquette-etapes li { display: flex; gap: 14px; align-items: baseline; padding: 10px 14px; border-radius: 12px; color: rgba(242, 237, 227, .78); transition: background .4s, color .4s; }
+.maquette-etapes li strong { color: var(--ecru); font-weight: 700; }
+.maquette-etapes li.est-active { background: rgba(224, 145, 63, .16); color: var(--ecru); }
+.maquette-num { font: 700 .8rem/1 var(--police-texte); color: #f3c48f; letter-spacing: .1em; }
+.maquette-note { font-size: .8rem; color: rgba(242, 237, 227, .75); }
+.maquette-scene { position: relative; height: 100%; max-height: 680px; min-height: 0; perspective: 1400px; perspective-origin: 50% 35%; cursor: grab; touch-action: pan-y; --k: 1; }
+.maquette-scene:active { cursor: grabbing; }
+.maquette-soleil { position: absolute; left: 12%; top: 10%; width: 64px; height: 64px; border-radius: 50%; background: radial-gradient(circle at 38% 36%, #fbd9a4, var(--soleil) 55%, var(--ocre)); box-shadow: 0 0 80px 30px rgba(240, 160, 80, .35); will-change: transform; }
+.maquette-monde { position: absolute; left: 50%; top: 60%; width: 0; height: 0; transform-style: preserve-3d; transform: scale(var(--k)); }
+.maison3d { position: absolute; left: 0; top: 0; transform-style: preserve-3d; transform: rotateX(-24deg) rotateY(-32deg); will-change: transform; }
+.piece, .b3 { position: absolute; left: 0; top: 0; transform-style: preserve-3d; }
+.f { position: absolute; left: 0; top: 0; backface-visibility: visible; }
+.f::after { content: ''; position: absolute; inset: 0; background: #0b0f11; opacity: var(--o, .2); pointer-events: none; }
+.f-av { --o: var(--o-av, .15); } .f-ar { --o: var(--o-ar, .5); } .f-dr { --o: var(--o-dr, .3); } .f-ga { --o: var(--o-ga, .4); } .f-ha { --o: .05; }
+.beton { background: #9b928a; } .beton-dessus { background: #b9b0a6; }
+.bardage { background: repeating-linear-gradient(90deg, #26211e 0 9px, #3a322d 9px 11px); }
+.bardage-cote { background: repeating-linear-gradient(90deg, #2b2521 0 9px, #3d3530 9px 11px); }
+.bois-clair { background: repeating-linear-gradient(90deg, #d2b48a 0 12px, #c3a378 12px 13px); }
+.tranche { background: #c9a77a; }
+.facade-sud { background:
+  linear-gradient(180deg, rgba(190, 220, 235, .92), rgba(100, 135, 155, .95)) 9% 22% / 34% 74% no-repeat,
+  linear-gradient(180deg, rgba(190, 220, 235, .92), rgba(100, 135, 155, .95)) 58% 22% / 18% 74% no-repeat,
+  linear-gradient(180deg, rgba(190, 220, 235, .92), rgba(100, 135, 155, .95)) 88% 30% / 10% 36% no-repeat,
+  repeating-linear-gradient(90deg, #2a2420 0 9px, #3c342f 9px 11px); }
+.toit3d { position: absolute; left: 0; top: 0; width: 370px; height: 126px; margin: -63px 0 0 -185px; background: repeating-linear-gradient(90deg, #1d2124 0 22px, #2a2f33 22px 24px); backface-visibility: visible; }
+.toit3d::after { content: ''; position: absolute; inset: 0; background: #0b0f11; opacity: var(--o-toit, .2); }
+.toit3d--ar::after { opacity: var(--o-toit-ar, .5); }
+.pignon3d { position: absolute; left: 0; top: 0; width: 210px; height: 70px; margin: -35px 0 0 -105px; clip-path: polygon(50% 0, 100% 100%, 0 100%); background: repeating-linear-gradient(90deg, #26211e 0 9px, #3a322d 9px 11px); }
+.sol3d { position: absolute; left: 0; top: 0; width: 640px; height: 480px; margin: -240px 0 0 -320px; transform: rotateX(90deg); background: radial-gradient(closest-side, rgba(120, 140, 100, .55), rgba(60, 72, 52, .25) 70%, transparent); }
+.sol3d-ombre { position: absolute; left: 50%; top: 50%; width: 360px; height: 230px; margin: -115px 0 0 -180px; background: rgba(8, 10, 12, .55); filter: none; border-radius: 6px; transform-origin: 50% 50%; transform: translate(40px, -30px) skewX(-18deg); }
+.maquette-indice { position: absolute; left: 50%; bottom: 6%; transform: translateX(-50%); margin: 0; padding: .4em .9em; border-radius: 99px; background: var(--ecru); color: var(--nuit); font: 700 .82rem/1.2 var(--police-texte); white-space: nowrap; }
+html:not(.js) .maquette, html.calme .maquette, html.secours .maquette { height: auto; }
+html:not(.js) .maquette-scene, html.calme .maquette-scene { height: 460px; }
+@media (max-width: 760px) {
+  .maquette-grille { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1fr) auto; gap: 8px; }
+  .maquette-scene { grid-row: 1; height: 100%; min-height: 240px; }
+  .maquette-texte { grid-row: 2; }
+  .maquette-titre { font-size: 1.4rem; margin-bottom: .2em; }
+  .maquette-etapes { margin: .5rem 0; gap: 4px; }
+  .maquette-etapes li { padding: 6px 10px; font-size: .9rem; }
+  .maquette-etapes li:not(.est-active) { display: none; }
+  html.calme .maquette-etapes li, html:not(.js) .maquette-etapes li { display: flex; }
+  .maquette-soleil { width: 44px; height: 44px; }
+}
+@media (max-height: 760px) and (min-width: 761px) { .maquette-etapes li { padding: 6px 12px; font-size: .92rem; } .maquette-titre { font-size: 1.9rem; } }
+
+/* Mots géants qui filent au défilement et s'inclinent selon la vitesse */
+.mots-geants { overflow: hidden; padding: clamp(28px, 6vh, 64px) 0; background: var(--ecru); }
+.mots-geants--sombre { background: var(--nuit); }
+.mots-rangee { display: flex; align-items: center; gap: .3em; width: max-content; margin: 0; font: 400 clamp(3.4rem, 1.6rem + 8vw, 10rem)/1 var(--police-titres); letter-spacing: -.03em; white-space: nowrap; will-change: transform; }
+.mots-rangee--2 { margin-top: .1em; }
+.mot-plein { color: var(--nuit); }
+.mot-creux { color: transparent; -webkit-text-stroke: 1.5px var(--ocre); }
+.mots-geants--sombre .mot-plein { color: var(--ecru); }
+.mots-geants--sombre .mot-creux { -webkit-text-stroke-color: var(--soleil); }
+.mot-soleil { flex: none; width: .32em; height: .32em; border-radius: 50%; background: var(--soleil); }
+
+/* Photo de projet qui s'ouvre jusqu'au plein écran */
+.plein { position: relative; background: var(--nuit); color: var(--ecru); padding: 0; overflow: hidden; }
+.plein-cadre { position: absolute; inset: var(--entete-h) 0 0 0; margin: 0; clip-path: inset(22% 30% 22% 30% round 22px); will-change: clip-path; }
+.plein-media { position: absolute; inset: 0; border-radius: 0; }
+.plein-media img { transform: none; }
+.plein-voile { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(14, 18, 20, .78), rgba(14, 18, 20, 0) 48%); pointer-events: none; }
+.plein-titre { position: absolute; z-index: 2; left: 0; right: 0; top: 50%; transform: translateY(-50%); margin: 0; display: flex; justify-content: center; gap: .25em; font: 400 clamp(3.6rem, 1rem + 12vw, 13rem)/1 var(--police-titres); letter-spacing: -.035em; pointer-events: none; color: var(--ecru); }
+.plein-mot { display: inline-block; will-change: transform; }
+.plein-mot--d { font-style: italic; color: #f6cf9c; }
+.plein-legende { position: absolute; z-index: 2; left: var(--gouttiere); right: var(--gouttiere); bottom: calc(var(--barres-h) + clamp(24px, 6vh, 56px)); margin: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; font-weight: 700; }
+html:not(.js) .plein-cadre, html.calme .plein-cadre, html.secours .plein-cadre { clip-path: none; }
+html:not(.js) .plein-media img, html.calme .plein-media img { transform: none; }
+html:not(.js) .plein, html.calme .plein { min-height: 100svh; }
+
+/* Titres qui arrivent lettre par lettre */
+[data-lettres] .fx-lettre { display: inline-block; will-change: transform; }
+
+/* Lumière-soleil au pointeur (souris seulement) : le curseur natif reste visible */
+.lumiere-pointeur { position: fixed; left: 0; top: 0; z-index: 760; width: 0; height: 0; pointer-events: none; opacity: 0; transition: opacity .4s; }
+.lumiere-pointeur.est-actif { opacity: 1; }
+.lumiere-pointeur::before { content: ''; position: absolute; left: -170px; top: -170px; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 196, 120, .26), rgba(255, 170, 90, .1) 38%, transparent 68%); transform: scale(var(--eclat, .55)); transition: transform .45s var(--courbe); }
+.lumiere-pointeur::after { content: ''; position: absolute; left: -7px; top: -7px; width: 14px; height: 14px; border-radius: 50%; background: radial-gradient(circle at 40% 38%, #fbd9a4, var(--soleil) 60%, var(--ocre)); box-shadow: 0 0 14px 4px rgba(240, 160, 80, .5); }
+.lumiere-pointeur.sur-photo { --eclat: 1.15; }
+html.calme .lumiere-pointeur, html.menu-ouvert .lumiere-pointeur { display: none; }
+
+/* Carrousel 3D des réalisations */
+.tour { padding: clamp(64px, 10vh, 120px) 0 clamp(40px, 6vh, 72px); background: var(--nuit); color: var(--ecru); overflow: hidden; }
+.tour .surtitre { color: #f3c48f; }
+.tour-scene { position: relative; height: clamp(380px, 44vw, 580px); perspective: 1600px; perspective-origin: 50% 40%; cursor: grab; touch-action: pan-y; margin-top: 1rem; }
+.tour-scene:active { cursor: grabbing; }
+.tour-cylindre { position: absolute; left: 50%; top: 42%; width: 0; height: 0; transform-style: preserve-3d; will-change: transform; --r: clamp(320px, 42vw, 640px); }
+.tour-carte { position: absolute; left: -130px; top: -120px; width: 260px; text-decoration: none; color: var(--ecru); transform: rotateY(calc(var(--i) * 30deg)) translateZ(var(--r)); backface-visibility: hidden; }
+.tour-carte img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .7); }
+.tour-carte span { display: grid; gap: 2px; padding-top: 8px; font-size: .9rem; }
+.tour-carte strong { font: 400 1.15rem/1.2 var(--police-titres); }
+.tour-carte:focus-visible img { outline: 3px solid var(--soleil); outline-offset: 4px; }
+.tour-commandes { position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 1.4rem; }
+.tour-commandes .vis-bouton { position: static; margin: 0; }
+.tour-indice { font-weight: 700; font-size: .9rem; color: rgba(242, 237, 227, .85); }
+@media (max-width: 760px) { .tour-carte { width: 180px; left: -90px; top: -90px; } .tour-cylindre { --r: 260px; } .tour-scene { height: 300px; } }
+html:not(.js) .tour-cylindre, html.calme .tour-cylindre { position: static; width: auto; height: auto; display: flex; gap: 16px; overflow-x: auto; padding: 0 var(--gouttiere); transform: none; }
+html:not(.js) .tour-carte, html.calme .tour-carte { position: static; transform: none; flex: none; }
+html:not(.js) .tour-scene, html.calme .tour-scene { height: auto; perspective: none; }
+.facade-sud::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, #2a2420 0 9px, #3c342f 9px 11px); opacity: calc(1 - var(--vitres, 1)); }
+
+/* Photo plein écran sans épinglage : section haute, scène collante (positions stables au rechargement) */
+.plein { height: 260vh; height: 260svh; overflow: clip; }
+.plein-collant { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
+.plein-cadre { inset: var(--entete-h) 0 8px 0; }
+html:not(.js) .plein, html.calme .plein, html.secours .plein { height: auto; }
+html:not(.js) .plein-collant, html.calme .plein-collant, html.secours .plein-collant { position: relative; }
