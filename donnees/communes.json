@@ -1,0 +1,100 @@
+[
+ {
+  "nom": "Quimper",
+  "lat": 47.996,
+  "lon": -4.102,
+  "zone": true,
+  "agence": true
+ },
+ {
+  "nom": "Ergué-Gabéric",
+  "lat": 47.996,
+  "lon": -4.02
+ },
+ {
+  "nom": "Tréméoc",
+  "lat": 47.905,
+  "lon": -4.214
+ },
+ {
+  "nom": "Pont-l'Abbé",
+  "lat": 47.866,
+  "lon": -4.223,
+  "zone": true
+ },
+ {
+  "nom": "Loctudy",
+  "lat": 47.834,
+  "lon": -4.171,
+  "zone": true
+ },
+ {
+  "nom": "Île-Tudy",
+  "lat": 47.844,
+  "lon": -4.165,
+  "zone": true,
+  "discret": true
+ },
+ {
+  "nom": "Combrit",
+  "lat": 47.887,
+  "lon": -4.155,
+  "zone": true
+ },
+ {
+  "nom": "Bénodet",
+  "lat": 47.876,
+  "lon": -4.106,
+  "zone": true
+ },
+ {
+  "nom": "Fouesnant",
+  "lat": 47.894,
+  "lon": -4.012,
+  "zone": true
+ },
+ {
+  "nom": "Concarneau",
+  "lat": 47.874,
+  "lon": -3.918,
+  "zone": true
+ },
+ {
+  "nom": "Névez",
+  "lat": 47.82,
+  "lon": -3.792,
+  "zone": true
+ },
+ {
+  "nom": "Riec-sur-Belon",
+  "lat": 47.844,
+  "lon": -3.693
+ },
+ {
+  "nom": "Moëlan-sur-Mer",
+  "lat": 47.814,
+  "lon": -3.629,
+  "zone": true
+ },
+ {
+  "nom": "Penmarc'h",
+  "lat": 47.811,
+  "lon": -4.338,
+  "zone": true
+ },
+ {
+  "nom": "Tréguennec",
+  "lat": 47.87,
+  "lon": -4.33
+ },
+ {
+  "nom": "Meilars",
+  "lat": 48.03,
+  "lon": -4.47
+ },
+ {
+  "nom": "Quimperlé",
+  "lat": 47.873,
+  "lon": -3.549
+ }
+]

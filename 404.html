@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page introuvable : Agence AE</title>
+<meta name="description" content="Cette page n&#39;existe pas ou plus.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://agence-ae-maquette.vercel.app/404">
+<style>:root{--fond:#f2ede3;--texte:#1e2427;--voile-fond:#c26a28;--ouverture-fond:#1e2427;--menu-fond:#f2ede3}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#f2ede3">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="agence ae">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Page introuvable : Agence AE">
+<meta property="og:description" content="Cette page n&#39;existe pas ou plus.">
+<meta property="og:url" content="https://agence-ae-maquette.vercel.app/404">
+<meta property="og:image" content="https://agence-ae-maquette.vercel.app/assets/partage/accueil-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Agence AE, architecture environnementale à Quimper, maison en bardage brûlé au soleil couchant">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"L'Agence AE","alternateName":"Agence d'Architecture Environnementale","url":"https://agence-ae-maquette.vercel.app/","telephone":"+33767426991","email":"agence.ae.quimper@gmail.com","foundingDate":"2010","founder":{"@type":"Person","name":"Marine Gourlay","jobTitle":"Architecte D.E. HMONP"},"address":{"@type":"PostalAddress","streetAddress":"2 place Denis Bérardier, Le Prieuré","addressLocality":"Quimper","addressRegion":"Bretagne","addressCountry":"FR"},"areaServed":["Quimper","Pont-l'Abbé","Concarneau","Bénodet","Fouesnant","Combrit","Moëlan-sur-Mer","Névez","Penmarc'h","Loctudy","Île-Tudy"],"sameAs":["https://www.instagram.com/agenceae","https://www.facebook.com/agenceaequimper"],"description":"Atelier d'architecture environnementale à Quimper : construction neuve, extension, rénovation et réhabilitation, locaux professionnels, en Sud Finistère."}</script>
+</head>
+<body id="haut">
+<div data-voile data-forme="iris" aria-hidden="true"><div class="voile-contenu"><span class="voile-ae"></span><span data-voile-libelle>Page introuvable</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <span class="ouverture-aube"></span>
+  <div class="ouverture-scene">
+    <svg class="ouverture-arc" viewBox="0 0 600 300" preserveAspectRatio="none"><path d="M20 290 A280 270 0 0 1 580 290" pathLength="1"/></svg>
+    <span class="ouverture-soleil" data-ouverture-objet></span>
+    <p class="ouverture-nom"><span class="ouv-l" style="--i:0"><span class="ouv-ombre">a</span><span class="ouv-lettre">a</span></span><span class="ouv-l" style="--i:1"><span class="ouv-ombre">g</span><span class="ouv-lettre">g</span></span><span class="ouv-l" style="--i:2"><span class="ouv-ombre">e</span><span class="ouv-lettre">e</span></span><span class="ouv-l" style="--i:3"><span class="ouv-ombre">n</span><span class="ouv-lettre">n</span></span><span class="ouv-l" style="--i:4"><span class="ouv-ombre">c</span><span class="ouv-lettre">c</span></span><span class="ouv-l" style="--i:5"><span class="ouv-ombre">e</span><span class="ouv-lettre">e</span></span><span class="ouv-esp"> </span><span class="ouv-l" style="--i:7"><span class="ouv-ombre">a</span><span class="ouv-lettre">a</span></span><span class="ouv-l" style="--i:8"><span class="ouv-ombre">e</span><span class="ouv-lettre">e</span></span></p>
+    <span class="ouverture-trait"></span>
+  </div>
+  <p class="ouverture-ligne">Architecture environnementale · Quimper</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" aria-label="agence ae, accueil" href="/" data-libelle="Accueil">
+      <span class="logo-mot" role="img" aria-label="agence ae"></span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/realisations" data-libelle="Réalisations">Réalisations</a></li><li><a href="/atelier" data-libelle="L&#39;Atelier">L&#39;Atelier</a></li><li><a href="/convictions" data-libelle="Convictions">Convictions</a></li><li><a href="/contact" data-libelle="Contact">Contact</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton" href="/contact#rendez-vous" data-libelle="Contact">Premier rendez-vous</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <ul><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/realisations" class="menu-lien" data-libelle="Réalisations">Réalisations</a></li><li style="--i:2"><a href="/atelier" class="menu-lien" data-libelle="L&#39;Atelier">L&#39;Atelier</a></li><li style="--i:3"><a href="/convictions" class="menu-lien" data-libelle="Convictions">Convictions</a></li><li style="--i:4"><a href="/contact" class="menu-lien" data-libelle="Contact">Contact</a></li></ul>
+  <p><a class="bouton" href="tel:+33767426991">Appeler 07 67 42 69 91</a></p>
+  <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+</div>
+<main id="contenu" tabindex="-1">
+<section class="introuvable" id="debut">
+  <figure class="media introuvable-media" data-grok data-fx="parallaxe" data-fx-force="6" style="--cadrage:30% 50%">
+  <picture>
+    <img src="/assets/images/grok/404-cadran-1168.webp" srcset="/assets/images/grok/404-cadran-640.webp 640w, /assets/images/grok/404-cadran-1168.webp 1168w" sizes="100vw" alt="Cadran solaire de pierre sur un muret, face à la mer" width="1168" height="656" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="conteneur introuvable-texte">
+    <span class="introuvable-disque" data-iris-centre="disque" aria-hidden="true">404</span>
+    <h1 class="titre-ombre" data-texte="Le cadran ne trouve pas cette page" data-grille="typo" data-effet="ombre-portee" data-anime>Le cadran ne trouve pas cette page</h1>
+    <p data-anime>Elle n&#39;existe pas ou plus. Le soleil, lui, continue sa course : revenez à l&#39;accueil.</p>
+    <p data-anime><a href="/" class="bouton bouton--soleil" data-libelle="Accueil" data-action-principale>Revenir à l&#39;accueil</a></p>
+    <p class="introuvable-info" data-info-cle>07 67 42 69 91</p>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div>
+      <p class="pied-nom"><span class="logo-marque" role="img" aria-label="agence ae, Marine Gourlay architecte"></span></p>
+      <p>Agence d&#39;Architecture Environnementale<br>2 place Denis Bérardier, Le Prieuré, Quimper<br><a href="tel:+33767426991">07 67 42 69 91</a><br><a href="mailto:agence.ae.quimper@gmail.com">agence.ae.quimper@gmail.com</a></p>
+      <p><strong>Suivre l&#39;agence</strong></p>
+      <ul class="pied-reseaux"><li><a href="https://www.instagram.com/agenceae" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/agenceaequimper" target="_blank" rel="noopener">Facebook</a></li></ul>
+    </div>
+    <nav aria-label="Sommaire">
+      <p><strong>Sommaire</strong></p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/realisations" data-libelle="Réalisations">Réalisations</a></li><li><a href="/atelier" data-libelle="L&#39;Atelier">L&#39;Atelier</a></li><li><a href="/convictions" data-libelle="Convictions">Convictions</a></li><li><a href="/contact" data-libelle="Contact">Contact</a></li></ul>
+    </nav>
+    <div>
+      <p><strong>Confort de lecture</strong></p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p class="pied-ordre"><span class="logo-ordre" role="img" aria-label="Inscrite à l'Ordre des architectes"></span>Architecte inscrite à l&#39;Ordre des architectes de Bretagne · n° d&#39;inscription à compléter</p><p>Mentions légales · Politique de confidentialité : à compléter</p><p>Maquette de présentation : les informations marquées « à compléter » seront fournies par l&#39;agence.</p><p>© L'Agence AE</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+33767426991">Appeler</a>
+  <a class="bouton" href="/contact#rendez-vous" data-libelle="Contact">Rendez-vous</a>
+</div>
+<div class="fil-soleil" data-grille="fil" data-effet="course-du-soleil" data-audit-ignorer aria-hidden="true"><span class="fil-rail"></span><span class="fil-trace"></span><ol class="fil-heures"></ol><span class="fil-astre"></span></div>
+</body>
+</html>

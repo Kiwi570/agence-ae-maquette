@@ -1,0 +1,1213 @@
+{
+ "images": {
+  "ouverture": {
+   "alt": "Maison T-G à Combrit : maison en ossature bois et bardage brûlé au soleil couchant",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1280,
+    1920
+   ],
+   "ratio": "16:9"
+  },
+  "planche-neuf": {
+   "alt": "Maison J-LM à Fouesnant, volumes blancs et bois sous un toit sombre",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1280
+   ],
+   "ratio": "4:3"
+  },
+  "planche-renovation": {
+   "alt": "Ancienne remise réhabilitée à Tréguennec : pierre, chaux et grande baie vitrée",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1280
+   ],
+   "ratio": "4:3"
+  },
+  "planche-pro": {
+   "alt": "Immeuble de bureaux et commerces à Ergué-Gabéric, façades en bois",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1280
+   ],
+   "ratio": "4:3"
+  },
+  "selection-combrit": {
+   "alt": "Maison T-G à Combrit : pergola en bois et bardage brûlé",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1080
+   ],
+   "ratio": "4:5"
+  },
+  "selection-treguennec": {
+   "alt": "Intérieur de la remise de Tréguennec : mur de pierre et rangements en bois",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1080
+   ],
+   "ratio": "4:5"
+  },
+  "selection-bureaux": {
+   "alt": "Immeuble de bureaux et commerces à Ergué-Gabéric",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1080
+   ],
+   "ratio": "4:5"
+  },
+  "selection-loctudy": {
+   "alt": "Maison de vacances rénovée à Loctudy : salle à manger traversée de soleil",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1080
+   ],
+   "ratio": "4:5"
+  },
+  "selection-lanvenegen": {
+   "alt": "Maison du XVIᵉ siècle réhabilitée à Lanvénégen : encadrement de pierre et escalier",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1080
+   ],
+   "ratio": "4:5"
+  },
+  "chaux-chanvre": {
+   "alt": "Mur isolé à la chaux et au chanvre pendant une rénovation écologique",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    960
+   ],
+   "ratio": "4:3"
+  },
+  "marine-gourlay": {
+   "alt": "Marine Gourlay, architecte, devant un mur de pierre",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    960
+   ],
+   "ratio": "4:5"
+  },
+  "marine-gourlay-bureau": {
+   "alt": "Marine Gourlay à son bureau, nuancier à la main",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    960
+   ],
+   "ratio": "4:5"
+  },
+  "chemin-mer": {
+   "alt": "Chemin de bois vers la mer, extérieurs rénovés à Loctudy",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    960
+   ],
+   "ratio": "4:5"
+  },
+  "tiroir-conseils": {
+   "alt": "Façade existante d'une longère avant sa réhabilitation",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    960
+   ],
+   "ratio": "4:5"
+  },
+  "tiroir-permis": {
+   "alt": "Maison M à Penmarc'h, visuel du projet",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    960
+   ],
+   "ratio": "4:5"
+  },
+  "tiroir-maitrise": {
+   "alt": "Extension en cours de construction dans le Cap Sizun",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    960
+   ],
+   "ratio": "4:5"
+  },
+  "tiroir-chantier": {
+   "alt": "Ossature bois en phase chantier sur une longère à Lanvénégen",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    960
+   ],
+   "ratio": "4:5"
+  },
+  "faq-interieur": {
+   "alt": "Intérieur de la remise de Tréguennec, double hauteur et pierre",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    960
+   ],
+   "ratio": "4:5"
+  },
+  "reemploi": {
+   "alt": "Salle aux murs de pierre conservés, avant son aménagement",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1280
+   ],
+   "ratio": "3:2"
+  },
+  "grok/contact-cote": {
+   "alt": "Côte de granit et d'herbes au soleil couchant",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1280
+   ],
+   "ratio": "21:9"
+  },
+  "grok/convictions-bois": {
+   "alt": "",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1280
+   ],
+   "ratio": "16:9"
+  },
+  "grok/atelier-chaux": {
+   "alt": "",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1280
+   ],
+   "ratio": "16:9"
+  },
+  "grok/scene-maquette": {
+   "alt": "Maquette de maison en carton sur une table à dessin, au soleil du matin",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    784
+   ],
+   "ratio": "4:5"
+  },
+  "grok/lumiere-hiver": {
+   "alt": "Soleil d'hiver entrant au fond d'un séjour vide",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1168
+   ],
+   "ratio": "3:2"
+  },
+  "grok/matiere-paille": {
+   "alt": "Mur en bottes de paille ouvert dans son ossature bois, à côté d'un enduit terre et chaux",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1168
+   ],
+   "ratio": "3:2"
+  },
+  "grok/matiere-ossature": {
+   "alt": "Ossature bois et isolant en fibre de bois, chutes triées dans une caisse",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1168
+   ],
+   "ratio": "3:2"
+  },
+  "grok/bocage-matin": {
+   "alt": "",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1168
+   ],
+   "ratio": "16:9"
+  },
+  "grok/404-cadran": {
+   "alt": "Cadran solaire de pierre sur un muret, face à la mer",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    1168
+   ],
+   "ratio": "16:9"
+  },
+  "grok/atelier-table": {
+   "alt": "Table à dessin avec calques et échantillons de matières",
+   "cadrage": "50% 50%",
+   "largeurs": [
+    640,
+    784
+   ],
+   "ratio": "4:5"
+  }
+ },
+ "projets": {
+  "maison-tg-combrit": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 5,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   }
+  ],
+  "maison-j-lm-fouesnant": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 960
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 516
+   },
+   {
+    "k": 5,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 556
+   }
+  ],
+  "maison-g-riec": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 719
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 719
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 781
+   }
+  ],
+  "extension-d-tremeoc": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 713
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 714
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 714
+   },
+   {
+    "k": 5,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 732
+   }
+  ],
+  "maison-e-ergue": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 721
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 571
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 572
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 572
+   },
+   {
+    "k": 5,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 717
+   }
+  ],
+  "extension-v-benodet": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 714
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 531
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 858,
+    "h": 1280
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 714,
+    "h": 1280
+   },
+   {
+    "k": 5,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 916,
+    "h": 1279
+   }
+  ],
+  "maison-m-penmarch": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 853
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 853
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 853
+   }
+  ],
+  "extension-d2-concarneau": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 853
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   }
+  ],
+  "maison-f-ergue": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   }
+  ],
+  "extension-cap-sizun": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 758
+   }
+  ],
+  "remise-pigeonnier-treguennec": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 960
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 960
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 960
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 960
+   },
+   {
+    "k": 5,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 959
+   },
+   {
+    "k": 6,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 959,
+    "h": 1280
+   }
+  ],
+  "maison-xvie-lanvenegen": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 960
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 960
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 960,
+    "h": 1280
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 802
+   },
+   {
+    "k": 5,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 960
+   }
+  ],
+  "maison-vacances-loctudy": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 739
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 719
+   },
+   {
+    "k": 5,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 788
+   },
+   {
+    "k": 6,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   }
+  ],
+  "habitation-meilars": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 476
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 960
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 5,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   }
+  ],
+  "salle-de-bain-treguennec": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1023,
+    "h": 1280
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 719
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1023,
+    "h": 1280
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1023,
+    "h": 1280
+   }
+  ],
+  "neobretonne-combrit": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 960,
+    "h": 1280
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 960
+   }
+  ],
+  "exterieurs-loctudy": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 5,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 719
+   }
+  ],
+  "combles-penmarch": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 720
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 720,
+    "h": 1280
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 749
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 714,
+    "h": 1280
+   }
+  ],
+  "bureaux-ergue": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 603
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 728
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 603
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 603
+   }
+  ],
+  "cabinet-medical-quimperle": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 478
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 719
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 853
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 853,
+    "h": 1280
+   },
+   {
+    "k": 5,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 853
+   },
+   {
+    "k": 6,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 851,
+    "h": 1281
+   }
+  ],
+  "coworking-quimper": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 853
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 853
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 853
+   },
+   {
+    "k": 4,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 853
+   }
+  ],
+  "galerie-artiste": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 811
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1160,
+    "h": 1280
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 671
+   }
+  ],
+  "boutique-paris": [
+   {
+    "k": 1,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 853
+   },
+   {
+    "k": 2,
+    "largeurs": [
+     640,
+     1280
+    ],
+    "l": 1280,
+    "h": 960
+   },
+   {
+    "k": 3,
+    "largeurs": [
+     640
+    ],
+    "l": 640,
+    "h": 528
+   }
+  ]
+ }
+}

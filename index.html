@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agence AE : architecte à Quimper et en Sud Finistère</title>
+<meta name="description" content="Atelier d&#39;architecture environnementale à Quimper : construction neuve, extension, rénovation et locaux professionnels en Sud Finistère. Premier rendez-vous gratuit.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://agence-ae-maquette.vercel.app/">
+<style>:root{--fond:#f2ede3;--texte:#1e2427;--voile-fond:#c26a28;--ouverture-fond:#1e2427;--menu-fond:#f2ede3}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#f2ede3">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="agence ae">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Agence AE : architecte à Quimper et en Sud Finistère">
+<meta property="og:description" content="Atelier d&#39;architecture environnementale à Quimper : construction neuve, extension, rénovation et locaux professionnels en Sud Finistère. Premier rendez-vous gratuit.">
+<meta property="og:url" content="https://agence-ae-maquette.vercel.app/">
+<meta property="og:image" content="https://agence-ae-maquette.vercel.app/assets/partage/accueil-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Agence AE, architecture environnementale à Quimper, maison en bardage brûlé au soleil couchant">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"L'Agence AE","alternateName":"Agence d'Architecture Environnementale","url":"https://agence-ae-maquette.vercel.app/","telephone":"+33767426991","email":"agence.ae.quimper@gmail.com","foundingDate":"2010","founder":{"@type":"Person","name":"Marine Gourlay","jobTitle":"Architecte D.E. HMONP"},"address":{"@type":"PostalAddress","streetAddress":"2 place Denis Bérardier, Le Prieuré","addressLocality":"Quimper","addressRegion":"Bretagne","addressCountry":"FR"},"areaServed":["Quimper","Pont-l'Abbé","Concarneau","Bénodet","Fouesnant","Combrit","Moëlan-sur-Mer","Névez","Penmarc'h","Loctudy","Île-Tudy"],"sameAs":["https://www.instagram.com/agenceae","https://www.facebook.com/agenceaequimper"],"description":"Atelier d'architecture environnementale à Quimper : construction neuve, extension, rénovation et réhabilitation, locaux professionnels, en Sud Finistère."}</script>
+</head>
+<body id="haut">
+<div data-voile data-forme="iris" aria-hidden="true"><div class="voile-contenu"><span class="voile-ae"></span><span data-voile-libelle>Accueil</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <span class="ouverture-aube"></span>
+  <div class="ouverture-scene">
+    <svg class="ouverture-arc" viewBox="0 0 600 300" preserveAspectRatio="none"><path d="M20 290 A280 270 0 0 1 580 290" pathLength="1"/></svg>
+    <span class="ouverture-soleil" data-ouverture-objet></span>
+    <p class="ouverture-nom"><span class="ouv-l" style="--i:0"><span class="ouv-ombre">a</span><span class="ouv-lettre">a</span></span><span class="ouv-l" style="--i:1"><span class="ouv-ombre">g</span><span class="ouv-lettre">g</span></span><span class="ouv-l" style="--i:2"><span class="ouv-ombre">e</span><span class="ouv-lettre">e</span></span><span class="ouv-l" style="--i:3"><span class="ouv-ombre">n</span><span class="ouv-lettre">n</span></span><span class="ouv-l" style="--i:4"><span class="ouv-ombre">c</span><span class="ouv-lettre">c</span></span><span class="ouv-l" style="--i:5"><span class="ouv-ombre">e</span><span class="ouv-lettre">e</span></span><span class="ouv-esp"> </span><span class="ouv-l" style="--i:7"><span class="ouv-ombre">a</span><span class="ouv-lettre">a</span></span><span class="ouv-l" style="--i:8"><span class="ouv-ombre">e</span><span class="ouv-lettre">e</span></span></p>
+    <span class="ouverture-trait"></span>
+  </div>
+  <p class="ouverture-ligne">Architecture environnementale · Quimper</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" aria-label="agence ae, accueil" href="/" data-libelle="Accueil" aria-current="page">
+      <span class="logo-mot" role="img" aria-label="agence ae"></span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/realisations" data-libelle="Réalisations">Réalisations</a></li><li><a href="/atelier" data-libelle="L&#39;Atelier">L&#39;Atelier</a></li><li><a href="/convictions" data-libelle="Convictions">Convictions</a></li><li><a href="/contact" data-libelle="Contact">Contact</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton" href="/contact#rendez-vous" data-libelle="Contact">Premier rendez-vous</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <ul><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil" aria-current="page">Accueil</a></li><li style="--i:1"><a href="/realisations" class="menu-lien" data-libelle="Réalisations">Réalisations</a></li><li style="--i:2"><a href="/atelier" class="menu-lien" data-libelle="L&#39;Atelier">L&#39;Atelier</a></li><li style="--i:3"><a href="/convictions" class="menu-lien" data-libelle="Convictions">Convictions</a></li><li style="--i:4"><a href="/contact" class="menu-lien" data-libelle="Contact">Contact</a></li></ul>
+  <p><a class="bouton" href="tel:+33767426991">Appeler 07 67 42 69 91</a></p>
+  <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+</div>
+<main id="contenu" tabindex="-1">
+<section class="hero" id="debut">
+  <figure class="media hero-media" style="--cadrage:55% 50%;--cadrage-mobile:50% 50%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/ouverture-mobile-640.webp 640w" sizes="100vw">
+    <img src="/assets/images/ouverture-1280.webp" srcset="/assets/images/ouverture-640.webp 640w, /assets/images/ouverture-1280.webp 1280w, /assets/images/ouverture-1920.webp 1920w" sizes="100vw" alt="Maison T-G à Combrit : maison en ossature bois et bardage brûlé au soleil couchant" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+  </picture>
+</figure>
+  <div class="hero-lumiere" aria-hidden="true"><span class="l-aube"></span><span class="l-jour"></span><span class="l-couchant"></span><span class="l-nuit"></span><span class="hero-halo"></span></div>
+  <div class="hero-ciel" data-effet="soleil-a-saisir" data-grille="manipuler">
+    <svg class="hero-arc" viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true"><path d="M60 368 C 200 -60, 800 -60, 940 368"/></svg>
+    <div class="hero-soleil" data-iris-centre="disque" tabindex="0" role="slider" aria-label="Soleil à faire glisser sur sa course : il change la lumière de la photo" aria-valuemin="6" aria-valuemax="21" aria-valuenow="17" aria-valuetext="17 h"><span class="hero-soleil-coeur"></span></div>
+    <p class="hero-heure" aria-hidden="true"><span data-heure>17 h 15</span><span data-moment>soleil bas</span></p>
+    <p class="hero-indice" aria-hidden="true"><span class="indice-souris">Faites glisser le soleil</span><span class="indice-tactile">Glissez le soleil</span></p>
+  </div>
+  <div class="hero-texte conteneur">
+    <p class="surtitre hero-surtitre" data-anime="gsap">Atelier d&#39;architecture environnementale · Quimper</p>
+    <h1 class="hero-titre"><span class="ligne-masque"><span data-anime="gsap" class="hero-ligne">Une architecture</span></span><span class="ligne-masque"><span data-anime="gsap" class="hero-ligne">humaine, locale</span></span><span class="ligne-masque"><span data-anime="gsap" class="hero-ligne hero-ligne--accent">et engagée</span></span></h1>
+    <p class="hero-intro" data-anime="gsap">Construction neuve, extension, rénovation et locaux professionnels, en Sud Finistère.</p>
+    <div class="hero-actions" data-anime="gsap">
+      <a href="/contact#rendez-vous" class="bouton bouton--soleil" data-libelle="Contact" data-action-principale data-survol="magnetique">Demander un rendez-vous</a>
+      <a href="/realisations" class="bouton bouton--clair" data-libelle="Réalisations">Voir les réalisations</a>
+    </div>
+    <p class="hero-info" data-anime="gsap" data-info-cle><span class="pastille-soleil" aria-hidden="true"></span>Premier rendez-vous gratuit et sans engagement</p>
+  </div>
+  <p class="hero-legende">Maison T-G · Combrit</p>
+</section>
+<section class="vision" id="vision">
+  <div class="conteneur vision-grille">
+    <div class="vision-texte">
+      <p class="surtitre" data-anime>Notre vision</p>
+      <h2 class="titre-ombre" data-texte="Plus que des mètres carrés" data-grille="typo" data-effet="ombre-portee" data-anime>Plus que des mètres carrés</h2>
+      <p class="manifeste" data-effet="manifeste"><span class="mm" style="--i:0">Une</span> <span class="mm" style="--i:1">maison</span> <span class="mm" style="--i:2">n&#39;est</span> <span class="mm" style="--i:3">pas</span> <span class="mm" style="--i:4">seulement</span> <span class="mm" style="--i:5">la</span> <span class="mm" style="--i:6">réponse</span> <span class="mm" style="--i:7">à</span> <span class="mm" style="--i:8">un</span> <span class="mm" style="--i:9">programme.</span> <span class="mm" style="--i:10">C&#39;est</span> <span class="mm" style="--i:11">un</span> <span class="mm" style="--i:12">lieu</span> <span class="mm" style="--i:13">de</span> <span class="mm" style="--i:14">vie</span> <span class="mm" style="--i:15">inscrit</span> <span class="mm" style="--i:16">dans</span> <span class="mm" style="--i:17">son</span> <span class="mm" style="--i:18">paysage,</span> <span class="mm" style="--i:19">un</span> <span class="mm" style="--i:20">mode</span> <span class="mm" style="--i:21">de</span> <span class="mm" style="--i:22">vie,</span> <span class="mm" style="--i:23">un</span> <span class="mm" style="--i:24">budget</span> <span class="mm" style="--i:25">et</span> <span class="mm" style="--i:26">une</span> <span class="mm" style="--i:27">vision</span> <span class="mm" style="--i:28">à</span> <span class="mm" style="--i:29">long</span> <span class="mm" style="--i:30">terme.</span> <span class="mm" style="--i:31">En</span> <span class="mm" style="--i:32">Sud</span> <span class="mm" style="--i:33">Finistère,</span> <span class="mm" style="--i:34">la</span> <span class="mm" style="--i:35">lumière,</span> <span class="mm" style="--i:36">les</span> <span class="mm" style="--i:37">vents</span> <span class="mm" style="--i:38">dominants,</span> <span class="mm" style="--i:39">les</span> <span class="mm" style="--i:40">vues</span> <span class="mm" style="--i:41">et</span> <span class="mm" style="--i:42">l&#39;orientation</span> <span class="mm" style="--i:43">sont</span> <span class="mm" style="--i:44">lus</span> <span class="mm" style="--i:45">dès</span> <span class="mm" style="--i:46">les</span> <span class="mm" style="--i:47">premières</span> <span class="mm" style="--i:48">esquisses.</span> </p>
+      <p class="vision-suite" data-anime>Qualité architecturale, confort en toutes saisons, respect de l&#39;environnement et durabilité : la même exigence pour un projet neuf comme pour une rénovation.</p>
+    </div>
+    <figure class="media vision-media" data-grok data-fx="zoom" style="--cadrage:50% 50%;aspect-ratio:4 / 5">
+  <picture>
+    <img src="/assets/images/grok/scene-maquette-784.webp" srcset="/assets/images/grok/scene-maquette-640.webp 640w, /assets/images/grok/scene-maquette-784.webp 784w" sizes="(max-width: 760px) 100vw, 40vw" alt="Maquette de maison en carton sur une table à dessin, au soleil du matin" width="784" height="980" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  </div>
+</section>
+<section class="savoir" id="savoir-faire">
+  <div class="conteneur savoir-tete">
+    <p class="surtitre" data-anime>Ce que nous faisons</p>
+    <h2 data-anime="lignes">Trois manières de bâtir</h2>
+  </div>
+  <div class="conteneur planches">
+    <article class="planche" style="--i:0" data-effet="planches">
+      <div class="planche-texte">
+        <p class="planche-num">01 · 10 projets</p>
+        <h3>Neuf et extension</h3>
+        <p>Maisons individuelles et extensions, souvent en ossature bois : un projet pensé avec son terrain, sa lumière et ses vents.</p>
+        <a href="/realisations?famille=neuf" class="lien-fleche" data-libelle="Réalisations">Voir les projets neufs</a>
+      </div>
+      <figure class="media planche-media" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/planche-neuf-1280.webp" srcset="/assets/images/planche-neuf-640.webp 640w, /assets/images/planche-neuf-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 55vw" alt="Maison J-LM à Fouesnant, volumes blancs et bois sous un toit sombre" width="1280" height="960" loading="lazy" decoding="async">
+  </picture>
+</figure>
+      <span class="planche-ombre" aria-hidden="true"></span>
+    </article><article class="planche" style="--i:1" data-effet="planches">
+      <div class="planche-texte">
+        <p class="planche-num">02 · 8 projets</p>
+        <h3>Rénovation et réhabilitation</h3>
+        <p>Travailler avec le bâti existant : révéler son potentiel, préserver son histoire, améliorer le confort et la performance énergétique.</p>
+        <a href="/realisations?famille=renovation" class="lien-fleche" data-libelle="Réalisations">Voir les rénovations</a>
+      </div>
+      <figure class="media planche-media" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/planche-renovation-1280.webp" srcset="/assets/images/planche-renovation-640.webp 640w, /assets/images/planche-renovation-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 55vw" alt="Ancienne remise réhabilitée à Tréguennec : pierre, chaux et grande baie vitrée" width="1280" height="960" loading="lazy" decoding="async">
+  </picture>
+</figure>
+      <span class="planche-ombre" aria-hidden="true"></span>
+    </article><article class="planche" style="--i:2" data-effet="planches">
+      <div class="planche-texte">
+        <p class="planche-num">03 · 5 projets</p>
+        <h3>Professionnel</h3>
+        <p>Bureaux, commerces, showroom, atelier, cabinet médical : des locaux pensés pour ceux qui y travaillent et ceux qui y viennent.</p>
+        <a href="/realisations?famille=pro" class="lien-fleche" data-libelle="Réalisations">Voir les projets professionnels</a>
+      </div>
+      <figure class="media planche-media" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/planche-pro-1280.webp" srcset="/assets/images/planche-pro-640.webp 640w, /assets/images/planche-pro-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 55vw" alt="Immeuble de bureaux et commerces à Ergué-Gabéric, façades en bois" width="1280" height="960" loading="lazy" decoding="async">
+  </picture>
+</figure>
+      <span class="planche-ombre" aria-hidden="true"></span>
+    </article>
+  </div>
+</section>
+<section class="lumiere ecran epingle" id="lumiere" data-entete-cache data-plein-ecran data-grille="scene" data-effet="maison-ombres">
+  <div class="conteneur lumiere-grille">
+    <div class="lumiere-texte">
+      <p class="surtitre">Le soleil dessine la maison</p>
+      <h2 class="lumiere-titre">La conception bioclimatique, en quatre gestes</h2>
+      <ol class="lumiere-etapes">
+        <li class="lumiere-etape" data-etape="1"><p class="lumiere-num">01</p><h3>Orienter</h3><p>La maison s&#39;ouvre au sud et se protège au nord. Lumière, vents dominants et vues sont pris en compte dès la première esquisse.</p><p class="lumiere-lecture">Équinoxe · midi · soleil à 42°</p></li><li class="lumiere-etape" data-etape="2"><p class="lumiere-num">02</p><h3>L&#39;été, le débord protège</h3><p>Haut dans le ciel, le soleil d&#39;été bute sur le débord de toit : le séjour reste frais, la lumière reste douce.</p><p class="lumiere-lecture">21 juin · midi · soleil à 65°</p></li><li class="lumiere-etape" data-etape="3"><p class="lumiere-num">03</p><h3>L&#39;hiver, le soleil entre</h3><p>Bas sur l&#39;horizon, le soleil d&#39;hiver traverse la baie et vient chauffer le fond du séjour.</p><p class="lumiere-lecture">21 décembre · midi · soleil à 19°</p></li><li class="lumiere-etape" data-etape="4"><p class="lumiere-num">04</p><h3>Garder la chaleur</h3><p>Une enveloppe épaisse en matériaux biosourcés garde la chaleur reçue l&#39;hiver, et le volume se ferme côté nord, face au froid et aux vents.</p><p class="lumiere-lecture">Bois, paille, chaux et chanvre</p></li>
+      </ol>
+      <div class="lumiere-progres" aria-hidden="true"><span data-point="1"></span><span data-point="2"></span><span data-point="3"></span><span data-point="4"></span></div>
+    </div>
+    <figure class="lumiere-coupe" data-visuel role="img" aria-label="Coupe bioclimatique animée" data-tient>
+      <svg viewBox="0 0 800 520" aria-hidden="true">
+        <defs>
+          <linearGradient id="ciel-coupe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--ciel-haut)"/><stop offset="1" stop-color="var(--ciel-bas)"/></linearGradient>
+          <pattern id="hachure" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0 V8" stroke="currentColor" stroke-width="1.4" opacity=".45"/></pattern>
+          <pattern id="paille" width="10" height="6" patternUnits="userSpaceOnUse"><path d="M0 3 L10 1 M0 6 L10 4" stroke="#b08a3e" stroke-width="1.2"/></pattern>
+        </defs>
+        <rect class="coupe-ciel" x="0" y="0" width="800" height="430" fill="url(#ciel-coupe)"/>
+        <path class="coupe-arc" d="M45 430 A 290 290 0 0 1 330 140" fill="none"/>
+        <polygon class="coupe-faisceau-ext" points="56,336 330,280.5 330,430"/>
+        <polygon class="coupe-ombre-sol" points="730,430 800,430 800,436 730,436"/>
+        <rect class="coupe-sol" x="0" y="430" width="800" height="90"/>
+        <text class="coupe-repere" x="40" y="470">Sud</text><text class="coupe-repere" x="740" y="470" text-anchor="end">Nord</text>
+        <rect class="coupe-dalle" x="330" y="430" width="400" height="16"/>
+        <rect class="coupe-interieur" x="330" y="241" width="370" height="189"/>
+        <polygon class="coupe-faisceau" points="330,280.5 330,430 700,430 700,407.8"/>
+        <line class="coupe-tache" x1="330" y1="428" x2="700" y2="428"/>
+        <line class="coupe-tache-mur" x1="698" y1="430" x2="698" y2="407.8"/>
+        <g class="coupe-mur-nord"><rect x="700" y="227" width="30" height="203" class="mur-structure"/><rect x="700" y="227" width="7" height="203" class="mur-enduit"/><rect x="707" y="227" width="12" height="203" fill="url(#paille)"/><rect x="719" y="227" width="6" height="203" class="mur-fibre"/><rect x="725" y="227" width="5" height="203" class="mur-bardage"/></g>
+        <rect class="coupe-vitrage" x="326" y="269" width="8" height="161"/>
+        <rect class="coupe-linteau" x="324" y="227" width="12" height="42"/>
+        <path class="coupe-toit" d="M258 227 L 742 227 L 742 207 L 258 215 Z"/>
+        <g class="coupe-vent" opacity="0"><path d="M712 300 h20 M712 340 h20 M712 380 h20"/></g>
+        <g class="coupe-chaleur" opacity="0"><ellipse cx="560" cy="380" rx="120" ry="40"/></g>
+        <g class="coupe-astre" transform="translate(56 336)"><circle class="coupe-halo" r="46"/><circle class="coupe-soleil" r="22"/></g>
+        <text class="coupe-angle" x="86" y="310">19°</text>
+      </svg>
+      <figcaption class="lumiere-note">Démonstration illustrative · attrapez le soleil pour tester les saisons · hauteurs calculées pour la latitude de Quimper</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="projets" id="projets">
+  <div class="conteneur projets-tete">
+    <p class="surtitre" data-anime>Sélection de projets</p>
+    <h2 class="titre-ombre" data-texte="Cinq maisons, cinq lumières" data-grille="typo" data-effet="ombre-portee" data-anime>Cinq maisons, cinq lumières</h2>
+  </div>
+  <ul class="conteneur projets-liste">
+    <li class="projet-sel" style="--i:0">
+      <a href="/realisations#projet-maison-tg-combrit" data-libelle="Réalisations">
+        <span class="projet-sel-cadre">
+          <figure class="media projet-sel-media" data-fx="onde" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/selection-combrit-1080.webp" srcset="/assets/images/selection-combrit-640.webp 640w, /assets/images/selection-combrit-1080.webp 1080w" sizes="(max-width: 760px) 92vw, 44vw" alt="Maison T-G à Combrit : pergola en bois et bardage brûlé" width="1080" height="1350" loading="lazy" decoding="async">
+  </picture>
+</figure>
+          <span class="ombre-passe" data-effet="ombre-qui-passe" aria-hidden="true"></span>
+        </span>
+        <span class="projet-sel-texte"><span class="projet-sel-type">Neuf et extension</span><strong>Maison T-G</strong><span>Combrit · Sainte-Marine</span></span>
+      </a>
+    </li><li class="projet-sel" style="--i:1">
+      <a href="/realisations#projet-remise-pigeonnier-treguennec" data-libelle="Réalisations">
+        <span class="projet-sel-cadre">
+          <figure class="media projet-sel-media" data-fx="onde" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/selection-treguennec-1080.webp" srcset="/assets/images/selection-treguennec-640.webp 640w, /assets/images/selection-treguennec-1080.webp 1080w" sizes="(max-width: 760px) 92vw, 44vw" alt="Intérieur de la remise de Tréguennec : mur de pierre et rangements en bois" width="1080" height="1350" loading="lazy" decoding="async">
+  </picture>
+</figure>
+          <span class="ombre-passe" data-effet="ombre-qui-passe" aria-hidden="true"></span>
+        </span>
+        <span class="projet-sel-texte"><span class="projet-sel-type">Rénovation</span><strong>Ancienne remise et pigeonnier</strong><span>Tréguennec</span></span>
+      </a>
+    </li><li class="projet-sel" style="--i:2">
+      <a href="/realisations#projet-bureaux-ergue" data-libelle="Réalisations">
+        <span class="projet-sel-cadre">
+          <figure class="media projet-sel-media" data-fx="onde" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/selection-bureaux-1080.webp" srcset="/assets/images/selection-bureaux-640.webp 640w, /assets/images/selection-bureaux-1080.webp 1080w" sizes="(max-width: 760px) 92vw, 44vw" alt="Immeuble de bureaux et commerces à Ergué-Gabéric" width="1080" height="1351" loading="lazy" decoding="async">
+  </picture>
+</figure>
+          <span class="ombre-passe" data-effet="ombre-qui-passe" aria-hidden="true"></span>
+        </span>
+        <span class="projet-sel-texte"><span class="projet-sel-type">Professionnel</span><strong>Immeuble de bureaux et commerces</strong><span>Ergué-Gabéric</span></span>
+      </a>
+    </li><li class="projet-sel" style="--i:3">
+      <a href="/realisations#projet-maison-vacances-loctudy" data-libelle="Réalisations">
+        <span class="projet-sel-cadre">
+          <figure class="media projet-sel-media" data-fx="parallaxe" data-fx-force="8" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/selection-loctudy-1080.webp" srcset="/assets/images/selection-loctudy-640.webp 640w, /assets/images/selection-loctudy-1080.webp 1080w" sizes="(max-width: 760px) 92vw, 44vw" alt="Maison de vacances rénovée à Loctudy : salle à manger traversée de soleil" width="1080" height="1350" loading="lazy" decoding="async">
+  </picture>
+</figure>
+          <span class="ombre-passe" data-effet="ombre-qui-passe" aria-hidden="true"></span>
+        </span>
+        <span class="projet-sel-texte"><span class="projet-sel-type">Rénovation</span><strong>Maison de vacances en bord de mer</strong><span>Loctudy</span></span>
+      </a>
+    </li><li class="projet-sel" style="--i:4">
+      <a href="/realisations#projet-maison-xvie-lanvenegen" data-libelle="Réalisations">
+        <span class="projet-sel-cadre">
+          <figure class="media projet-sel-media" data-fx="parallaxe" data-fx-force="8" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/selection-lanvenegen-1080.webp" srcset="/assets/images/selection-lanvenegen-640.webp 640w, /assets/images/selection-lanvenegen-1080.webp 1080w" sizes="(max-width: 760px) 92vw, 44vw" alt="Maison du XVIᵉ siècle réhabilitée à Lanvénégen : encadrement de pierre et escalier" width="1080" height="1351" loading="lazy" decoding="async">
+  </picture>
+</figure>
+          <span class="ombre-passe" data-effet="ombre-qui-passe" aria-hidden="true"></span>
+        </span>
+        <span class="projet-sel-texte"><span class="projet-sel-type">Rénovation</span><strong>Maison du XVIᵉ siècle</strong><span>Lanvénégen</span></span>
+      </a>
+    </li>
+  </ul>
+  <p class="conteneur projets-tout"><a href="/realisations" class="bouton" data-libelle="Réalisations" data-survol="magnetique">Découvrir toutes les réalisations</a></p>
+</section>
+<section class="chiffres-acc" id="chiffres">
+  <div class="conteneur chiffres-grille">
+    <div>
+      <p class="surtitre" data-anime>Pourquoi l&#39;écoconstruction</p>
+      <h2 data-anime="lignes">Le bâtiment pèse lourd</h2>
+      <ul class="chiffres-liste" data-anime="cascade" data-grille="typo">
+        <li><span class="chiffre-boite"><strong class="chiffre-grand" data-compteur="40" data-effet="chiffres-gras">40</strong><span class="chiffre-unite">%</span></span><span class="chiffre-texte">des émissions de gaz à effet de serre viennent du bâtiment, construction et usage compris</span></li>
+        <li><span class="chiffre-boite"><strong class="chiffre-grand" data-compteur="70" data-effet="chiffres-gras">70</strong><span class="chiffre-unite">%</span></span><span class="chiffre-texte">des déchets produits en France viennent de la construction et de la démolition</span></li>
+        <li><span class="chiffre-boite"><strong class="chiffre-grand" data-compteur="800" data-effet="chiffres-gras">800</strong><span class="chiffre-unite">kg</span></span><span class="chiffre-texte">de CO₂ émis pour produire un mètre carré de bâtiment en béton</span></li>
+      </ul>
+      <p class="chiffres-source">Chiffres repris de la page « Nos convictions » de l&#39;agence (sources : service statistique du ministère de la Transition écologique ; Philippe Madec, « Mieux avec moins »).</p>
+      <p><a href="/convictions" class="lien-fleche" data-libelle="Convictions">Lire nos convictions</a></p>
+    </div>
+    <figure class="media chiffres-media" data-fx="parallaxe" style="--cadrage:50% 50%;aspect-ratio:3 / 4">
+  <picture>
+    <img src="/assets/images/chaux-chanvre-960.webp" srcset="/assets/images/chaux-chanvre-640.webp 640w, /assets/images/chaux-chanvre-960.webp 960w" sizes="(max-width: 760px) 100vw, 36vw" alt="Mur isolé à la chaux et au chanvre pendant une rénovation écologique" width="960" height="720" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div>
+</section>
+<section class="zone" id="zone">
+  <figure class="media zone-fond" data-grok data-fx="parallaxe" data-fx-force="8" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/bocage-matin-1168.webp" srcset="/assets/images/grok/bocage-matin-640.webp 640w, /assets/images/grok/bocage-matin-1168.webp 1168w" sizes="100vw" alt="" width="1168" height="656" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="conteneur zone-carte-boite">
+    <div class="zone-texte">
+      <p class="surtitre" data-anime>Zone d&#39;intervention</p>
+      <h2 data-anime="lignes">Quimper et la côte du Sud Finistère</h2>
+      <p data-anime>L&#39;agence intervient principalement autour de Quimper et sur la côte, de Penmarc&#39;h à Moëlan-sur-Mer.</p>
+      <p class="zone-info" aria-live="polite"><strong data-zone-nom>Quimper</strong><span data-zone-detail>Commune desservie</span></p>
+      <ul class="zone-communes" data-anime="cascade"><li><button type="button" class="puce" data-commune-bouton="Quimper" data-detail="1 réalisation présentée" aria-pressed="false">Quimper</button></li><li><button type="button" class="puce" data-commune-bouton="Pont-l&#39;Abbé" data-detail="Commune desservie" aria-pressed="false">Pont-l&#39;Abbé</button></li><li><button type="button" class="puce" data-commune-bouton="Loctudy" data-detail="2 réalisations présentées" aria-pressed="false">Loctudy</button></li><li><button type="button" class="puce" data-commune-bouton="Île-Tudy" data-detail="Commune desservie" aria-pressed="false">Île-Tudy</button></li><li><button type="button" class="puce" data-commune-bouton="Combrit" data-detail="2 réalisations présentées" aria-pressed="false">Combrit</button></li><li><button type="button" class="puce" data-commune-bouton="Bénodet" data-detail="1 réalisation présentée" aria-pressed="false">Bénodet</button></li><li><button type="button" class="puce" data-commune-bouton="Fouesnant" data-detail="1 réalisation présentée" aria-pressed="false">Fouesnant</button></li><li><button type="button" class="puce" data-commune-bouton="Concarneau" data-detail="1 réalisation présentée" aria-pressed="false">Concarneau</button></li><li><button type="button" class="puce" data-commune-bouton="Névez" data-detail="Commune desservie" aria-pressed="false">Névez</button></li><li><button type="button" class="puce" data-commune-bouton="Moëlan-sur-Mer" data-detail="Commune desservie" aria-pressed="false">Moëlan-sur-Mer</button></li><li><button type="button" class="puce" data-commune-bouton="Penmarc&#39;h" data-detail="2 réalisations présentées" aria-pressed="false">Penmarc&#39;h</button></li></ul>
+      <p class="zone-indice"><span class="indice-souris">Survolez une commune</span><span class="indice-tactile">Touchez une commune</span></p>
+    </div>
+    <figure class="zone-carte" data-visuel role="img" aria-label="Carte schématique de la zone d&#39;intervention">
+      <svg viewBox="0 0 800 306" aria-hidden="true" data-fx="trace">
+  <path class="carte-terre" d="M18 36 L72 45 L132 58 L168 72 L205 94 L226 130 L244 175 L256 211 L247 243 L262 256 L301 259 L337 256 L361 243 L370 225 L376 208 L394 196 L404 191 L421 196 L445 207 L475 205 L484 189 L475 175 L484 162 L505 175 L520 191 L535 211 L553 243 L559 261 L589 262 L620 254 L641 256 L662 261 L698 270 L734 283 L770 279 L800 283 L 800 283 L 800 0 L 0 0 L 0 36 Z"/>
+  <path class="carte-cote" d="M18 36 L72 45 L132 58 L168 72 L205 94 L226 130 L244 175 L256 211 L247 243 L262 256 L301 259 L337 256 L361 243 L370 225 L376 208 L394 196 L404 191 L421 196 L445 207 L475 205 L484 189 L475 175 L484 162 L505 175 L520 191 L535 211 L553 243 L559 261 L589 262 L620 254 L641 256 L662 261 L698 270 L734 283 L770 279 L800 283" data-fx-trait/>
+  <g class="carte-commune est-zone est-agence" data-commune="Quimper" style="--i:0" transform="translate(408 75)">
+    <circle r="9"/><circle class="carte-agence-halo" r="18" data-effet="carte-zone"/>
+    <text x="10" y="-8">Quimper</text>
+  </g><g class="carte-commune" data-commune="Ergué-Gabéric" style="--i:1" transform="translate(457 75)">
+    <circle r="4.5"/>
+    <text x="10" y="-8">Ergué-Gabéric</text>
+  </g><g class="carte-commune" data-commune="Tréméoc" style="--i:2" transform="translate(340 157)">
+    <circle r="4.5"/>
+    <text x="10" y="-8">Tréméoc</text>
+  </g><g class="carte-commune est-zone" data-commune="Pont-l&#39;Abbé" style="--i:3" transform="translate(335 192)">
+    <circle r="6"/>
+    <text x="10" y="-8">Pont-l&#39;Abbé</text>
+  </g><g class="carte-commune est-zone" data-commune="Loctudy" style="--i:4" transform="translate(366 221)">
+    <circle r="6"/>
+    <text x="10" y="14">Loctudy</text>
+  </g><g class="carte-commune est-zone" data-commune="Île-Tudy" style="--i:5" transform="translate(370 212)">
+    <circle r="6"/>
+  </g><g class="carte-commune est-zone" data-commune="Combrit" style="--i:6" transform="translate(376 173)">
+    <circle r="6"/>
+    <text x="10" y="-8">Combrit</text>
+  </g><g class="carte-commune est-zone" data-commune="Bénodet" style="--i:7" transform="translate(405 183)">
+    <circle r="6"/>
+    <text x="10" y="-8">Bénodet</text>
+  </g><g class="carte-commune est-zone" data-commune="Fouesnant" style="--i:8" transform="translate(462 167)">
+    <circle r="6"/>
+    <text x="10" y="-8">Fouesnant</text>
+  </g><g class="carte-commune est-zone" data-commune="Concarneau" style="--i:9" transform="translate(518 185)">
+    <circle r="6"/>
+    <text x="10" y="-8">Concarneau</text>
+  </g><g class="carte-commune est-zone" data-commune="Névez" style="--i:10" transform="translate(594 234)">
+    <circle r="6"/>
+    <text x="10" y="-8">Névez</text>
+  </g><g class="carte-commune" data-commune="Riec-sur-Belon" style="--i:11" transform="translate(654 212)">
+    <circle r="4.5"/>
+    <text x="-10" y="-8" text-anchor="end">Riec-sur-Belon</text>
+  </g><g class="carte-commune est-zone" data-commune="Moëlan-sur-Mer" style="--i:12" transform="translate(692 239)">
+    <circle r="6"/>
+    <text x="-10" y="-8" text-anchor="end">Moëlan-sur-Mer</text>
+  </g><g class="carte-commune est-zone" data-commune="Penmarc&#39;h" style="--i:13" transform="translate(266 242)">
+    <circle r="6"/>
+    <text x="10" y="-8">Penmarc&#39;h</text>
+  </g><g class="carte-commune" data-commune="Tréguennec" style="--i:14" transform="translate(271 189)">
+    <circle r="4.5"/>
+    <text x="10" y="-8">Tréguennec</text>
+  </g><g class="carte-commune" data-commune="Meilars" style="--i:15" transform="translate(186 45)">
+    <circle r="4.5"/>
+    <text x="10" y="-8">Meilars</text>
+  </g><g class="carte-commune" data-commune="Quimperlé" style="--i:16" transform="translate(740 186)">
+    <circle r="4.5"/>
+    <text x="-10" y="-8" text-anchor="end">Quimperlé</text>
+  </g>
+  <text class="carte-mer" x="288" y="284">Océan Atlantique</text>
+</svg>
+      <figcaption>Carte schématique</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="temoignage" id="temoignage">
+  <div class="conteneur temoignage-grille">
+    <div class="temoignage-visuel" data-visuel data-anime aria-hidden="true"><span>«</span></div>
+    <figure class="temoignage-citation">
+      <p class="surtitre">Paroles de client</p>
+      <blockquote data-anime="mots"><p>Bonjour Marine, je voulais vous dire ma gratitude…</p></blockquote>
+      <figcaption><strong>Marion, Penmarc&#39;h</strong><span>Message adressé à Marine Gourlay. Texte complet à reprendre du site actuel (à compléter).</span></figcaption>
+    </figure>
+  </div>
+</section>
+<section class="fin" id="fin">
+  <div class="conteneur fin-grille">
+    <div class="fin-texte">
+      <h2 class="titre-ombre" data-texte="Le premier rendez-vous est gratuit" data-effet="ombre-portee" data-anime>Le premier rendez-vous est gratuit</h2>
+      <p data-anime>Par téléphone ou par e-mail, sans engagement. Apportez si vous le pouvez vos plans et vos photos, vos besoins, votre budget et vos délais.</p>
+      <p class="fin-actions" data-anime>
+        <a href="/contact#rendez-vous" class="bouton bouton--soleil" data-libelle="Contact" data-survol="magnetique">Demander un rendez-vous</a>
+        <a class="bouton bouton--contour" href="tel:+33767426991">Appeler le 07 67 42 69 91</a>
+      </p>
+    </div>
+    <figure class="media fin-media" data-anime="rideau" style="--cadrage:50% 50%;aspect-ratio:4 / 5">
+  <picture>
+    <img src="/assets/images/chemin-mer-960.webp" srcset="/assets/images/chemin-mer-640.webp 640w, /assets/images/chemin-mer-960.webp 960w" sizes="(max-width: 760px) 100vw, 38vw" alt="Chemin de bois vers la mer, extérieurs rénovés à Loctudy" width="960" height="1200" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div>
+      <p class="pied-nom"><span class="logo-marque" role="img" aria-label="agence ae, Marine Gourlay architecte"></span></p>
+      <p>Agence d&#39;Architecture Environnementale<br>2 place Denis Bérardier, Le Prieuré, Quimper<br><a href="tel:+33767426991">07 67 42 69 91</a><br><a href="mailto:agence.ae.quimper@gmail.com">agence.ae.quimper@gmail.com</a></p>
+      <p><strong>Suivre l&#39;agence</strong></p>
+      <ul class="pied-reseaux"><li><a href="https://www.instagram.com/agenceae" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/agenceaequimper" target="_blank" rel="noopener">Facebook</a></li></ul>
+    </div>
+    <nav aria-label="Sommaire">
+      <p><strong>Sommaire</strong></p>
+      <ul><li><a href="/" data-libelle="Accueil" aria-current="page">Accueil</a></li><li><a href="/realisations" data-libelle="Réalisations">Réalisations</a></li><li><a href="/atelier" data-libelle="L&#39;Atelier">L&#39;Atelier</a></li><li><a href="/convictions" data-libelle="Convictions">Convictions</a></li><li><a href="/contact" data-libelle="Contact">Contact</a></li></ul>
+    </nav>
+    <div>
+      <p><strong>Confort de lecture</strong></p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p class="pied-ordre"><span class="logo-ordre" role="img" aria-label="Inscrite à l'Ordre des architectes"></span>Architecte inscrite à l&#39;Ordre des architectes de Bretagne · n° d&#39;inscription à compléter</p><p>Mentions légales · Politique de confidentialité : à compléter</p><p>Maquette de présentation : les informations marquées « à compléter » seront fournies par l&#39;agence.</p><p>© L'Agence AE</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+33767426991">Appeler</a>
+  <a class="bouton" href="/contact#rendez-vous" data-libelle="Contact">Rendez-vous</a>
+</div>
+<div class="fil-soleil" data-grille="fil" data-effet="course-du-soleil" data-audit-ignorer aria-hidden="true"><span class="fil-rail"></span><span class="fil-trace"></span><ol class="fil-heures"></ol><span class="fil-astre"></span></div>
+</body>
+</html>

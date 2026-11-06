@@ -1,0 +1,6 @@
+{
+  "siteActuel": "agence-ae.fr",
+  "pagesTypes": ["/", "/realisations", "/atelier", "/convictions", "/contact"],
+  "effets": ["soleil-a-saisir", "photo-reeclairee", "course-du-soleil", "ombre-portee", "manifeste", "planches", "maison-ombres", "ombre-qui-passe", "chiffres-gras", "carte-zone", "cadran-filtres", "ruban-real", "cartouche", "meuble-a-plans", "mur-en-coupe", "barres", "chiffre-lumiere", "numero-trace", "tampon-recu", "plan-acces"],
+  "grille": { "dispenses": {} }
+}

@@ -1,0 +1,486 @@
+{
+  "commun": {
+    "navigation": "Navigation principale",
+    "menu": "Menu",
+    "fermer": "Fermer",
+    "langueAutre": "Français",
+    "actionEntete": "Premier rendez-vous",
+    "appeler": "Appeler",
+    "calmeReduire": "Réduire les animations",
+    "calmeRetablir": "Rétablir les animations",
+    "calmeSysteme": "Animations réduites par le réglage de votre appareil",
+    "sommaire": "Sommaire",
+    "confort": "Confort de lecture",
+    "retourHaut": "Retour en haut",
+    "maquette": "Maquette de présentation : les informations marquées « à compléter » seront fournies par l'agence.",
+    "evitement": "Aller au contenu",
+    "mentionIa": "Illustration générée",
+    "pause": "Pause",
+    "lecture": "Lecture",
+    "introLigne": "Architecture environnementale · Quimper",
+    "nomLong": "Agence d'Architecture Environnementale",
+    "suivre": "Suivre l'agence",
+    "legal": "Mentions légales · Politique de confidentialité : à compléter",
+    "ordre": "Architecte inscrite à l'Ordre des architectes de Bretagne · n° d'inscription à compléter",
+    "filEtiquette": "Course du soleil : votre avancée dans la page",
+    "visuelProjet": "Visuel du projet",
+    "illustratif": "Démonstration illustrative",
+    "actionCourte": "Rendez-vous"
+  },
+  "pages": {
+    "accueil": {
+      "titre": "Agence AE : architecte à Quimper et en Sud Finistère",
+      "description": "Atelier d'architecture environnementale à Quimper : construction neuve, extension, rénovation et locaux professionnels en Sud Finistère. Premier rendez-vous gratuit.",
+      "nav": "Accueil",
+      "partageAlt": "Agence AE, architecture environnementale à Quimper, maison en bardage brûlé au soleil couchant",
+      "accroche": "Une architecture humaine, locale et engagée"
+    },
+    "realisations": {
+      "titre": "Réalisations : Agence AE, architecte à Quimper",
+      "description": "Maisons neuves, extensions, rénovations et locaux professionnels conçus par l'Agence AE en Sud Finistère.",
+      "nav": "Réalisations",
+      "partageAlt": "Réalisations de l'Agence AE en Sud Finistère",
+      "accroche": "Neuf, rénovation, professionnel : les projets de l'agence"
+    },
+    "atelier": {
+      "titre": "L'Atelier : Marine Gourlay et son équipe, Agence AE",
+      "description": "Une agence d'architecture à taille humaine à Quimper depuis 2010 : l'architecte, l'équipe, la démarche et les questions fréquentes.",
+      "nav": "L'Atelier",
+      "partageAlt": "Marine Gourlay, architecte de l'Agence AE à Quimper",
+      "accroche": "Une architecte, une équipe, une démarche"
+    },
+    "convictions": {
+      "titre": "Nos convictions : construire écoresponsable, Agence AE",
+      "description": "Habitat bioclimatique, habitat sain, chantier propre : pourquoi et comment l'Agence AE construit et rénove autrement.",
+      "nav": "Convictions",
+      "partageAlt": "Les convictions de l'Agence AE : bioclimatique, sain, chantier propre",
+      "accroche": "Construire mieux, avec moins"
+    },
+    "contact": {
+      "titre": "Contact et premier rendez-vous : Agence AE, Quimper",
+      "description": "Premier rendez-vous gratuit et sans engagement avec l'Agence AE à Quimper : téléphone, e-mail, accès.",
+      "nav": "Contact",
+      "partageAlt": "Contacter l'Agence AE à Quimper",
+      "accroche": "Le premier rendez-vous est gratuit"
+    },
+    "404": {
+      "titre": "Page introuvable : Agence AE",
+      "description": "Cette page n'existe pas ou plus.",
+      "nav": "Page introuvable",
+      "partageAlt": "Page introuvable",
+      "accroche": "Page introuvable"
+    }
+  },
+  "accueil": {
+    "hero": {
+      "surtitre": "Atelier d'architecture environnementale · Quimper",
+      "titre1": "Une architecture",
+      "titre2": "humaine, locale",
+      "titre3": "et engagée",
+      "texte": "Construction neuve, extension, rénovation et locaux professionnels, en Sud Finistère.",
+      "action": "Demander un rendez-vous",
+      "secondaire": "Voir les réalisations",
+      "info": "Premier rendez-vous gratuit et sans engagement",
+      "soleil": "Soleil à faire glisser sur sa course : il change la lumière de la photo",
+      "indice": "Faites glisser le soleil",
+      "indiceTactile": "Glissez le soleil",
+      "legende": "Maison T-G · Combrit"
+    },
+    "vision": {
+      "surtitre": "Notre vision",
+      "titre": "Plus que des mètres carrés",
+      "texte": "Une maison n'est pas seulement la réponse à un programme. C'est un lieu de vie inscrit dans son paysage, un mode de vie, un budget et une vision à long terme. En Sud Finistère, la lumière, les vents dominants, les vues et l'orientation sont lus dès les premières esquisses.",
+      "suite": "Qualité architecturale, confort en toutes saisons, respect de l'environnement et durabilité : la même exigence pour un projet neuf comme pour une rénovation."
+    },
+    "savoir": {
+      "surtitre": "Ce que nous faisons",
+      "titre": "Trois manières de bâtir",
+      "neuf": {
+        "titre": "Neuf et extension",
+        "texte": "Maisons individuelles et extensions, souvent en ossature bois : un projet pensé avec son terrain, sa lumière et ses vents.",
+        "lien": "Voir les projets neufs"
+      },
+      "renovation": {
+        "titre": "Rénovation et réhabilitation",
+        "texte": "Travailler avec le bâti existant : révéler son potentiel, préserver son histoire, améliorer le confort et la performance énergétique.",
+        "lien": "Voir les rénovations"
+      },
+      "pro": {
+        "titre": "Professionnel",
+        "texte": "Bureaux, commerces, showroom, atelier, cabinet médical : des locaux pensés pour ceux qui y travaillent et ceux qui y viennent.",
+        "lien": "Voir les projets professionnels"
+      },
+      "compte": "{n} projets"
+    },
+    "lumiere": {
+      "surtitre": "Le soleil dessine la maison",
+      "titre": "La conception bioclimatique, en quatre gestes",
+      "region": "Coupe bioclimatique animée",
+      "e1": {
+        "titre": "Orienter",
+        "texte": "La maison s'ouvre au sud et se protège au nord. Lumière, vents dominants et vues sont pris en compte dès la première esquisse.",
+        "lecture": "Équinoxe · midi · soleil à 42°"
+      },
+      "e2": {
+        "titre": "L'été, le débord protège",
+        "texte": "Haut dans le ciel, le soleil d'été bute sur le débord de toit : le séjour reste frais, la lumière reste douce.",
+        "lecture": "21 juin · midi · soleil à 65°"
+      },
+      "e3": {
+        "titre": "L'hiver, le soleil entre",
+        "texte": "Bas sur l'horizon, le soleil d'hiver traverse la baie et vient chauffer le fond du séjour.",
+        "lecture": "21 décembre · midi · soleil à 19°"
+      },
+      "e4": {
+        "titre": "Garder la chaleur",
+        "texte": "Une enveloppe épaisse en matériaux biosourcés garde la chaleur reçue l'hiver, et le volume se ferme côté nord, face au froid et aux vents.",
+        "lecture": "Bois, paille, chaux et chanvre"
+      },
+      "note": "Démonstration illustrative · attrapez le soleil pour tester les saisons · hauteurs calculées pour la latitude de Quimper"
+    },
+    "projets": {
+      "surtitre": "Sélection de projets",
+      "titre": "Cinq maisons, cinq lumières",
+      "tout": "Découvrir toutes les réalisations"
+    },
+    "chiffres": {
+      "surtitre": "Pourquoi l'écoconstruction",
+      "titre": "Le bâtiment pèse lourd",
+      "c1": "des émissions de gaz à effet de serre viennent du bâtiment, construction et usage compris",
+      "c2": "des déchets produits en France viennent de la construction et de la démolition",
+      "c3": "de CO₂ émis pour produire un mètre carré de bâtiment en béton",
+      "source": "Chiffres repris de la page « Nos convictions » de l'agence (sources : service statistique du ministère de la Transition écologique ; Philippe Madec, « Mieux avec moins »).",
+      "lien": "Lire nos convictions"
+    },
+    "zone": {
+      "surtitre": "Zone d'intervention",
+      "titre": "Quimper et la côte du Sud Finistère",
+      "texte": "L'agence intervient principalement autour de Quimper et sur la côte, de Penmarc'h à Moëlan-sur-Mer.",
+      "indice": "Survolez une commune",
+      "indiceTactile": "Touchez une commune",
+      "projets": "{n} réalisations présentées",
+      "aucun": "Commune desservie",
+      "region": "Carte schématique de la zone d'intervention",
+      "note": "Carte schématique",
+      "projet": "{n} réalisation présentée"
+    },
+    "temoignage": {
+      "surtitre": "Paroles de client",
+      "citation": "Bonjour Marine, je voulais vous dire ma gratitude…",
+      "auteur": "Marion, Penmarc'h",
+      "complement": "Message adressé à Marine Gourlay. Texte complet à reprendre du site actuel (à compléter)."
+    },
+    "fin": {
+      "titre": "Le premier rendez-vous est gratuit",
+      "texte": "Par téléphone ou par e-mail, sans engagement. Apportez si vous le pouvez vos plans et vos photos, vos besoins, votre budget et vos délais.",
+      "action": "Demander un rendez-vous",
+      "appeler": "Appeler le 07 67 42 69 91"
+    }
+  },
+  "realisations": {
+    "surtitre": "Réalisations",
+    "titre": "Des lieux qui suivent le soleil",
+    "texte": "Maisons neuves et extensions, rénovations de longères et de maisons de bord de mer, locaux professionnels : chaque projet part de son terrain et de sa lumière.",
+    "cadran": "Cadran des réalisations : tournez-le pour choisir une famille de projets",
+    "indice": "Tournez le cadran",
+    "filtres": "Familles de projets",
+    "tous": "Tout",
+    "neuf": "Neuf et extension",
+    "renovation": "Rénovation",
+    "pro": "Professionnel",
+    "compte": "{n} projets",
+    "voir": "Voir le projet",
+    "region": "Liste des réalisations",
+    "fermer": "Fermer",
+    "precedent": "Photo précédente",
+    "suivant": "Photo suivante",
+    "photos": "{n} photos",
+    "aCompleter": "Description du projet à compléter.",
+    "surfaces": "Surfaces",
+    "materiaux": "Matériaux",
+    "ruban": "Réalisations en Sud Finistère",
+    "fin": {
+      "titre": "Votre projet sera le prochain",
+      "texte": "Neuf, extension ou rénovation : parlons-en lors d'un premier rendez-vous gratuit.",
+      "action": "Demander un rendez-vous"
+    },
+    "noteVisuels": "Certains visuels de projets neufs sont des perspectives : statut (projet ou réalisé) à préciser par l'agence.",
+    "voirTous": "Voir les projets",
+    "photo": "{n} photo"
+  },
+  "atelier": {
+    "cartouche": {
+      "projet": "Agence d'Architecture Environnementale",
+      "nom": "Marine Gourlay",
+      "titre": "Architecte D.E. HMONP",
+      "ordre": "Ordre des architectes de Bretagne",
+      "assurance": "Assurée à la MAF",
+      "lieu": "Quimper · depuis 2010",
+      "echelle": "Échelle humaine"
+    },
+    "surtitre": "L'Atelier",
+    "titre": "Une agence à taille humaine",
+    "texte": "Fondée en 2010 à Quimper, en Cornouaille, l'agence est une structure artisanale : un accompagnement proche et personnel, de la première idée à la remise des clés.",
+    "portrait": "Marine Gourlay à son bureau",
+    "parcours": {
+      "surtitre": "Parcours",
+      "titre": "Une architecture locale, consciente et durable",
+      "texte": "L'écoconstruction et l'écorénovation ne sont pas une contrainte mais une responsabilité qui enrichit chaque projet : qualité, études complètes et préparation soignée du chantier.",
+      "j1": {
+        "annee": "2008",
+        "texte": "Habilitation à la maîtrise d'œuvre en son nom propre (HMONP), à Rennes"
+      },
+      "j2": {
+        "annee": "2010",
+        "texte": "Installation à Quimper : naissance de l'agence"
+      },
+      "j3": {
+        "annee": "2016",
+        "texte": "Formation à la construction en paille (PROPAILLE)"
+      },
+      "reseaux": "Membre des réseaux Approche Éco-Habitat, MaEB, RFCP et Abibois."
+    },
+    "equipe": {
+      "surtitre": "L'équipe",
+      "titre": "Quatre métiers autour d'un projet",
+      "m1": {
+        "nom": "Marine Gourlay",
+        "role": "Architecte D.E. HMONP, fondatrice"
+      },
+      "m2": {
+        "nom": "Matthieu Le Coz",
+        "role": "Maître d'œuvre"
+      },
+      "m3": {
+        "nom": "Hugues de Kerckhove",
+        "role": "Métreur géomètre"
+      },
+      "m4": {
+        "nom": "Manon Duroy",
+        "role": "Architecte d'intérieur et dessinatrice"
+      },
+      "candidature": "Candidatures : à venir."
+    },
+    "demarche": {
+      "surtitre": "Notre démarche",
+      "titre": "Le meuble à plans de la mission",
+      "texte": "Chaque tiroir est une étape de la mission. Ouvrez-les dans l'ordre, ou directement celui qui vous concerne.",
+      "ouvrir": "Ouvrir le tiroir",
+      "parler": "En parler au premier rendez-vous",
+      "t1": {
+        "titre": "Conseils",
+        "texte": "Avant d'acheter, une visite conseil de 1 à 3 heures sur place, avec un compte rendu sous une semaine environ.",
+        "detail": "105 € TTC de l'heure · estimation des travaux en option : 90 € TTC · déplacements offerts à Quimper, facturés au-delà."
+      },
+      "t2": {
+        "titre": "Conception",
+        "texte": "L'esquisse représente environ une semaine de travail : étude réglementaire, visite du site, une ou deux options avec plans, perspectives et estimation des travaux.",
+        "detail": "Une esquisse payée est une esquisse soignée : c'est elle qui fixe le projet."
+      },
+      "t3": {
+        "titre": "Permis de construire",
+        "texte": "Constitution et dépôt du dossier. Au-delà de 150 m² de surface de plancher, le recours à un architecte est obligatoire.",
+        "detail": "L'architecte intervient en amont : jamais de simple tampon sur des plans qu'il n'a pas conçus."
+      },
+      "t4": {
+        "titre": "Maîtrise d'œuvre",
+        "texte": "L'agence consulte les entreprises adaptées au projet et vérifie leurs garanties, sans en imposer aucune : le choix final vous revient.",
+        "detail": "Un interlocuteur unique pour coordonner le projet."
+      },
+      "t5": {
+        "titre": "Suivi de chantier",
+        "texte": "L'architecte dirige le chantier jusqu'à la réception, sur tout type de projet, avec un chantier propre : tri des déchets, nettoyage, voisinage respecté.",
+        "detail": "La construction sèche en ossature bois produit peu de déchets et consomme peu d'eau."
+      }
+    },
+    "faq": {
+      "surtitre": "Questions fréquentes",
+      "titre": "Avant de nous appeler"
+    },
+    "fin": {
+      "titre": "Rencontrons-nous",
+      "texte": "Le premier rendez-vous est gratuit et sans engagement.",
+      "action": "Demander un rendez-vous"
+    }
+  },
+  "faq": {
+    "q1": {
+      "q": "Pourquoi faire appel à un architecte ?",
+      "r": "C'est le seul professionnel qui peut suivre votre projet de la conception à la réalisation, avec un projet sur mesure et un interlocuteur unique. Vous pouvez vérifier son inscription au tableau de l'Ordre des architectes. Un projet bien conçu se valorise souvent mieux à la revente : c'est un repère, pas une garantie."
+    },
+    "q2": {
+      "q": "Architecte ou maître d'œuvre, quelle différence ?",
+      "r": "Maître d'œuvre désigne un rôle dans une opération, pas un titre ni une qualification. Pour porter le titre d'architecte, il faut le diplôme d'État, l'habilitation HMONP et l'inscription à l'Ordre."
+    },
+    "q3": {
+      "q": "L'architecte est-il obligatoire ?",
+      "r": "Oui, à partir de 150 m² de surface de plancher pour un permis de construire. En dessous, il reste le seul à pouvoir suivre le projet de bout en bout."
+    },
+    "q4": {
+      "q": "Comment préparer le premier rendez-vous ?",
+      "r": "Apportez si possible des plans et des photos (ce n'est pas obligatoire), et réfléchissez à vos besoins, à votre budget et à vos délais. Le premier rendez-vous est gratuit et sans engagement."
+    },
+    "q5": {
+      "q": "Combien coûte un architecte ?",
+      "r": "Les honoraires dépendent de la taille du projet, de sa complexité et de l'étendue de la mission (partielle ou complète). Un contrat qui fait office de devis vous est envoyé par e-mail après le premier rendez-vous. À titre de repère, l'agence indique qu'ils restent en général inférieurs à la TVA des travaux : à confirmer pour chaque projet."
+    },
+    "q6": {
+      "q": "Pourquoi l'esquisse est-elle payante ?",
+      "r": "Elle représente environ une semaine de travail : étude réglementaire, visite du site, une ou deux options avec plans, perspectives et estimation des travaux. Une esquisse offerte est souvent une esquisse bâclée."
+    },
+    "q7": {
+      "q": "Proposez-vous des visites conseil avant achat ?",
+      "r": "Oui : 105 € TTC de l'heure, pour 1 à 3 heures sur place, avec un compte rendu sous une semaine environ. L'estimation des travaux est en option (90 € TTC). Les déplacements sont offerts à Quimper et facturés au-delà."
+    }
+  },
+  "convictions": {
+    "surtitre": "Nos convictions",
+    "grand": "40 %",
+    "titre": "des émissions de gaz à effet de serre viennent du bâtiment",
+    "texte": "Construction et usage compris. Construire et rénover autrement n'est pas un supplément d'âme : c'est le cœur du métier.",
+    "pourquoi": {
+      "surtitre": "Pourquoi construire écoresponsable",
+      "titre": "Les chiffres qui ont décidé de notre manière de faire",
+      "c1": {
+        "v": "57",
+        "u": "%",
+        "t": "des résidences principales sont des maisons, qui pèsent 73 % de la consommation de chauffage"
+      },
+      "c2": {
+        "v": "1",
+        "u": "%",
+        "t": "du parc s'ajoute chaque année par la construction neuve : le reste est à rénover"
+      },
+      "c3": {
+        "v": "70",
+        "u": "%",
+        "t": "des déchets produits en France viennent de la construction et de la démolition"
+      },
+      "c4": {
+        "v": "9",
+        "u": "%",
+        "t": "des logements sont vacants, soit 3,1 millions"
+      },
+      "source": "Sources citées par l'agence : service des données et études statistiques du ministère de la Transition écologique ; Philippe Madec, « Mieux avec moins »."
+    },
+    "p1": {
+      "numero": "01",
+      "titre": "Habitat bioclimatique",
+      "texte": "Adapter le bâtiment à son terrain, à son orientation et à ses vues, avec des protections solaires naturelles et des stratégies passives. Le surcoût, de l'ordre de 8 à 10 %, se compense par des charges plus faibles. L'énergie solaire peut couvrir jusqu'à 70 % des besoins en eau chaude et en chauffage ; l'eau de pluie récupérée couvre une grande part des autres usages.",
+      "lien": "Voir la coupe bioclimatique"
+    },
+    "p2": {
+      "numero": "02",
+      "titre": "Habitat sain",
+      "texte": "Préférer les matériaux biosourcés, de préférence en circuit court : bois, terre, béton de chanvre, paille, ouate de cellulose. Ils évitent le formaldéhyde, le styrène et les autres composés organiques volatils, et règlent l'humidité : le confort ne se résume pas à la conductivité thermique.",
+      "region": "Mur en coupe : faites défiler pour le décomposer",
+      "couches": {
+        "k1": {
+          "nom": "Bardage bois",
+          "info": "protège et ventile"
+        },
+        "k2": {
+          "nom": "Pare-pluie",
+          "info": "laisse respirer le mur"
+        },
+        "k3": {
+          "nom": "Fibre de bois",
+          "info": "isolant biosourcé, coupe la chaleur d'été"
+        },
+        "k4": {
+          "nom": "Paille",
+          "info": "isolant en circuit court"
+        },
+        "k5": {
+          "nom": "Ossature bois",
+          "info": "construction sèche"
+        },
+        "k6": {
+          "nom": "Enduit chaux-chanvre",
+          "info": "régule l'humidité intérieure"
+        }
+      },
+      "note": "Composition illustrative : chaque mur est dimensionné projet par projet."
+    },
+    "p3": {
+      "numero": "03",
+      "titre": "Chantier propre",
+      "texte": "Trier les déchets, nettoyer chaque jour, réemployer sur place la terre des fouilles, traiter les eaux polluées et limiter la gêne pour les voisins. La construction sèche en ossature bois produit peu de déchets et consomme peu d'eau ; un chantier plus propre est aussi plus sûr."
+    },
+    "sobre": {
+      "surtitre": "Vers plus sobre",
+      "titre": "Quatre pistes pour aller plus loin",
+      "l1": "Rénover avant de construire",
+      "l2": "Matériaux biosourcés et géosourcés",
+      "l3": "Réemploi des matériaux",
+      "l4": "Standard Passivhaus"
+    },
+    "fin": {
+      "titre": "Un projet sobre commence par une conversation",
+      "texte": "Premier rendez-vous gratuit et sans engagement.",
+      "action": "Demander un rendez-vous"
+    },
+    "voirPrincipes": "Nos trois principes"
+  },
+  "contact": {
+    "surtitre": "Contact",
+    "titre": "Parlons de votre projet",
+    "info": "Premier rendez-vous gratuit et sans engagement",
+    "telephone": "Téléphone",
+    "email": "E-mail",
+    "adresse": "Agence",
+    "horaires": "Sur rendez-vous · horaires à compléter",
+    "reseaux": "Réseaux",
+    "form": {
+      "surtitre": "Premier rendez-vous",
+      "titre": "Préparons-le ensemble",
+      "texte": "Cinq étapes courtes. Rien n'est envoyé dans cette maquette.",
+      "etapes": "Étape {n} sur 5",
+      "e1": "Votre projet",
+      "e2": "Où ?",
+      "e3": "Vos repères",
+      "e4": "Vos coordonnées",
+      "e5": "Récapitulatif",
+      "type": "Type de projet",
+      "neuf": "Construction neuve",
+      "extension": "Extension",
+      "renovation": "Rénovation ou réhabilitation",
+      "pro": "Local professionnel",
+      "conseil": "Visite conseil avant achat",
+      "commune": "Commune du projet",
+      "communeAide": "Par exemple : Quimper, Fouesnant, Penmarc'h",
+      "terrain": "Avez-vous déjà le terrain ou le bâtiment ?",
+      "oui": "Oui",
+      "non": "Pas encore",
+      "budget": "Budget envisagé (facultatif)",
+      "delai": "Délai souhaité (facultatif)",
+      "plans": "J'ai des plans ou des photos à apporter",
+      "message": "Quelques mots sur votre projet",
+      "nom": "Nom",
+      "email": "E-mail",
+      "tel": "Téléphone",
+      "suivant": "Continuer",
+      "precedent": "Retour",
+      "modifier": "Modifier",
+      "envoyer": "Demander le rendez-vous",
+      "donnees": "Vos données servent uniquement à répondre à votre demande. Politique de confidentialité : à compléter.",
+      "simule": "Demande simulée : rien n'a été envoyé. Sur le site final, elle partira vers l'agence.",
+      "recu": "Reçu",
+      "recuTexte": "Votre demande est posée sur la table à dessin.",
+      "vide": "non précisé"
+    },
+    "acces": {
+      "surtitre": "Accès",
+      "titre": "Au Prieuré, à Quimper",
+      "texte": "2 place Denis Bérardier, Le Prieuré, Quimper. Le rendez-vous peut aussi avoir lieu sur votre terrain.",
+      "region": "Plan schématique de l'accès à l'agence",
+      "note": "Plan schématique"
+    },
+    "horairesLabel": "Horaires"
+  },
+  "introuvable": {
+    "titre": "Le cadran ne trouve pas cette page",
+    "texte": "Elle n'existe pas ou plus. Le soleil, lui, continue sa course : revenez à l'accueil.",
+    "retour": "Revenir à l'accueil"
+  }
+}

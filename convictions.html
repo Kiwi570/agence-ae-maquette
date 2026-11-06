@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nos convictions : construire écoresponsable, Agence AE</title>
+<meta name="description" content="Habitat bioclimatique, habitat sain, chantier propre : pourquoi et comment l&#39;Agence AE construit et rénove autrement.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://agence-ae-maquette.vercel.app/convictions">
+<style>:root{--fond:#f2ede3;--texte:#1e2427;--voile-fond:#c26a28;--ouverture-fond:#1e2427;--menu-fond:#f2ede3}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#f2ede3">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="agence ae">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Nos convictions : construire écoresponsable, Agence AE">
+<meta property="og:description" content="Habitat bioclimatique, habitat sain, chantier propre : pourquoi et comment l&#39;Agence AE construit et rénove autrement.">
+<meta property="og:url" content="https://agence-ae-maquette.vercel.app/convictions">
+<meta property="og:image" content="https://agence-ae-maquette.vercel.app/assets/partage/convictions-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Les convictions de l&#39;Agence AE : bioclimatique, sain, chantier propre">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"L'Agence AE","alternateName":"Agence d'Architecture Environnementale","url":"https://agence-ae-maquette.vercel.app/","telephone":"+33767426991","email":"agence.ae.quimper@gmail.com","foundingDate":"2010","founder":{"@type":"Person","name":"Marine Gourlay","jobTitle":"Architecte D.E. HMONP"},"address":{"@type":"PostalAddress","streetAddress":"2 place Denis Bérardier, Le Prieuré","addressLocality":"Quimper","addressRegion":"Bretagne","addressCountry":"FR"},"areaServed":["Quimper","Pont-l'Abbé","Concarneau","Bénodet","Fouesnant","Combrit","Moëlan-sur-Mer","Névez","Penmarc'h","Loctudy","Île-Tudy"],"sameAs":["https://www.instagram.com/agenceae","https://www.facebook.com/agenceaequimper"],"description":"Atelier d'architecture environnementale à Quimper : construction neuve, extension, rénovation et réhabilitation, locaux professionnels, en Sud Finistère."}</script>
+</head>
+<body id="haut">
+<div data-voile data-forme="iris" aria-hidden="true"><div class="voile-contenu"><span class="voile-ae"></span><span data-voile-libelle>Convictions</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <span class="ouverture-aube"></span>
+  <div class="ouverture-scene">
+    <svg class="ouverture-arc" viewBox="0 0 600 300" preserveAspectRatio="none"><path d="M20 290 A280 270 0 0 1 580 290" pathLength="1"/></svg>
+    <span class="ouverture-soleil" data-ouverture-objet></span>
+    <p class="ouverture-nom"><span class="ouv-l" style="--i:0"><span class="ouv-ombre">a</span><span class="ouv-lettre">a</span></span><span class="ouv-l" style="--i:1"><span class="ouv-ombre">g</span><span class="ouv-lettre">g</span></span><span class="ouv-l" style="--i:2"><span class="ouv-ombre">e</span><span class="ouv-lettre">e</span></span><span class="ouv-l" style="--i:3"><span class="ouv-ombre">n</span><span class="ouv-lettre">n</span></span><span class="ouv-l" style="--i:4"><span class="ouv-ombre">c</span><span class="ouv-lettre">c</span></span><span class="ouv-l" style="--i:5"><span class="ouv-ombre">e</span><span class="ouv-lettre">e</span></span><span class="ouv-esp"> </span><span class="ouv-l" style="--i:7"><span class="ouv-ombre">a</span><span class="ouv-lettre">a</span></span><span class="ouv-l" style="--i:8"><span class="ouv-ombre">e</span><span class="ouv-lettre">e</span></span></p>
+    <span class="ouverture-trait"></span>
+  </div>
+  <p class="ouverture-ligne">Architecture environnementale · Quimper</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" aria-label="agence ae, accueil" href="/" data-libelle="Accueil">
+      <span class="logo-mot" role="img" aria-label="agence ae"></span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/realisations" data-libelle="Réalisations">Réalisations</a></li><li><a href="/atelier" data-libelle="L&#39;Atelier">L&#39;Atelier</a></li><li><a href="/convictions" data-libelle="Convictions" aria-current="page">Convictions</a></li><li><a href="/contact" data-libelle="Contact">Contact</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton" href="/contact#rendez-vous" data-libelle="Contact">Premier rendez-vous</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <ul><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/realisations" class="menu-lien" data-libelle="Réalisations">Réalisations</a></li><li style="--i:2"><a href="/atelier" class="menu-lien" data-libelle="L&#39;Atelier">L&#39;Atelier</a></li><li style="--i:3"><a href="/convictions" class="menu-lien" data-libelle="Convictions" aria-current="page">Convictions</a></li><li style="--i:4"><a href="/contact" class="menu-lien" data-libelle="Contact">Contact</a></li></ul>
+  <p><a class="bouton" href="tel:+33767426991">Appeler 07 67 42 69 91</a></p>
+  <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+</div>
+<main id="contenu" tabindex="-1">
+<section class="conv-tete" id="debut">
+  <figure class="media conv-fond" data-grok data-fx="parallaxe" data-fx-force="5" style="--cadrage:50% 50%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/convictions-bois-mobile-480.webp 480w" sizes="100vw">
+    <img src="/assets/images/grok/convictions-bois-1280.webp" srcset="/assets/images/grok/convictions-bois-640.webp 640w, /assets/images/grok/convictions-bois-1280.webp 1280w" sizes="100vw" alt="" width="1280" height="719" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <span class="conv-rayon" data-effet="chiffre-lumiere" aria-hidden="true"></span>
+  <div class="conteneur conv-tete-texte">
+    <p class="surtitre" data-anime="gsap" data-ouv>Nos convictions</p>
+    <p class="conv-grand" aria-hidden="true"><span class="conv-grand-chiffre" data-anime="gsap" data-ouv>40 %</span><span class="conv-soleil" data-iris-centre="disque"></span></p>
+    <h1 class="conv-titre" data-info-cle><span class="visuellement-cache">40 % </span><span class="ligne-masque"><span class="ouv-ligne" data-anime="gsap">des émissions de gaz à effet de serre viennent du bâtiment</span></span></h1>
+    <p class="conv-intro" data-anime="gsap" data-ouv>Construction et usage compris. Construire et rénover autrement n&#39;est pas un supplément d&#39;âme : c&#39;est le cœur du métier.</p>
+    <p data-anime="gsap" data-ouv><a class="bouton bouton--soleil" href="#principes" data-action-principale data-sans-transition>Nos trois principes</a></p>
+  </div>
+</section>
+<section class="pourquoi" id="pourquoi">
+  <div class="conteneur">
+    <p class="surtitre" data-anime>Pourquoi construire écoresponsable</p>
+    <h2 class="titre-ombre pourquoi-titre" data-texte="Les chiffres qui ont décidé de notre manière de faire" data-grille="typo" data-effet="ombre-portee" data-anime>Les chiffres qui ont décidé de notre manière de faire</h2>
+    <ul class="barres" data-visuel><li class="barre">
+      <span class="chiffre-boite"><strong class="chiffre-grand" data-compteur="57">57</strong><span class="chiffre-unite">%</span></span>
+      <span class="barre-piste" aria-hidden="true"><span class="barre-plein" data-effet="barres" style="--v:57"></span></span>
+      <span class="barre-texte">des résidences principales sont des maisons, qui pèsent 73 % de la consommation de chauffage</span>
+    </li><li class="barre">
+      <span class="chiffre-boite"><strong class="chiffre-grand" data-compteur="1">1</strong><span class="chiffre-unite">%</span></span>
+      <span class="barre-piste" aria-hidden="true"><span class="barre-plein" data-effet="barres" style="--v:1"></span></span>
+      <span class="barre-texte">du parc s&#39;ajoute chaque année par la construction neuve : le reste est à rénover</span>
+    </li><li class="barre">
+      <span class="chiffre-boite"><strong class="chiffre-grand" data-compteur="70">70</strong><span class="chiffre-unite">%</span></span>
+      <span class="barre-piste" aria-hidden="true"><span class="barre-plein" data-effet="barres" style="--v:70"></span></span>
+      <span class="barre-texte">des déchets produits en France viennent de la construction et de la démolition</span>
+    </li><li class="barre">
+      <span class="chiffre-boite"><strong class="chiffre-grand" data-compteur="9">9</strong><span class="chiffre-unite">%</span></span>
+      <span class="barre-piste" aria-hidden="true"><span class="barre-plein" data-effet="barres" style="--v:9"></span></span>
+      <span class="barre-texte">des logements sont vacants, soit 3,1 millions</span>
+    </li></ul>
+    <p class="chiffres-source">Sources citées par l&#39;agence : service des données et études statistiques du ministère de la Transition écologique ; Philippe Madec, « Mieux avec moins ».</p>
+  </div>
+</section>
+<section class="principe" id="principes">
+  <div class="conteneur principe-grille">
+    <div>
+      <p class="principe-num" data-anime>01</p>
+      <h2 data-anime="lignes">Habitat bioclimatique</h2>
+      <p data-anime>Adapter le bâtiment à son terrain, à son orientation et à ses vues, avec des protections solaires naturelles et des stratégies passives. Le surcoût, de l&#39;ordre de 8 à 10 %, se compense par des charges plus faibles. L&#39;énergie solaire peut couvrir jusqu&#39;à 70 % des besoins en eau chaude et en chauffage ; l&#39;eau de pluie récupérée couvre une grande part des autres usages.</p>
+      <p><a href="/#lumiere" class="lien-fleche" data-libelle="Accueil">Voir la coupe bioclimatique</a></p>
+    </div>
+    <figure class="media principe-media" data-grok data-fx="onde" style="--cadrage:50% 50%;aspect-ratio:3 / 2">
+  <picture>
+    <img src="/assets/images/grok/lumiere-hiver-1168.webp" srcset="/assets/images/grok/lumiere-hiver-640.webp 640w, /assets/images/grok/lumiere-hiver-1168.webp 1168w" sizes="(max-width: 760px) 100vw, 50vw" alt="Soleil d&#39;hiver entrant au fond d&#39;un séjour vide" width="1168" height="778" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  </div>
+</section>
+<section class="mur ecran epingle" id="habitat-sain" data-entete-cache data-plein-ecran data-grille="scene" data-effet="mur-en-coupe">
+  <div class="conteneur mur-grille">
+    <div class="mur-texte">
+      <p class="principe-num">02</p>
+      <h2>Habitat sain</h2>
+      <p>Préférer les matériaux biosourcés, de préférence en circuit court : bois, terre, béton de chanvre, paille, ouate de cellulose. Ils évitent le formaldéhyde, le styrène et les autres composés organiques volatils, et règlent l&#39;humidité : le confort ne se résume pas à la conductivité thermique.</p>
+      <ol class="mur-legende"><li data-couche="0"><strong>Bardage bois</strong><span>protège et ventile</span></li><li data-couche="1"><strong>Pare-pluie</strong><span>laisse respirer le mur</span></li><li data-couche="2"><strong>Fibre de bois</strong><span>isolant biosourcé, coupe la chaleur d&#39;été</span></li><li data-couche="3"><strong>Paille</strong><span>isolant en circuit court</span></li><li data-couche="4"><strong>Ossature bois</strong><span>construction sèche</span></li><li data-couche="5"><strong>Enduit chaux-chanvre</strong><span>régule l&#39;humidité intérieure</span></li></ol>
+      <p class="mur-note">Composition illustrative : chaque mur est dimensionné projet par projet.</p>
+    </div>
+    <figure class="mur-coupe" data-visuel role="img" aria-label="Mur en coupe : faites défiler pour le décomposer" data-tient>
+      <div class="mur-scene"><span class="mur-couche mur-couche--0" style="--i:0"><span class="mur-etiquette">Bardage bois</span></span><span class="mur-couche mur-couche--1" style="--i:1"><span class="mur-etiquette">Pare-pluie</span></span><span class="mur-couche mur-couche--2" style="--i:2"><span class="mur-etiquette">Fibre de bois</span></span><span class="mur-couche mur-couche--3" style="--i:3"><span class="mur-etiquette">Paille</span></span><span class="mur-couche mur-couche--4" style="--i:4"><span class="mur-etiquette">Ossature bois</span></span><span class="mur-couche mur-couche--5" style="--i:5"><span class="mur-etiquette">Enduit chaux-chanvre</span></span></div>
+      <figcaption>Démonstration illustrative</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="principe principe--inverse" id="chantier-propre">
+  <div class="conteneur principe-grille">
+    <figure class="media principe-media" data-grok data-fx="zoom" style="--cadrage:50% 50%;aspect-ratio:3 / 2">
+  <picture>
+    <img src="/assets/images/grok/matiere-ossature-1168.webp" srcset="/assets/images/grok/matiere-ossature-640.webp 640w, /assets/images/grok/matiere-ossature-1168.webp 1168w" sizes="(max-width: 760px) 100vw, 50vw" alt="Ossature bois et isolant en fibre de bois, chutes triées dans une caisse" width="1168" height="778" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+    <div>
+      <p class="principe-num" data-anime>03</p>
+      <h2 data-anime="lignes">Chantier propre</h2>
+      <p data-anime>Trier les déchets, nettoyer chaque jour, réemployer sur place la terre des fouilles, traiter les eaux polluées et limiter la gêne pour les voisins. La construction sèche en ossature bois produit peu de déchets et consomme peu d&#39;eau ; un chantier plus propre est aussi plus sûr.</p>
+    </div>
+  </div>
+</section>
+<section class="sobre" id="sobre">
+  <div class="conteneur sobre-grille">
+    <div>
+      <p class="surtitre" data-anime>Vers plus sobre</p>
+      <h2 data-anime="lignes">Quatre pistes pour aller plus loin</h2>
+      <ol class="sobre-liste" data-anime="cascade"><li><span class="sobre-num">01</span>Rénover avant de construire</li><li><span class="sobre-num">02</span>Matériaux biosourcés et géosourcés</li><li><span class="sobre-num">03</span>Réemploi des matériaux</li><li><span class="sobre-num">04</span>Standard Passivhaus</li></ol>
+    </div>
+    <div class="sobre-images">
+      <figure class="media sobre-media" data-grok data-fx="parallaxe" style="--cadrage:50% 50%;aspect-ratio:3 / 2">
+  <picture>
+    <img src="/assets/images/grok/matiere-paille-1168.webp" srcset="/assets/images/grok/matiere-paille-640.webp 640w, /assets/images/grok/matiere-paille-1168.webp 1168w" sizes="(max-width: 760px) 100vw, 40vw" alt="Mur en bottes de paille ouvert dans son ossature bois, à côté d&#39;un enduit terre et chaux" width="1168" height="778" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+      <figure class="media sobre-media sobre-media--2" data-anime="rideau" style="--cadrage:50% 50%;aspect-ratio:3 / 2">
+  <picture>
+    <img src="/assets/images/reemploi-1280.webp" srcset="/assets/images/reemploi-640.webp 640w, /assets/images/reemploi-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 30vw" alt="Salle aux murs de pierre conservés, avant son aménagement" width="1280" height="853" loading="lazy" decoding="async">
+  </picture>
+</figure>
+    </div>
+  </div>
+</section>
+<section class="fin" id="fin">
+  <div class="conteneur fin-grille">
+    <div class="fin-texte">
+      <h2 class="titre-ombre" data-texte="Un projet sobre commence par une conversation" data-effet="ombre-portee" data-anime>Un projet sobre commence par une conversation</h2>
+      <p data-anime>Premier rendez-vous gratuit et sans engagement.</p>
+      <p class="fin-actions" data-anime><a href="/contact#rendez-vous" class="bouton bouton--soleil" data-libelle="Contact" data-survol="magnetique">Demander un rendez-vous</a></p>
+    </div>
+    <figure class="media fin-media" data-anime="rideau" style="--cadrage:50% 50%;aspect-ratio:4 / 5">
+  <picture>
+    <img src="/assets/images/chaux-chanvre-960.webp" srcset="/assets/images/chaux-chanvre-640.webp 640w, /assets/images/chaux-chanvre-960.webp 960w" sizes="(max-width: 760px) 100vw, 38vw" alt="Mur isolé à la chaux et au chanvre pendant une rénovation écologique" width="960" height="720" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div>
+      <p class="pied-nom"><span class="logo-marque" role="img" aria-label="agence ae, Marine Gourlay architecte"></span></p>
+      <p>Agence d&#39;Architecture Environnementale<br>2 place Denis Bérardier, Le Prieuré, Quimper<br><a href="tel:+33767426991">07 67 42 69 91</a><br><a href="mailto:agence.ae.quimper@gmail.com">agence.ae.quimper@gmail.com</a></p>
+      <p><strong>Suivre l&#39;agence</strong></p>
+      <ul class="pied-reseaux"><li><a href="https://www.instagram.com/agenceae" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/agenceaequimper" target="_blank" rel="noopener">Facebook</a></li></ul>
+    </div>
+    <nav aria-label="Sommaire">
+      <p><strong>Sommaire</strong></p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/realisations" data-libelle="Réalisations">Réalisations</a></li><li><a href="/atelier" data-libelle="L&#39;Atelier">L&#39;Atelier</a></li><li><a href="/convictions" data-libelle="Convictions" aria-current="page">Convictions</a></li><li><a href="/contact" data-libelle="Contact">Contact</a></li></ul>
+    </nav>
+    <div>
+      <p><strong>Confort de lecture</strong></p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p class="pied-ordre"><span class="logo-ordre" role="img" aria-label="Inscrite à l'Ordre des architectes"></span>Architecte inscrite à l&#39;Ordre des architectes de Bretagne · n° d&#39;inscription à compléter</p><p>Mentions légales · Politique de confidentialité : à compléter</p><p>Maquette de présentation : les informations marquées « à compléter » seront fournies par l&#39;agence.</p><p>© L'Agence AE</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+33767426991">Appeler</a>
+  <a class="bouton" href="/contact#rendez-vous" data-libelle="Contact">Rendez-vous</a>
+</div>
+<div class="fil-soleil" data-grille="fil" data-effet="course-du-soleil" data-audit-ignorer aria-hidden="true"><span class="fil-rail"></span><span class="fil-trace"></span><ol class="fil-heures"></ol><span class="fil-astre"></span></div>
+</body>
+</html>

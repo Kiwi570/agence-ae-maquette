@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "L'Agence AE",
+  "alternateName": "Agence d'Architecture Environnementale",
+  "url": "https://agence-ae-maquette.vercel.app/",
+  "telephone": "+33767426991",
+  "email": "agence.ae.quimper@gmail.com",
+  "foundingDate": "2010",
+  "founder": { "@type": "Person", "name": "Marine Gourlay", "jobTitle": "Architecte D.E. HMONP" },
+  "address": { "@type": "PostalAddress", "streetAddress": "2 place Denis Bérardier, Le Prieuré", "addressLocality": "Quimper", "addressRegion": "Bretagne", "addressCountry": "FR" },
+  "areaServed": ["Quimper", "Pont-l'Abbé", "Concarneau", "Bénodet", "Fouesnant", "Combrit", "Moëlan-sur-Mer", "Névez", "Penmarc'h", "Loctudy", "Île-Tudy"],
+  "sameAs": ["https://www.instagram.com/agenceae", "https://www.facebook.com/agenceaequimper"],
+  "description": "Atelier d'architecture environnementale à Quimper : construction neuve, extension, rénovation et réhabilitation, locaux professionnels, en Sud Finistère."
+}

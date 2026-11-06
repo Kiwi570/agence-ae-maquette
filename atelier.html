@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>L&#39;Atelier : Marine Gourlay et son équipe, Agence AE</title>
+<meta name="description" content="Une agence d&#39;architecture à taille humaine à Quimper depuis 2010 : l&#39;architecte, l&#39;équipe, la démarche et les questions fréquentes.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://agence-ae-maquette.vercel.app/atelier">
+<style>:root{--fond:#f2ede3;--texte:#1e2427;--voile-fond:#c26a28;--ouverture-fond:#1e2427;--menu-fond:#f2ede3}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#f2ede3">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="agence ae">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="L&#39;Atelier : Marine Gourlay et son équipe, Agence AE">
+<meta property="og:description" content="Une agence d&#39;architecture à taille humaine à Quimper depuis 2010 : l&#39;architecte, l&#39;équipe, la démarche et les questions fréquentes.">
+<meta property="og:url" content="https://agence-ae-maquette.vercel.app/atelier">
+<meta property="og:image" content="https://agence-ae-maquette.vercel.app/assets/partage/atelier-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Marine Gourlay, architecte de l&#39;Agence AE à Quimper">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"L'Agence AE","alternateName":"Agence d'Architecture Environnementale","url":"https://agence-ae-maquette.vercel.app/","telephone":"+33767426991","email":"agence.ae.quimper@gmail.com","foundingDate":"2010","founder":{"@type":"Person","name":"Marine Gourlay","jobTitle":"Architecte D.E. HMONP"},"address":{"@type":"PostalAddress","streetAddress":"2 place Denis Bérardier, Le Prieuré","addressLocality":"Quimper","addressRegion":"Bretagne","addressCountry":"FR"},"areaServed":["Quimper","Pont-l'Abbé","Concarneau","Bénodet","Fouesnant","Combrit","Moëlan-sur-Mer","Névez","Penmarc'h","Loctudy","Île-Tudy"],"sameAs":["https://www.instagram.com/agenceae","https://www.facebook.com/agenceaequimper"],"description":"Atelier d'architecture environnementale à Quimper : construction neuve, extension, rénovation et réhabilitation, locaux professionnels, en Sud Finistère."}</script>
+</head>
+<body id="haut">
+<div data-voile data-forme="iris" aria-hidden="true"><div class="voile-contenu"><span class="voile-ae"></span><span data-voile-libelle>L&#39;Atelier</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <span class="ouverture-aube"></span>
+  <div class="ouverture-scene">
+    <svg class="ouverture-arc" viewBox="0 0 600 300" preserveAspectRatio="none"><path d="M20 290 A280 270 0 0 1 580 290" pathLength="1"/></svg>
+    <span class="ouverture-soleil" data-ouverture-objet></span>
+    <p class="ouverture-nom"><span class="ouv-l" style="--i:0"><span class="ouv-ombre">a</span><span class="ouv-lettre">a</span></span><span class="ouv-l" style="--i:1"><span class="ouv-ombre">g</span><span class="ouv-lettre">g</span></span><span class="ouv-l" style="--i:2"><span class="ouv-ombre">e</span><span class="ouv-lettre">e</span></span><span class="ouv-l" style="--i:3"><span class="ouv-ombre">n</span><span class="ouv-lettre">n</span></span><span class="ouv-l" style="--i:4"><span class="ouv-ombre">c</span><span class="ouv-lettre">c</span></span><span class="ouv-l" style="--i:5"><span class="ouv-ombre">e</span><span class="ouv-lettre">e</span></span><span class="ouv-esp"> </span><span class="ouv-l" style="--i:7"><span class="ouv-ombre">a</span><span class="ouv-lettre">a</span></span><span class="ouv-l" style="--i:8"><span class="ouv-ombre">e</span><span class="ouv-lettre">e</span></span></p>
+    <span class="ouverture-trait"></span>
+  </div>
+  <p class="ouverture-ligne">Architecture environnementale · Quimper</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" aria-label="agence ae, accueil" href="/" data-libelle="Accueil">
+      <span class="logo-mot" role="img" aria-label="agence ae"></span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/realisations" data-libelle="Réalisations">Réalisations</a></li><li><a href="/atelier" data-libelle="L&#39;Atelier" aria-current="page">L&#39;Atelier</a></li><li><a href="/convictions" data-libelle="Convictions">Convictions</a></li><li><a href="/contact" data-libelle="Contact">Contact</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton" href="/contact#rendez-vous" data-libelle="Contact">Premier rendez-vous</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <ul><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/realisations" class="menu-lien" data-libelle="Réalisations">Réalisations</a></li><li style="--i:2"><a href="/atelier" class="menu-lien" data-libelle="L&#39;Atelier" aria-current="page">L&#39;Atelier</a></li><li style="--i:3"><a href="/convictions" class="menu-lien" data-libelle="Convictions">Convictions</a></li><li style="--i:4"><a href="/contact" class="menu-lien" data-libelle="Contact">Contact</a></li></ul>
+  <p><a class="bouton" href="tel:+33767426991">Appeler 07 67 42 69 91</a></p>
+  <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+</div>
+<main id="contenu" tabindex="-1">
+<section class="atelier-tete" id="debut">
+  <figure class="media atelier-fond" data-grok data-fx="parallaxe" data-fx-force="5" style="--cadrage:50% 50%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/atelier-chaux-mobile-480.webp 480w" sizes="100vw">
+    <img src="/assets/images/grok/atelier-chaux-1280.webp" srcset="/assets/images/grok/atelier-chaux-640.webp 640w, /assets/images/grok/atelier-chaux-1280.webp 1280w" sizes="100vw" alt="" width="1280" height="719" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="conteneur atelier-tete-grille">
+    <div class="atelier-tete-texte">
+      <p class="surtitre" data-anime="gsap" data-ouv>L&#39;Atelier</p>
+      <h1 class="titre-ombre atelier-titre" data-texte="Une agence à taille humaine" data-grille="typo" data-effet="ombre-portee"><span class="ligne-masque"><span class="ouv-ligne" data-anime="gsap">Une agence à taille humaine</span></span></h1>
+      <p class="atelier-intro" data-anime="gsap" data-ouv data-info-cle>Fondée en 2010 à Quimper, en Cornouaille, l&#39;agence est une structure artisanale : un accompagnement proche et personnel, de la première idée à la remise des clés.</p>
+      <p class="atelier-actions" data-anime="gsap" data-ouv><a href="/contact#rendez-vous" class="bouton" data-libelle="Contact" data-action-principale>Demander un rendez-vous</a></p>
+      <div class="cartouche" data-effet="cartouche" aria-label="Cartouche">
+        <svg class="cartouche-traits" viewBox="0 0 600 220" preserveAspectRatio="none" aria-hidden="true"><path d="M1 1 H599 V219 H1 Z M1 60 H599 M400 60 V219 M1 120 H400 M1 170 H400" pathLength="1"/></svg>
+        <p class="cartouche-projet">Agence d&#39;Architecture Environnementale</p>
+        <p class="cartouche-nom"><span data-ecrit>Marine Gourlay</span></p>
+        <p class="cartouche-titre"><span data-ecrit>Architecte D.E. HMONP</span></p>
+        <p class="cartouche-ordre"><span data-ecrit>Ordre des architectes de Bretagne · Assurée à la MAF</span></p>
+        <div class="cartouche-tampon" data-iris-centre="disque" aria-hidden="true"><span class="voile-ae"></span><span class="tampon-lieu">Quimper · depuis 2010</span></div>
+      </div>
+    </div>
+    <figure class="media atelier-portrait" data-anime="gsap" data-ouv style="--cadrage:50% 50%;aspect-ratio:4 / 5">
+  <picture>
+    <img src="/assets/images/marine-gourlay-bureau-960.webp" srcset="/assets/images/marine-gourlay-bureau-640.webp 640w, /assets/images/marine-gourlay-bureau-960.webp 960w" sizes="(max-width: 760px) 70vw, 30vw" alt="Marine Gourlay à son bureau, nuancier à la main" width="960" height="1200" fetchpriority="high" loading="eager" decoding="async">
+  </picture>
+</figure>
+  </div>
+</section>
+<section class="parcours" id="parcours">
+  <div class="conteneur parcours-grille">
+    <div>
+      <p class="surtitre" data-anime>Parcours</p>
+      <h2 data-anime="lignes">Une architecture locale, consciente et durable</h2>
+      <p data-anime>L&#39;écoconstruction et l&#39;écorénovation ne sont pas une contrainte mais une responsabilité qui enrichit chaque projet : qualité, études complètes et préparation soignée du chantier.</p>
+      <p class="parcours-reseaux" data-anime>Membre des réseaux Approche Éco-Habitat, MaEB, RFCP et Abibois.</p>
+    </div>
+    <div class="frise" data-visuel>
+      <svg class="frise-trait" viewBox="0 0 20 600" preserveAspectRatio="none" aria-hidden="true" data-fx="trace"><path d="M10 4 V596"/></svg>
+      <ol data-anime="cascade"><li><span class="frise-annee">2008</span><span class="frise-texte">Habilitation à la maîtrise d&#39;œuvre en son nom propre (HMONP), à Rennes</span></li><li><span class="frise-annee">2010</span><span class="frise-texte">Installation à Quimper : naissance de l&#39;agence</span></li><li><span class="frise-annee">2016</span><span class="frise-texte">Formation à la construction en paille (PROPAILLE)</span></li></ol>
+    </div>
+  </div>
+</section>
+<section class="equipe" id="equipe">
+  <div class="conteneur">
+    <p class="surtitre" data-anime>L&#39;équipe</p>
+    <h2 class="titre-ombre" data-texte="Quatre métiers autour d&#39;un projet" data-effet="ombre-portee" data-anime>Quatre métiers autour d&#39;un projet</h2>
+    <ul class="equipe-liste" data-anime="cascade"><li class="membre" data-visuel><span class="membre-monogramme" aria-hidden="true">MG</span><strong>Marine Gourlay</strong><span>Architecte D.E. HMONP, fondatrice</span></li><li class="membre" data-visuel><span class="membre-monogramme" aria-hidden="true">ML</span><strong>Matthieu Le Coz</strong><span>Maître d&#39;œuvre</span></li><li class="membre" data-visuel><span class="membre-monogramme" aria-hidden="true">HK</span><strong>Hugues de Kerckhove</strong><span>Métreur géomètre</span></li><li class="membre" data-visuel><span class="membre-monogramme" aria-hidden="true">MD</span><strong>Manon Duroy</strong><span>Architecte d&#39;intérieur et dessinatrice</span></li></ul>
+  </div>
+</section>
+<section class="demarche" id="demarche" data-grille="scene" data-effet="meuble-a-plans">
+  <div class="conteneur demarche-grille">
+    <div class="demarche-texte">
+      <p class="surtitre" data-anime>Notre démarche</p>
+      <h2 data-anime="lignes">Le meuble à plans de la mission</h2>
+      <p data-anime>Chaque tiroir est une étape de la mission. Ouvrez-les dans l&#39;ordre, ou directement celui qui vous concerne.</p>
+      <div class="meuble">
+        <div class="tiroir est-ouvert" data-tiroir="1">
+          <h3 class="tiroir-titre"><button type="button" class="tiroir-facade" aria-expanded="true" aria-controls="tiroir-1"><span class="tiroir-num">01</span><span>Conseils</span><span class="tiroir-poignee" aria-hidden="true"></span></button></h3>
+          <div class="tiroir-corps" id="tiroir-1">
+            <div class="tiroir-dedans">
+              <p>Avant d&#39;acheter, une visite conseil de 1 à 3 heures sur place, avec un compte rendu sous une semaine environ.</p>
+              <p class="tiroir-detail">105 € TTC de l&#39;heure · estimation des travaux en option : 90 € TTC · déplacements offerts à Quimper, facturés au-delà.</p>
+              <a href="/contact?projet=conseil#rendez-vous" class="lien-fleche" data-libelle="Contact">En parler au premier rendez-vous</a>
+            </div>
+          </div>
+        </div><div class="tiroir" data-tiroir="2">
+          <h3 class="tiroir-titre"><button type="button" class="tiroir-facade" aria-expanded="false" aria-controls="tiroir-2"><span class="tiroir-num">02</span><span>Conception</span><span class="tiroir-poignee" aria-hidden="true"></span></button></h3>
+          <div class="tiroir-corps" id="tiroir-2" hidden>
+            <div class="tiroir-dedans">
+              <p>L&#39;esquisse représente environ une semaine de travail : étude réglementaire, visite du site, une ou deux options avec plans, perspectives et estimation des travaux.</p>
+              <p class="tiroir-detail">Une esquisse payée est une esquisse soignée : c&#39;est elle qui fixe le projet.</p>
+              <a href="/contact?projet=neuf#rendez-vous" class="lien-fleche" data-libelle="Contact">En parler au premier rendez-vous</a>
+            </div>
+          </div>
+        </div><div class="tiroir" data-tiroir="3">
+          <h3 class="tiroir-titre"><button type="button" class="tiroir-facade" aria-expanded="false" aria-controls="tiroir-3"><span class="tiroir-num">03</span><span>Permis de construire</span><span class="tiroir-poignee" aria-hidden="true"></span></button></h3>
+          <div class="tiroir-corps" id="tiroir-3" hidden>
+            <div class="tiroir-dedans">
+              <p>Constitution et dépôt du dossier. Au-delà de 150 m² de surface de plancher, le recours à un architecte est obligatoire.</p>
+              <p class="tiroir-detail">L&#39;architecte intervient en amont : jamais de simple tampon sur des plans qu&#39;il n&#39;a pas conçus.</p>
+              <a href="/contact?projet=neuf#rendez-vous" class="lien-fleche" data-libelle="Contact">En parler au premier rendez-vous</a>
+            </div>
+          </div>
+        </div><div class="tiroir" data-tiroir="4">
+          <h3 class="tiroir-titre"><button type="button" class="tiroir-facade" aria-expanded="false" aria-controls="tiroir-4"><span class="tiroir-num">04</span><span>Maîtrise d&#39;œuvre</span><span class="tiroir-poignee" aria-hidden="true"></span></button></h3>
+          <div class="tiroir-corps" id="tiroir-4" hidden>
+            <div class="tiroir-dedans">
+              <p>L&#39;agence consulte les entreprises adaptées au projet et vérifie leurs garanties, sans en imposer aucune : le choix final vous revient.</p>
+              <p class="tiroir-detail">Un interlocuteur unique pour coordonner le projet.</p>
+              <a href="/contact?projet=renovation#rendez-vous" class="lien-fleche" data-libelle="Contact">En parler au premier rendez-vous</a>
+            </div>
+          </div>
+        </div><div class="tiroir" data-tiroir="5">
+          <h3 class="tiroir-titre"><button type="button" class="tiroir-facade" aria-expanded="false" aria-controls="tiroir-5"><span class="tiroir-num">05</span><span>Suivi de chantier</span><span class="tiroir-poignee" aria-hidden="true"></span></button></h3>
+          <div class="tiroir-corps" id="tiroir-5" hidden>
+            <div class="tiroir-dedans">
+              <p>L&#39;architecte dirige le chantier jusqu&#39;à la réception, sur tout type de projet, avec un chantier propre : tri des déchets, nettoyage, voisinage respecté.</p>
+              <p class="tiroir-detail">La construction sèche en ossature bois produit peu de déchets et consomme peu d&#39;eau.</p>
+              <a href="/contact?projet=renovation#rendez-vous" class="lien-fleche" data-libelle="Contact">En parler au premier rendez-vous</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="demarche-images" aria-hidden="true">
+      <figure class="media demarche-image est-visible" data-image-tiroir="1" style="--cadrage:50% 50%;aspect-ratio:4 / 5">
+  <picture>
+    <img src="/assets/images/tiroir-conseils-960.webp" srcset="/assets/images/tiroir-conseils-640.webp 640w, /assets/images/tiroir-conseils-960.webp 960w" sizes="(max-width: 760px) 72vw, 36vw" alt="" width="960" height="1200" loading="lazy" decoding="async">
+  </picture>
+</figure><figure class="media demarche-image" data-grok data-image-tiroir="2" style="--cadrage:50% 50%;aspect-ratio:4 / 5">
+  <picture>
+    <img src="/assets/images/grok/atelier-table-784.webp" srcset="/assets/images/grok/atelier-table-640.webp 640w, /assets/images/grok/atelier-table-784.webp 784w" sizes="(max-width: 760px) 72vw, 36vw" alt="" width="784" height="980" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure><figure class="media demarche-image" data-image-tiroir="3" style="--cadrage:50% 50%;aspect-ratio:4 / 5">
+  <picture>
+    <img src="/assets/images/tiroir-permis-960.webp" srcset="/assets/images/tiroir-permis-640.webp 640w, /assets/images/tiroir-permis-960.webp 960w" sizes="(max-width: 760px) 72vw, 36vw" alt="" width="960" height="1200" loading="lazy" decoding="async">
+  </picture>
+</figure><figure class="media demarche-image" data-image-tiroir="4" style="--cadrage:50% 50%;aspect-ratio:4 / 5">
+  <picture>
+    <img src="/assets/images/tiroir-maitrise-960.webp" srcset="/assets/images/tiroir-maitrise-640.webp 640w, /assets/images/tiroir-maitrise-960.webp 960w" sizes="(max-width: 760px) 72vw, 36vw" alt="" width="960" height="1200" loading="lazy" decoding="async">
+  </picture>
+</figure><figure class="media demarche-image" data-image-tiroir="5" style="--cadrage:50% 50%;aspect-ratio:4 / 5">
+  <picture>
+    <img src="/assets/images/tiroir-chantier-960.webp" srcset="/assets/images/tiroir-chantier-640.webp 640w, /assets/images/tiroir-chantier-960.webp 960w" sizes="(max-width: 760px) 72vw, 36vw" alt="" width="960" height="1200" loading="lazy" decoding="async">
+  </picture>
+</figure>
+    </div>
+  </div>
+</section>
+<section class="faq" id="faq">
+  <div class="conteneur faq-grille">
+    <div>
+      <p class="surtitre" data-anime>Questions fréquentes</p>
+      <h2 data-anime="lignes">Avant de nous appeler</h2>
+      <div class="faq-liste" data-anime="cascade"><details class="faq-item"><summary>Pourquoi faire appel à un architecte ?</summary><div class="faq-reponse"><p>C&#39;est le seul professionnel qui peut suivre votre projet de la conception à la réalisation, avec un projet sur mesure et un interlocuteur unique. Vous pouvez vérifier son inscription au tableau de l&#39;Ordre des architectes. Un projet bien conçu se valorise souvent mieux à la revente : c&#39;est un repère, pas une garantie.</p></div></details><details class="faq-item"><summary>Architecte ou maître d&#39;œuvre, quelle différence ?</summary><div class="faq-reponse"><p>Maître d&#39;œuvre désigne un rôle dans une opération, pas un titre ni une qualification. Pour porter le titre d&#39;architecte, il faut le diplôme d&#39;État, l&#39;habilitation HMONP et l&#39;inscription à l&#39;Ordre.</p></div></details><details class="faq-item"><summary>L&#39;architecte est-il obligatoire ?</summary><div class="faq-reponse"><p>Oui, à partir de 150 m² de surface de plancher pour un permis de construire. En dessous, il reste le seul à pouvoir suivre le projet de bout en bout.</p></div></details><details class="faq-item"><summary>Comment préparer le premier rendez-vous ?</summary><div class="faq-reponse"><p>Apportez si possible des plans et des photos (ce n&#39;est pas obligatoire), et réfléchissez à vos besoins, à votre budget et à vos délais. Le premier rendez-vous est gratuit et sans engagement.</p></div></details><details class="faq-item"><summary>Combien coûte un architecte ?</summary><div class="faq-reponse"><p>Les honoraires dépendent de la taille du projet, de sa complexité et de l&#39;étendue de la mission (partielle ou complète). Un contrat qui fait office de devis vous est envoyé par e-mail après le premier rendez-vous. À titre de repère, l&#39;agence indique qu&#39;ils restent en général inférieurs à la TVA des travaux : à confirmer pour chaque projet.</p></div></details><details class="faq-item"><summary>Pourquoi l&#39;esquisse est-elle payante ?</summary><div class="faq-reponse"><p>Elle représente environ une semaine de travail : étude réglementaire, visite du site, une ou deux options avec plans, perspectives et estimation des travaux. Une esquisse offerte est souvent une esquisse bâclée.</p></div></details><details class="faq-item"><summary>Proposez-vous des visites conseil avant achat ?</summary><div class="faq-reponse"><p>Oui : 105 € TTC de l&#39;heure, pour 1 à 3 heures sur place, avec un compte rendu sous une semaine environ. L&#39;estimation des travaux est en option (90 € TTC). Les déplacements sont offerts à Quimper et facturés au-delà.</p></div></details></div>
+    </div>
+    <figure class="media faq-media" data-fx="parallaxe" style="--cadrage:50% 50%;aspect-ratio:4 / 5">
+  <picture>
+    <img src="/assets/images/faq-interieur-960.webp" srcset="/assets/images/faq-interieur-640.webp 640w, /assets/images/faq-interieur-960.webp 960w" sizes="(max-width: 760px) 100vw, 34vw" alt="Intérieur de la remise de Tréguennec, double hauteur et pierre" width="960" height="1200" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div>
+</section>
+<section class="fin" id="fin">
+  <div class="conteneur fin-grille">
+    <div class="fin-texte">
+      <h2 class="titre-ombre" data-texte="Rencontrons-nous" data-effet="ombre-portee" data-anime>Rencontrons-nous</h2>
+      <p data-anime>Le premier rendez-vous est gratuit et sans engagement.</p>
+      <p class="fin-actions" data-anime><a href="/contact#rendez-vous" class="bouton bouton--soleil" data-libelle="Contact" data-survol="magnetique">Demander un rendez-vous</a></p>
+    </div>
+    <figure class="media fin-media" data-anime="rideau" style="--cadrage:50% 50%;aspect-ratio:4 / 5">
+  <picture>
+    <img src="/assets/images/marine-gourlay-960.webp" srcset="/assets/images/marine-gourlay-640.webp 640w, /assets/images/marine-gourlay-960.webp 960w" sizes="(max-width: 760px) 100vw, 38vw" alt="Marine Gourlay, architecte, devant un mur de pierre" width="960" height="1200" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div>
+      <p class="pied-nom"><span class="logo-marque" role="img" aria-label="agence ae, Marine Gourlay architecte"></span></p>
+      <p>Agence d&#39;Architecture Environnementale<br>2 place Denis Bérardier, Le Prieuré, Quimper<br><a href="tel:+33767426991">07 67 42 69 91</a><br><a href="mailto:agence.ae.quimper@gmail.com">agence.ae.quimper@gmail.com</a></p>
+      <p><strong>Suivre l&#39;agence</strong></p>
+      <ul class="pied-reseaux"><li><a href="https://www.instagram.com/agenceae" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/agenceaequimper" target="_blank" rel="noopener">Facebook</a></li></ul>
+    </div>
+    <nav aria-label="Sommaire">
+      <p><strong>Sommaire</strong></p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/realisations" data-libelle="Réalisations">Réalisations</a></li><li><a href="/atelier" data-libelle="L&#39;Atelier" aria-current="page">L&#39;Atelier</a></li><li><a href="/convictions" data-libelle="Convictions">Convictions</a></li><li><a href="/contact" data-libelle="Contact">Contact</a></li></ul>
+    </nav>
+    <div>
+      <p><strong>Confort de lecture</strong></p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p class="pied-ordre"><span class="logo-ordre" role="img" aria-label="Inscrite à l'Ordre des architectes"></span>Architecte inscrite à l&#39;Ordre des architectes de Bretagne · n° d&#39;inscription à compléter</p><p>Mentions légales · Politique de confidentialité : à compléter</p><p>Maquette de présentation : les informations marquées « à compléter » seront fournies par l&#39;agence.</p><p>© L'Agence AE</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+33767426991">Appeler</a>
+  <a class="bouton" href="/contact#rendez-vous" data-libelle="Contact">Rendez-vous</a>
+</div>
+<div class="fil-soleil" data-grille="fil" data-effet="course-du-soleil" data-audit-ignorer aria-hidden="true"><span class="fil-rail"></span><span class="fil-trace"></span><ol class="fil-heures"></ol><span class="fil-astre"></span></div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "siteActuel": "domaine-du-client.fr",
+  "pagesTypes": ["/", "/a-propos"],
+  "effets": ["onde", "points", "galerie", "trace"],
+  "grille": {
+    "dispenses": {}
+  }
+}

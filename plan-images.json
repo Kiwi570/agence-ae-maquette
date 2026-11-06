@@ -1,0 +1,573 @@
+{
+ "_note": "Plan des images (décision de Claude). Produit par outils/produire-images.py (repli local du pipeline de la bibliothèque, dont les scripts n'ont pas pu être lancés dans cet environnement). cadrage en % ; ratio ; largeurs ; mobile = source et ratio de la version téléphone.",
+ "fixes": [
+  {
+   "nom": "ouverture",
+   "source": "site/construction-maison-individuelle.jpg",
+   "ratio": "16:9",
+   "largeurs": [
+    640,
+    1280,
+    1920
+   ],
+   "cadrage": [
+    55,
+    50
+   ],
+   "mobile": {
+    "source": "site/maison-t-g.jpg",
+    "ratio": "9:16",
+    "largeurs": [
+     640,
+     960
+    ],
+    "cadrage": [
+     62,
+     55
+    ]
+   },
+   "alt": "Maison T-G à Combrit : maison en ossature bois et bardage brûlé au soleil couchant"
+  },
+  {
+   "nom": "planche-neuf",
+   "source": "site/maison-j-lm.jpg",
+   "ratio": "4:3",
+   "largeurs": [
+    640,
+    1280
+   ],
+   "alt": "Maison J-LM à Fouesnant, volumes blancs et bois sous un toit sombre"
+  },
+  {
+   "nom": "planche-renovation",
+   "source": "site/renovation-remise-pigeonnier-8.png",
+   "ratio": "4:3",
+   "largeurs": [
+    640,
+    1280
+   ],
+   "alt": "Ancienne remise réhabilitée à Tréguennec : pierre, chaux et grande baie vitrée"
+  },
+  {
+   "nom": "planche-pro",
+   "source": "site/construction-immeuble-bureaux-commerces.jpg",
+   "ratio": "4:3",
+   "largeurs": [
+    640,
+    1280
+   ],
+   "alt": "Immeuble de bureaux et commerces à Ergué-Gabéric, façades en bois"
+  },
+  {
+   "nom": "selection-combrit",
+   "source": "site/agence-ae-5.jpg",
+   "ratio": "4:5",
+   "largeurs": [
+    640,
+    1080
+   ],
+   "alt": "Maison T-G à Combrit : pergola en bois et bardage brûlé"
+  },
+  {
+   "nom": "selection-treguennec",
+   "source": "site/renovation-remise-pigeonnier-13.png",
+   "ratio": "4:5",
+   "largeurs": [
+    640,
+    1080
+   ],
+   "alt": "Intérieur de la remise de Tréguennec : mur de pierre et rangements en bois"
+  },
+  {
+   "nom": "selection-bureaux",
+   "source": "site/construction-immeuble-bureaux-commerces-2.jpg",
+   "ratio": "4:5",
+   "largeurs": [
+    640,
+    1080
+   ],
+   "alt": "Immeuble de bureaux et commerces à Ergué-Gabéric"
+  },
+  {
+   "nom": "selection-loctudy",
+   "source": "site/renovation-maison-vacances-loctudy-27.png",
+   "ratio": "4:5",
+   "largeurs": [
+    640,
+    1080
+   ],
+   "alt": "Maison de vacances rénovée à Loctudy : salle à manger traversée de soleil"
+  },
+  {
+   "nom": "selection-lanvenegen",
+   "source": "site/chantier-termine-10.jpg",
+   "ratio": "4:5",
+   "largeurs": [
+    640,
+    1080
+   ],
+   "alt": "Maison du XVIᵉ siècle réhabilitée à Lanvénégen : encadrement de pierre et escalier"
+  },
+  {
+   "nom": "chaux-chanvre",
+   "source": "site/mur-isolaee-chaux-chanvre.jpg",
+   "ratio": "4:3",
+   "largeurs": [
+    640,
+    960
+   ],
+   "alt": "Mur isolé à la chaux et au chanvre pendant une rénovation écologique"
+  },
+  {
+   "nom": "marine-gourlay",
+   "source": "site/marine-gourlay-architecte-quimper.jpg",
+   "ratio": "4:5",
+   "largeurs": [
+    640,
+    960
+   ],
+   "alt": "Marine Gourlay, architecte, devant un mur de pierre"
+  },
+  {
+   "nom": "marine-gourlay-bureau",
+   "source": "site/marine-gourlay-architecte.jpg",
+   "ratio": "4:5",
+   "largeurs": [
+    640,
+    960
+   ],
+   "alt": "Marine Gourlay à son bureau, nuancier à la main"
+  },
+  {
+   "nom": "chemin-mer",
+   "source": "site/apres-travaux-2.jpg",
+   "ratio": "4:5",
+   "largeurs": [
+    640,
+    960
+   ],
+   "alt": "Chemin de bois vers la mer, extérieurs rénovés à Loctudy"
+  },
+  {
+   "nom": "tiroir-conseils",
+   "source": "site/facade-existante.jpg",
+   "ratio": "4:5",
+   "largeurs": [
+    640,
+    960
+   ],
+   "alt": "Façade existante d'une longère avant sa réhabilitation"
+  },
+  {
+   "nom": "tiroir-permis",
+   "source": "site/maison-m.png",
+   "ratio": "4:5",
+   "largeurs": [
+    640,
+    960
+   ],
+   "alt": "Maison M à Penmarc'h, visuel du projet"
+  },
+  {
+   "nom": "tiroir-maitrise",
+   "source": "site/surface-8.jpg",
+   "ratio": "4:5",
+   "largeurs": [
+    640,
+    960
+   ],
+   "alt": "Extension en cours de construction dans le Cap Sizun"
+  },
+  {
+   "nom": "tiroir-chantier",
+   "source": "site/phase-chantier.jpg",
+   "ratio": "4:5",
+   "largeurs": [
+    640,
+    960
+   ],
+   "alt": "Ossature bois en phase chantier sur une longère à Lanvénégen"
+  },
+  {
+   "nom": "faq-interieur",
+   "source": "site/renovation-remise-pigeonnier-18.png",
+   "ratio": "4:5",
+   "largeurs": [
+    640,
+    960
+   ],
+   "alt": "Intérieur de la remise de Tréguennec, double hauteur et pierre"
+  },
+  {
+   "nom": "reemploi",
+   "source": "site/realisations.jpg",
+   "ratio": "3:2",
+   "largeurs": [
+    640,
+    1280
+   ],
+   "alt": "Salle aux murs de pierre conservés, avant son aménagement"
+  },
+  {
+   "nom": "grok/contact-cote",
+   "source": "grok/g-contact-cote.jpg",
+   "ratio": "21:9",
+   "largeurs": [
+    640,
+    1280,
+    1920
+   ],
+   "cadrage": [
+    50,
+    62
+   ],
+   "mobile": {
+    "source": "grok/g-contact-cote.jpg",
+    "ratio": "4:5",
+    "largeurs": [
+     640
+    ],
+    "cadrage": [
+     62,
+     60
+    ]
+   },
+   "alt": "Côte de granit et d'herbes au soleil couchant"
+  },
+  {
+   "nom": "grok/convictions-bois",
+   "source": "grok/g-convictions-bois.jpg",
+   "ratio": "16:9",
+   "largeurs": [
+    640,
+    1280,
+    1920
+   ],
+   "mobile": {
+    "source": "grok/g-convictions-bois.jpg",
+    "ratio": "9:16",
+    "largeurs": [
+     480
+    ],
+    "cadrage": [
+     45,
+     50
+    ]
+   },
+   "alt": ""
+  },
+  {
+   "nom": "grok/atelier-chaux",
+   "source": "grok/g-atelier-chaux.jpg",
+   "ratio": "16:9",
+   "largeurs": [
+    640,
+    1280,
+    1920
+   ],
+   "mobile": {
+    "source": "grok/g-atelier-chaux.jpg",
+    "ratio": "9:16",
+    "largeurs": [
+     480
+    ],
+    "cadrage": [
+     70,
+     40
+    ]
+   },
+   "alt": ""
+  },
+  {
+   "nom": "grok/scene-maquette",
+   "source": "grok/g-scene-maquette.jpg",
+   "ratio": "4:5",
+   "largeurs": [
+    640,
+    784
+   ],
+   "alt": "Maquette de maison en carton sur une table à dessin, au soleil du matin"
+  },
+  {
+   "nom": "grok/lumiere-hiver",
+   "source": "grok/g-lumiere-hiver.jpg",
+   "ratio": "3:2",
+   "largeurs": [
+    640,
+    1168
+   ],
+   "alt": "Soleil d'hiver entrant au fond d'un séjour vide"
+  },
+  {
+   "nom": "grok/matiere-paille",
+   "source": "grok/g-matiere-paille.jpg",
+   "ratio": "3:2",
+   "largeurs": [
+    640,
+    1168
+   ],
+   "alt": "Mur en bottes de paille ouvert dans son ossature bois, à côté d'un enduit terre et chaux"
+  },
+  {
+   "nom": "grok/matiere-ossature",
+   "source": "grok/g-matiere-ossature.jpg",
+   "ratio": "3:2",
+   "largeurs": [
+    640,
+    1168
+   ],
+   "alt": "Ossature bois et isolant en fibre de bois, chutes triées dans une caisse"
+  },
+  {
+   "nom": "grok/bocage-matin",
+   "source": "grok/g-bocage-matin.jpg",
+   "ratio": "16:9",
+   "largeurs": [
+    640,
+    1168
+   ],
+   "alt": ""
+  },
+  {
+   "nom": "grok/404-cadran",
+   "source": "grok/g-404-cadran.jpg",
+   "ratio": "16:9",
+   "largeurs": [
+    640,
+    1168
+   ],
+   "cadrage": [
+    30,
+    50
+   ],
+   "alt": "Cadran solaire de pierre sur un muret, face à la mer"
+  },
+  {
+   "nom": "grok/atelier-table",
+   "source": "grok/g-atelier-table.jpg",
+   "ratio": "4:5",
+   "largeurs": [
+    640,
+    784
+   ],
+   "alt": "Table à dessin avec calques et échantillons de matières"
+  }
+ ],
+ "projets": {
+  "maison-tg-combrit": {
+   "carte": "agence-ae-4.jpg",
+   "galerie": [
+    "construction-maison-individuelle.jpg",
+    "agence-ae-2.jpg",
+    "agence-ae-3.jpg",
+    "agence-ae-5.jpg",
+    "maison-t-g.jpg"
+   ]
+  },
+  "maison-j-lm-fouesnant": {
+   "carte": "maison-j-lm.jpg",
+   "galerie": [
+    "maison-j-lm.jpg",
+    "construction-maison-habitation-fouesnant.jpg",
+    "construction-maison-habitation-fouesnant-2.jpg",
+    "construction-maison-habitation-fouesnant-5.png",
+    "construction-maison-habitation-fouesnant-7.png"
+   ]
+  },
+  "maison-g-riec": {
+   "carte": "maison-g.png",
+   "galerie": [
+    "maison-g.png",
+    "construction-maison-habitation-riec.png",
+    "construction-maison-habitation-riec-2.png",
+    "maison-g-2.png"
+   ]
+  },
+  "extension-d-tremeoc": {
+   "carte": "chantier-termine-19.png",
+   "galerie": [
+    "chantier-termine-19.png",
+    "chantier-termine-18.jpg",
+    "chantier-termine-20.png",
+    "chantier-termine-21.png",
+    "extension.png"
+   ]
+  },
+  "maison-e-ergue": {
+   "carte": "construction-maison-individuelle-2.png",
+   "galerie": [
+    "construction-maison-individuelle-2.png",
+    "construction-maison-individuelle-5.png",
+    "construction-maison-individuelle-6.png",
+    "construction-maison-individuelle-7.png",
+    "construction-maison-individuelle-9.png"
+   ]
+  },
+  "extension-v-benodet": {
+   "carte": "extension-v.jpg",
+   "galerie": [
+    "extension-v.jpg",
+    "chantier-termine-27.jpg",
+    "chantier-termine-23.png",
+    "chantier-termine-26.png",
+    "chantier-termine-28.png"
+   ]
+  },
+  "maison-m-penmarch": {
+   "carte": "maison-m-2.png",
+   "galerie": [
+    "maison-m-2.png",
+    "construction-maison-habitation-penmarc.png",
+    "construction-maison-individuelle-3.png"
+   ]
+  },
+  "extension-d2-concarneau": {
+   "carte": "extension-d2.png",
+   "galerie": [
+    "extension-d2.png",
+    "extension-d2-2.png",
+    "extension-d2-3.png",
+    "construction-extension-concarneau.png"
+   ]
+  },
+  "maison-f-ergue": {
+   "carte": "habitation-ergue-gaberic.png",
+   "galerie": [
+    "habitation-ergue-gaberic.png",
+    "habitation-ergue-gaberic-2.png",
+    "habitation-ergue-gaberic-3.png",
+    "habitation-ergue-gaberic-4.png"
+   ]
+  },
+  "extension-cap-sizun": {
+   "carte": "construction-extension-ossature-bois.jpg",
+   "galerie": [
+    "construction-extension-ossature-bois.jpg"
+   ]
+  },
+  "remise-pigeonnier-treguennec": {
+   "carte": "renovation-remise-pigeonnier-3.png",
+   "galerie": [
+    "renovation-remise-pigeonnier-3.png",
+    "renovation-remise-pigeonnier-6.png",
+    "renovation-remise-pigeonnier-9.png",
+    "renovation-remise-pigeonnier-13.png",
+    "renovation-remise-pigeonnier-19.png",
+    "renovation-remise-pigeonnier-20.png"
+   ]
+  },
+  "maison-xvie-lanvenegen": {
+   "carte": "chantier-termine.jpg",
+   "galerie": [
+    "chantier-termine.jpg",
+    "chantier-termine-2.jpg",
+    "chantier-termine-4.jpg",
+    "chantier-termine-10.jpg",
+    "rehabilitation-maison-xvieme-siecle.jpg"
+   ]
+  },
+  "maison-vacances-loctudy": {
+   "carte": "renovation-maison-vacances-loctudy-20.png",
+   "galerie": [
+    "renovation-maison-vacances-loctudy-20.png",
+    "renovation-maison-vacances-loctudy.jpg",
+    "renovation-maison-vacances-loctudy-27.png",
+    "renovation-maison-vacances-loctudy-18.png",
+    "renovation-maison-vacances-loctudy-17.png",
+    "renovation-maison-vacances-loctudy-24.png"
+   ]
+  },
+  "habitation-meilars": {
+   "carte": "rehabilitation-habitation.jpg",
+   "galerie": [
+    "rehabilitation-habitation.jpg",
+    "surface.jpg",
+    "surface-12.jpg",
+    "surface-8.jpg",
+    "surface-10.jpg"
+   ]
+  },
+  "salle-de-bain-treguennec": {
+   "carte": "creation-salle-bain.png",
+   "galerie": [
+    "creation-salle-bain.png",
+    "surface-22.png",
+    "surface-20.png",
+    "surface-21.png"
+   ]
+  },
+  "neobretonne-combrit": {
+   "carte": "renovation-maison-neo-bretonne.jpg",
+   "galerie": [
+    "renovation-maison-neo-bretonne.jpg",
+    "renovation-maison-neo-bretonne-2.jpg",
+    "renovation-maison-neo-bretonne-8.jpg",
+    "renovation-maison-neo-bretonne-20.jpg"
+   ]
+  },
+  "exterieurs-loctudy": {
+   "carte": "renovation-exterieurs-maison-bord.jpg",
+   "galerie": [
+    "renovation-exterieurs-maison-bord.jpg",
+    "apres-travaux.jpg",
+    "apres-travaux-3.jpg",
+    "apres-travaux-4.jpg",
+    "apres-travaux-8.jpg"
+   ]
+  },
+  "combles-penmarch": {
+   "carte": "suite-parentale.jpg",
+   "galerie": [
+    "suite-parentale.jpg",
+    "cage-escalier.jpg",
+    "salle-eau.jpg",
+    "salle-eau-2.jpg"
+   ]
+  },
+  "bureaux-ergue": {
+   "carte": "construction-immeuble-bureaux-commerces-3.jpg",
+   "galerie": [
+    "construction-immeuble-bureaux-commerces.jpg",
+    "construction-immeuble-bureaux-commerces-2.jpg",
+    "construction-immeuble-bureaux-commerces-3.jpg",
+    "construction-immeuble-bureaux-commerces-4.jpg"
+   ]
+  },
+  "cabinet-medical-quimperle": {
+   "carte": "facade-arriere.jpg",
+   "galerie": [
+    "construction-cabinet-medical-m.jpg",
+    "facade-arriere.jpg",
+    "vue-nuit.jpg",
+    "hall.jpg",
+    "accueil-1.jpg",
+    "degagement.jpg"
+   ]
+  },
+  "coworking-quimper": {
+   "carte": "amenagement-espace-coworking.png",
+   "galerie": [
+    "amenagement-espace-coworking.png",
+    "transformation-local-kine-espace-3.png",
+    "transformation-local-kine-espace-4.png",
+    "transformation-local-kine-espace-6.png"
+   ]
+  },
+  "galerie-artiste": {
+   "carte": "transformation-habitation-galerie-4.jpg",
+   "galerie": [
+    "transformation-habitation-galerie-4.jpg",
+    "transformation-habitation-galerie.jpg",
+    "renovation-galerie-artiste.png"
+   ]
+  },
+  "boutique-paris": {
+   "carte": "boutique-accessoires-scooter.jpg",
+   "galerie": [
+    "boutique-accessoires-scooter.jpg",
+    "creation-boutique-2.jpg",
+    "creation-boutique-4.png"
+   ]
+  }
+ }
+}

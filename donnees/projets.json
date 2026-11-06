@@ -1,0 +1,205 @@
+[
+ {
+  "id": "maison-tg-combrit",
+  "titre": "Maison T-G",
+  "sous": "Maison individuelle en ossature bois et bardage brûlé",
+  "commune": "Combrit · Sainte-Marine",
+  "dep": "29",
+  "categorie": "neuf",
+  "accueil": true
+ },
+ {
+  "id": "maison-j-lm-fouesnant",
+  "titre": "Maison J-LM",
+  "sous": "Maison individuelle",
+  "commune": "Fouesnant",
+  "dep": "29",
+  "categorie": "neuf"
+ },
+ {
+  "id": "maison-g-riec",
+  "titre": "Maison G",
+  "sous": "Maison individuelle",
+  "commune": "Riec-sur-Belon",
+  "dep": "29",
+  "categorie": "neuf"
+ },
+ {
+  "id": "extension-d-tremeoc",
+  "titre": "Extension D",
+  "sous": "Extension",
+  "commune": "Tréméoc",
+  "dep": "29",
+  "categorie": "neuf"
+ },
+ {
+  "id": "maison-e-ergue",
+  "titre": "Maison E",
+  "sous": "Maison individuelle",
+  "commune": "Ergué-Gabéric",
+  "dep": "29",
+  "categorie": "neuf",
+  "accueil": true
+ },
+ {
+  "id": "extension-v-benodet",
+  "titre": "Extension V",
+  "sous": "Extension",
+  "commune": "Bénodet",
+  "dep": "29",
+  "categorie": "neuf"
+ },
+ {
+  "id": "maison-m-penmarch",
+  "titre": "Maison M",
+  "sous": "Maison individuelle",
+  "commune": "Penmarc'h",
+  "dep": "29",
+  "categorie": "neuf"
+ },
+ {
+  "id": "extension-d2-concarneau",
+  "titre": "Extension D2",
+  "sous": "Extension",
+  "commune": "Concarneau",
+  "dep": "29",
+  "categorie": "neuf"
+ },
+ {
+  "id": "maison-f-ergue",
+  "titre": "Maison F",
+  "sous": "Maison individuelle",
+  "commune": "Ergué-Gabéric",
+  "dep": "29",
+  "categorie": "neuf"
+ },
+ {
+  "id": "extension-cap-sizun",
+  "titre": "Extension en ossature bois",
+  "sous": "Extension",
+  "commune": "Cap Sizun",
+  "dep": "29",
+  "categorie": "neuf"
+ },
+ {
+  "id": "remise-pigeonnier-treguennec",
+  "titre": "Ancienne remise et pigeonnier",
+  "sous": "Réhabilitation écologique, mission complète",
+  "commune": "Tréguennec",
+  "dep": "29",
+  "categorie": "renovation",
+  "accueil": true,
+  "detail": {
+   "texte": "Une grange en ruine devient une maison d'invités, le pigeonnier un abri à vélos. Le bâti, entièrement dégagé, est rénové selon une démarche d'écorénovation. La surface étant réduite, un bloc technique central réunit cuisine, salle d'eau, escalier et équipements (VMC, ballon d'eau chaude, tableau électrique) et porte une mezzanine avec une chambre.",
+   "surfaces": [
+    "60 m² réhabilités",
+    "mezzanine de 10 m²",
+    "pigeonnier de 15 m²"
+   ],
+   "materiaux": [
+    "Murs intérieurs en pierre, enduit chaux-chanvre",
+    "Joints extérieurs à la chaux",
+    "Bardage en châtaignier pré-grisé, zinc pour le pigeonnier",
+    "Menuiseries en aluminium",
+    "Sol en béton, terrasse en travertin"
+   ]
+  }
+ },
+ {
+  "id": "maison-xvie-lanvenegen",
+  "titre": "Maison du XVIᵉ siècle",
+  "sous": "Réhabilitation",
+  "commune": "Lanvénégen",
+  "dep": "56",
+  "categorie": "renovation"
+ },
+ {
+  "id": "maison-vacances-loctudy",
+  "titre": "Maison de vacances en bord de mer",
+  "sous": "Rénovation",
+  "commune": "Loctudy",
+  "dep": "29",
+  "categorie": "renovation"
+ },
+ {
+  "id": "habitation-meilars",
+  "titre": "Habitation à Confort",
+  "sous": "Réhabilitation",
+  "commune": "Meilars",
+  "dep": "29",
+  "categorie": "renovation"
+ },
+ {
+  "id": "salle-de-bain-treguennec",
+  "titre": "Salle de bain",
+  "sous": "Création d'une salle de bain",
+  "commune": "Tréguennec",
+  "dep": "29",
+  "categorie": "renovation"
+ },
+ {
+  "id": "neobretonne-combrit",
+  "titre": "Maison néo-bretonne",
+  "sous": "Rénovation",
+  "commune": "Combrit",
+  "dep": "29",
+  "categorie": "renovation"
+ },
+ {
+  "id": "exterieurs-loctudy",
+  "titre": "Extérieurs en bord de mer",
+  "sous": "Rénovation des extérieurs",
+  "commune": "Loctudy",
+  "dep": "29",
+  "categorie": "renovation"
+ },
+ {
+  "id": "combles-penmarch",
+  "titre": "Combles",
+  "sous": "Aménagement de combles",
+  "commune": "Penmarc'h",
+  "dep": "29",
+  "categorie": "renovation"
+ },
+ {
+  "id": "bureaux-ergue",
+  "titre": "Immeuble de bureaux et commerces",
+  "sous": "Construction",
+  "commune": "Ergué-Gabéric",
+  "dep": "29",
+  "categorie": "pro",
+  "accueil": true
+ },
+ {
+  "id": "cabinet-medical-quimperle",
+  "titre": "Cabinet médical M",
+  "sous": "Construction",
+  "commune": "Quimperlé",
+  "dep": "29",
+  "categorie": "pro"
+ },
+ {
+  "id": "coworking-quimper",
+  "titre": "Espace de coworking",
+  "sous": "Aménagement d'un ancien local",
+  "commune": "Quimper",
+  "dep": "29",
+  "categorie": "pro"
+ },
+ {
+  "id": "galerie-artiste",
+  "titre": "Galerie d'artiste",
+  "sous": "Rénovation d'une habitation en galerie",
+  "commune": "commune à compléter",
+  "dep": "",
+  "categorie": "pro"
+ },
+ {
+  "id": "boutique-paris",
+  "titre": "Boutique d'accessoires",
+  "sous": "Création d'une boutique",
+  "commune": "Paris",
+  "dep": "75",
+  "categorie": "pro"
+ }
+]
