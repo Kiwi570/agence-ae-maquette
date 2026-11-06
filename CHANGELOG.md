@@ -1,5 +1,9 @@
 # Journal des versions
 
+## v3 · 6 novembre 2026
+
+- Accueil : la coupe bioclimatique ne prend plus la main trop tôt. Elle s'épinglait environ 2 000 px avant sa place, pendant les planches « Neuf, Rénovation, Professionnel », parce que la maquette 3D, plus haut dans la page, était calculée après elle. Les scènes sont désormais calculées dans l'ordre de la page.
+
 ## v2 · 6 novembre 2026
 
 Plus de mouvement « wouahou », dans le monde de l'architecte. Comparé fichier par fichier à la v1.

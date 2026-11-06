@@ -4,7 +4,7 @@
    Ici : l'intro (le soleil se lève sur « agence ae » puis rejoint l'objet d'ouverture de la page), le soleil à saisir,
    la course du soleil (fil conducteur), les titres à ombre portée, la coupe bioclimatique, les planches,
    l'ombre qui passe sur les projets, la carte de la zone, puis les effets des pages intérieures. */
-import { demarrer, boucle, etat, versObjet, quand, suivre, lacher, aller } from './socle/index.js?v=2';
+import { demarrer, boucle, etat, versObjet, quand, suivre, lacher, aller } from './socle/index.js?v=3';
 
 const gsap = window.gsap;
 const $ = (s, r = document) => r.querySelector(s);
@@ -424,6 +424,9 @@ demarrer({
     chiffresGras();
     carteZone();
     preparerPages();
+    /* Scènes créées hors de l'ordre de la page (la maquette 3D, plus haut, est créée après la coupe) :
+       on les trie dans l'ordre de la page puis on recalcule, sinon une scène épinglée démarre trop tôt. */
+    if (ST()) { ST().sort(); ST().refresh(); }
   },
   jouer: intro,
   etatFinal() {

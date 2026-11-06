@@ -189,6 +189,41 @@
    ],
    "grilleDispenses": {},
    "notes": "Demande du client : plus d'animations wouahou et modernes."
+  },
+  {
+   "version": 3,
+   "skill": "v10.3",
+   "perimetre": [
+    "accueil"
+   ],
+   "etapes": [
+    {
+     "etape": "correction : scène épinglée qui démarrait trop tôt",
+     "budget": 10,
+     "debut": "2026-11-06T18:59:00+01:00",
+     "fin": "2026-11-06T19:08:00+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-06T19:08:00+01:00",
+     "fin": "2026-11-06T19:10:00+01:00"
+    }
+   ],
+   "attentes": [],
+   "allersRetours": 1,
+   "modules": [],
+   "audit": {
+    "niveau": "ciblé (/ et /convictions)",
+    "echecsPremierPassage": 0,
+    "relances": 0,
+    "corrections": [
+     "ScrollTrigger triés dans l'ordre de la page puis recalculés"
+    ]
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "Signalé par le client : la coupe bioclimatique s'épinglait environ 2 000 px trop tôt, pendant les planches (la maquette 3D, plus haut, était créée après elle)."
   }
  ]
 }

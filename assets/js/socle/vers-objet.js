@@ -15,7 +15,7 @@
    - Fin à a + duree + ouverture (1,0 + 0,5 + 0,8 = 2,3 s) : sous les 3 s du socle. Tout effet long (titre qui se coud,
      compteur) se joue hors de cette timeline (tl.call), sinon le socle accélère toute l'intro.
    - Accélérer, passer, retour arrière, mode calme : gérés par le socle comme pour toute intro. */
-import { centreOuverture, rayon } from './voile.js?v=2';
+import { centreOuverture, rayon } from './voile.js?v=3';
 
 /**
  * @param {object} tl  timeline GSAP de l'intro

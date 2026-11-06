@@ -10,7 +10,7 @@
    la page se prépare dessous, le voile se retire ; mode calme : rien ; retour arrière : reinitialiser().
    Repli sans clip-path ni masque (iris, rideau) : fondu. Une autre forme (tampon, empreinte, étoile) se branche ici,
    dans couvrir() et decouvrir(), sur le modèle des quatre formes. */
-import { html, etat } from './etat.js?v=2';
+import { html, etat } from './etat.js?v=3';
 
 export const FORMES = ['glisse', 'iris', 'vague', 'rideau'];
 const COURBE = 'cubic-bezier(.65,0,.35,1)';
