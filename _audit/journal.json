@@ -224,6 +224,68 @@
    "effetsRetires": [],
    "grilleDispenses": {},
    "notes": "Signalé par le client : la coupe bioclimatique s'épinglait environ 2 000 px trop tôt, pendant les planches (la maquette 3D, plus haut, était créée après elle)."
+  },
+  {
+   "version": 4,
+   "skill": "v10.3",
+   "perimetre": [
+    "accueil",
+    "realisations",
+    "atelier",
+    "convictions",
+    "contact",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "audit complet de la version finale",
+     "budget": 30,
+     "debut": "2026-11-06T19:10:00+01:00",
+     "fin": "2026-11-06T19:38:00+01:00"
+    },
+    {
+     "etape": "corrections des formats de l'audit complet (paysage, écrans bas, sans JavaScript)",
+     "budget": 20,
+     "debut": "2026-11-06T19:38:00+01:00",
+     "fin": "2026-11-06T20:00:00+01:00"
+    },
+    {
+     "etape": "audit complet final",
+     "budget": 30,
+     "debut": "2026-11-06T20:00:00+01:00",
+     "fin": "2026-11-06T20:28:00+01:00"
+    },
+    {
+     "etape": "livraison et préparation de l'entrée en bibliothèque",
+     "budget": 15,
+     "debut": "2026-11-06T20:28:00+01:00",
+     "fin": "2026-11-06T20:38:00+01:00"
+    }
+   ],
+   "attentes": [
+    {
+     "objet": "choix des leçons et des modules",
+     "debut": "2026-11-06T19:24:00+01:00",
+     "fin": "2026-11-06T19:26:00+01:00"
+    }
+   ],
+   "allersRetours": 0,
+   "modules": [],
+   "audit": {
+    "niveau": "complet",
+    "echecsPremierPassage": 21,
+    "relances": 3,
+    "corrections": [
+     "ouvertures resserrées sous 500 px de haut (téléphone à l'horizontale)",
+     "planches de l'accueil sans paragraphe sous 500 px de haut",
+     "mur en coupe resserré jusqu'à 820 px de haut",
+     "mention « Illustration générée » de la 404 déplacée à gauche",
+     "en-tête sans JavaScript : hauteur de secours et liens sur une rangée qui passe à la ligne"
+    ]
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "Version finale archivée dans la bibliothèque. Les 21 échecs venaient de formats que l'audit standard ne teste pas (844×390, 320×568 sans JavaScript, scène épinglée à 1366×768)."
   }
  ]
 }

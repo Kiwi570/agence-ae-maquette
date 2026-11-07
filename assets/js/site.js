@@ -4,7 +4,7 @@
    Ici : l'intro (le soleil se lève sur « agence ae » puis rejoint l'objet d'ouverture de la page), le soleil à saisir,
    la course du soleil (fil conducteur), les titres à ombre portée, la coupe bioclimatique, les planches,
    l'ombre qui passe sur les projets, la carte de la zone, puis les effets des pages intérieures. */
-import { demarrer, boucle, etat, versObjet, quand, suivre, lacher, aller } from './socle/index.js?v=3';
+import { demarrer, boucle, etat, versObjet, quand, suivre, lacher, aller } from './socle/index.js?v=4';
 
 const gsap = window.gsap;
 const $ = (s, r = document) => r.querySelector(s);

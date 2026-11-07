@@ -1,4 +1,4 @@
-# Agence AE · maquette v2
+# Agence AE · maquette v4 (version finale)
 
 Maquette de présentation du futur site de L'Agence AE (Marine Gourlay, architecte, Quimper), direction artistique **« Course du soleil »** : la conception bioclimatique rendue tangible. Site statique (HTML, CSS, JavaScript), prêt pour Vercel sans étape de construction.
 
@@ -15,7 +15,7 @@ Adresse prévue : https://agence-ae-maquette.vercel.app (à mettre dans le modul
 | Contact | le numéro en très grand, bandeau de côte | premier rendez-vous en 5 étapes, tampon « Reçu », plan d'accès schématique |
 | 404 | cadran solaire | |
 
-Pages du site actuel non reprises en v1 (disponibles en v2) : une fiche projet par réalisation, la FAQ complète en page dédiée (16 questions, dont 7 reprises sur L'Atelier).
+Pages du site actuel non reprises (à ajouter si le client le souhaite) : une fiche projet par réalisation, la FAQ complète en page dédiée (16 questions, dont 7 reprises sur L'Atelier).
 
 ## Modifier le contenu
 

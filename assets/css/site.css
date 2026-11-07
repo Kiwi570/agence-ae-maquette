@@ -770,3 +770,54 @@ html:not(.js) .tour-scene, html.calme .tour-scene { height: auto; perspective: n
 .plein-cadre { inset: var(--entete-h) 0 8px 0; }
 html:not(.js) .plein, html.calme .plein, html.secours .plein { height: auto; }
 html:not(.js) .plein-collant, html.calme .plein-collant, html.secours .plein-collant { position: relative; }
+
+/* ===== v4 · formats de l'audit complet ===== */
+/* Sans JavaScript, la hauteur de l'en-tête n'est pas mesurée : valeur de secours, et le menu replié devient une rangée qui défile. */
+html:not(.js) { --entete-h: 66px; --barres-h: 0px; }
+@media (max-width: 760px) {
+  html:not(.js) { --entete-h: 110px; --barres-h: 78px; }
+  html:not(.js) .entete-rangee { flex-wrap: wrap; row-gap: 0; }
+  html:not(.js) [data-nav] { order: 3; flex-basis: 100%; justify-content: flex-start; }
+  html:not(.js) [data-nav] ul { flex-wrap: wrap; column-gap: 12px; row-gap: 0; white-space: nowrap; font-size: clamp(.8rem, 3.9vw, 1rem); }
+}
+/* 404 : la mention de l'illustration passe à gauche, loin du numéro aligné à droite. */
+.introuvable-media .mention-ia { right: auto; left: 8px; bottom: calc(var(--barres-h, 0px) + 8px); }
+/* Téléphone à l'horizontale et écrans très bas : les ouvertures se resserrent pour garder titre, action et information clé dans le premier écran. */
+@media (max-height: 500px) and (min-width: 761px) {
+  .planche-texte { padding: 16px 22px; }
+  .planche-texte p:not(.planche-num) { display: none; }
+  .planche h3 { font-size: 1.6rem; margin-bottom: .2em; }
+  .introuvable-disque { width: 56px; height: 56px; font-size: 1rem; margin-bottom: 4px; }
+  .introuvable-texte h1 { font-size: 2rem; max-width: 24ch; margin-bottom: .3em; }
+  .introuvable-texte h1 + p { display: none; }
+  .introuvable-texte p { margin-bottom: .5em; }
+  .atelier-tete { padding-top: calc(var(--entete-h) + 14px); }
+  .atelier-tete .surtitre { display: none; }
+  .atelier-titre { font-size: 2.1rem; margin-bottom: .3em; }
+  .atelier-intro { font-size: .92rem; margin-bottom: .6rem; }
+  .conv-tete { padding-top: calc(var(--entete-h) + 10px); padding-bottom: 16px; }
+  .conv-tete .surtitre { display: none; }
+  .conv-grand-chiffre { font-size: 26vh; }
+  .conv-titre { font-size: 1.45rem; margin: .3em auto .5em; }
+  .conv-intro { display: none; }
+  .real-tete { padding-top: calc(var(--entete-h) + 12px); }
+  .real-tete .surtitre { display: none; }
+  .real-titre { font-size: 2.3rem; }
+  .real-intro { display: none; }
+  .real-actions { margin-top: .4rem; }
+  .cadran { width: min(100%, 58svh); }
+}
+/* 404 sur téléphone bas : disque plus petit, la phrase cède la place au bouton et au numéro. */
+@media (max-width: 760px) and (max-height: 700px) {
+  .introuvable-disque { width: 64px; height: 64px; font-size: 1.05rem; }
+  .introuvable-texte h1 + p { display: none; }
+}
+/* Mur en coupe épinglé : les écrans de 768 px de haut prennent aussi la version resserrée. */
+@media (max-height: 820px) and (min-width: 761px) {
+  .mur-texte > p:not(.principe-num):not(.mur-note) { display: none; }
+  .mur .principe-num { font-size: 2.2rem; }
+  .mur-texte h2 { font-size: 1.8rem; }
+  .mur-legende li { padding: 3px 10px; font-size: .88rem; }
+  .mur-legende { margin: .6rem 0; }
+  .mur-coupe figcaption { display: none; }
+}

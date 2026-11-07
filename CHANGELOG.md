@@ -1,5 +1,14 @@
 # Journal des versions
 
+## v4 · 6 novembre 2026
+
+Version finale, après l'audit complet (tous les formats). Seule la feuille de style change, et seulement sur les formats ci-dessous ; ailleurs, le rendu ne bouge pas.
+
+- Téléphone à l'horizontale et écrans très bas (moins de 500 px de haut) : les ouvertures de L'Atelier, Convictions, Réalisations et de la 404 se resserrent (surtitre et phrase d'introduction retirés, titres plus petits) pour garder le titre, le bouton principal et l'information clé dans le premier écran ; les planches de l'accueil ne gardent que le numéro, le titre et le lien.
+- Convictions : le mur en coupe épinglé prend sa version resserrée dès 820 px de haut (au lieu de 760), il tient en entier sur un écran 1366×768.
+- 404 : la mention « Illustration générée » passe en bas à gauche, elle ne chevauche plus le numéro ; sur téléphone bas, la phrase cède la place au bouton et au numéro.
+- Sans JavaScript, sur téléphone : le menu devient une rangée de liens sous le logo au lieu d'une colonne qui cachait le haut de la page.
+
 ## v3 · 6 novembre 2026
 
 - Accueil : la coupe bioclimatique ne prend plus la main trop tôt. Elle s'épinglait environ 2 000 px avant sa place, pendant les planches « Neuf, Rénovation, Professionnel », parce que la maquette 3D, plus haut dans la page, était calculée après elle. Les scènes sont désormais calculées dans l'ordre de la page.
